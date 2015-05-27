@@ -1,0 +1,63 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: phdbook.aux
+The style file: unified.bst
+A level-1 auxiliary file: 0-preface.aux
+A level-1 auxiliary file: 1-introduction.aux
+A level-1 auxiliary file: 2-background.aux
+A level-1 auxiliary file: 3-background-irl.aux
+A level-1 auxiliary file: 4-background-fcg.aux
+A level-1 auxiliary file: 5-german-spatial-language.aux
+A level-1 auxiliary file: 6-semantics.aux
+A level-1 auxiliary file: 7-syntax.aux
+A level-1 auxiliary file: 8-semantic-processing.aux
+A level-1 auxiliary file: 9-syntax-semantic-interaction.aux
+A level-1 auxiliary file: 10-category-alignment.aux
+A level-1 auxiliary file: 11-reference-systems.aux
+A level-1 auxiliary file: 12-lexical-marking.aux
+A level-1 auxiliary file: 13-grammar.aux
+A level-1 auxiliary file: 14-discussion-and-conclusion.aux
+Database file #1: papers.bib
+Database file #2: space.bib
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+You've used 156 entries,
+            3166 wiz_defined-function locations,
+            1478 strings with 29361 characters,
+and the built_in function-call counts, 95776 in all, are:
+= -- 8090
+> -- 3025
+< -- 168
++ -- 1082
+- -- 888
+* -- 5918
+:= -- 14473
+add.period$ -- 684
+call.type$ -- 156
+change.case$ -- 1225
+chr.to.int$ -- 163
+cite$ -- 156
+duplicate$ -- 7895
+empty$ -- 7960
+format.name$ -- 1314
+if$ -- 19792
+int.to.chr$ -- 11
+int.to.str$ -- 1
+missing$ -- 1579
+newline$ -- 805
+num.names$ -- 718
+pop$ -- 3284
+preamble$ -- 1
+purify$ -- 884
+quote$ -- 0
+skip$ -- 2927
+stack$ -- 0
+substring$ -- 4562
+swap$ -- 3790
+text.length$ -- 14
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 1326
+warning$ -- 0
+while$ -- 766
+width$ -- 0
+write$ -- 2119

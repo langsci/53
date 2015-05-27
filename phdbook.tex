@@ -1,0 +1,85 @@
+ \documentclass[ number=5
+                ,series=cmle,
+                ,isbn=978-3-944675-46-6,
+                ,url=http://langsci-press.org/ %catalog/book/14,
+	        ,output=long    % long|short|inprep              
+	        %,blackandwhite
+	        %,smallfont
+	        %,draftmode  
+		  ]{langsci}
+	
+%new	  
+\usepackage{lsp-gb4e} 
+\usepackage{localmetadata}
+\usepackage{localpackages}
+\usepackage{localhyphenation}
+\usepackage{localcommands}
+
+\usepackage{fancyvrb}
+\fvset{fontsize=\footnotesize}
+\RecustomVerbatimEnvironment{verbatim}{Verbatim}{}
+\usepackage{alltt}
+\usepackage{covington}
+
+\color{black}
+
+% turn of those nasty overfull and underfull hboxes
+\hbadness=10000
+\hfuzz=50pt
+
+% ####################################################################
+
+\include{System/environments}
+%\include{System/commands}
+%\include{System/preamble}
+
+\begin{document}
+
+\maketitle  
+
+\frontmatter
+
+\include{0-preface}
+
+\tableofcontents
+
+% ####################################################################
+\mainmatter	
+
+\include{1-introduction}
+
+%%% 2. Background
+\part{Spatial Language Games and Technical Background}
+\label{p:embodied-language-games}
+\include{2-background}
+\include{3-background-irl}
+\include{4-background-fcg}
+
+%%% 4-6 The German Language System 
+\part{Reconstructing German Locative Phrases} 
+\label{p:german-locative-phrases}
+\include{5-german-spatial-language}
+\include{6-semantics}
+\include{7-syntax}
+\include{8-semantic-processing}
+\include{9-syntax-semantic-interaction}
+
+%%% 10 evolution
+\part{Spatial Language Evolution}
+\label{p:spatial-language-evolution}
+\include{10-category-alignment}
+\include{11-reference-systems}
+\include{12-lexical-marking}
+\include{13-grammar}	
+
+%%% conclusions
+\part{Conclusion}
+\include{14-discussion-and-conclusion}
+
+% ####################################################################
+\backmatter
+%\renewcommand{\bibname}{References} % changes default name Bibliography to References
+\ohead{Bibliography}
+\bibliography{papers,space} % References file
+
+\end{document}
