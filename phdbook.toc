@@ -16,7 +16,7 @@
 \contentsline {part}{\numberline {I}Spatial Language Games and Technical Background}{21}{part.1}
 \contentsline {chapter}{\numberline {2}Grounded Spatial Language Games}{23}{chapter.2}
 \contentsline {section}{\numberline {2.1}Perception}{25}{section.2.1}
-\contentsline {section}{\numberline {2.2}Social Mechanisms}{30}{section.2.2}
+\contentsline {section}{\numberline {2.2}Social Mechanisms}{27}{section.2.2}
 \contentsline {chapter}{\numberline {3}Embodied Cognitive Semantics with IRL}{33}{chapter.3}
 \contentsline {section}{\numberline {3.1}Procedural Semantics}{33}{section.3.1}
 \contentsline {section}{\numberline {3.2}Evaluation}{35}{section.3.2}
@@ -32,66 +32,66 @@
 \contentsline {chapter}{\numberline {5}German Locative Phrases -- An Introduction}{59}{chapter.5}
 \contentsline {chapter}{\numberline {6}Spatial Semantics}{65}{chapter.6}
 \contentsline {section}{\numberline {6.1}Representing Spatial Relations}{65}{section.6.1}
-\contentsline {section}{\numberline {6.2}Applying Spatial Relations}{68}{section.6.2}
-\contentsline {section}{\numberline {6.3}Frames of Reference}{71}{section.6.3}
+\contentsline {section}{\numberline {6.2}Applying Spatial Relations}{69}{section.6.2}
+\contentsline {section}{\numberline {6.3}Frames of Reference}{70}{section.6.3}
 \contentsline {section}{\numberline {6.4}Internal and External Regions}{74}{section.6.4}
-\contentsline {section}{\numberline {6.5}Group-based Reference}{76}{section.6.5}
-\contentsline {section}{\numberline {6.6}Perspective Marking}{77}{section.6.6}
+\contentsline {section}{\numberline {6.5}Group-based Reference}{75}{section.6.5}
+\contentsline {section}{\numberline {6.6}Perspective Marking}{76}{section.6.6}
 \contentsline {section}{\numberline {6.7}Discussion}{78}{section.6.7}
 \contentsline {chapter}{\numberline {7}Syntactic Processing}{81}{chapter.7}
 \contentsline {section}{\numberline {7.1}Overview of Syntactic Processing}{82}{section.7.1}
 \contentsline {section}{\numberline {7.2}Lexical Classes -- Lexical and Functional Constructions}{85}{section.7.2}
-\contentsline {section}{\numberline {7.3}Landmarks and Complements -- Adverbial and Prepositional Constructions}{96}{section.7.3}
-\contentsline {section}{\numberline {7.4}Linking Everything Together -- High-level Phrasal Constructions}{99}{section.7.4}
-\contentsline {section}{\numberline {7.5}Handling Case}{103}{section.7.5}
-\contentsline {section}{\numberline {7.6}Summary}{109}{section.7.6}
-\contentsline {chapter}{\numberline {8}Semantic Processing}{113}{chapter.8}
-\contentsline {section}{\numberline {8.1}Factors Influencing Semantic Processing}{113}{section.8.1}
+\contentsline {section}{\numberline {7.3}Landmarks and Complements -- Adverbial and Prepositional Constructions}{95}{section.7.3}
+\contentsline {section}{\numberline {7.4}Linking Everything Together -- High-level Phrasal Constructions}{98}{section.7.4}
+\contentsline {section}{\numberline {7.5}Handling Case}{102}{section.7.5}
+\contentsline {section}{\numberline {7.6}Summary}{108}{section.7.6}
+\contentsline {chapter}{\numberline {8}Semantic Processing}{111}{chapter.8}
+\contentsline {section}{\numberline {8.1}Factors Influencing Semantic Processing}{111}{section.8.1}
 \contentsline {section}{\numberline {8.2}Implementing Spatial Conceptualization}{116}{section.8.2}
-\contentsline {section}{\numberline {8.3}Categorization and Discrimination}{123}{section.8.3}
-\contentsline {section}{\numberline {8.4}Summary}{137}{section.8.4}
-\contentsline {chapter}{\numberline {9}A Whole Systems Approach to Processing}{139}{chapter.9}
-\contentsline {section}{\numberline {9.1}Integrating IRL and FCG}{139}{section.9.1}
-\contentsline {section}{\numberline {9.2}Handling Semantic Ambiguity}{141}{section.9.2}
-\contentsline {subsection}{\numberline {9.2.1}Syntactic Processing}{143}{subsection.9.2.1}
-\contentsline {subsection}{\numberline {9.2.2}Semantic Processing}{153}{subsection.9.2.2}
-\contentsline {section}{\numberline {9.3}Discussion and Results}{154}{section.9.3}
-\contentsline {part}{\numberline {III}Spatial Language Evolution}{159}{part.3}
-\contentsline {chapter}{\numberline {10}Evolution of Basic Spatial Category Systems}{161}{chapter.10}
-\contentsline {section}{\numberline {10.1}Acquisition of Lexical Systems}{162}{section.10.1}
-\contentsline {subsection}{\numberline {10.1.1}Learning Operators}{162}{subsection.10.1.1}
-\contentsline {subsection}{\numberline {10.1.2}Experimental Setup and Measures}{167}{subsection.10.1.2}
-\contentsline {subsection}{\numberline {10.1.3}Results}{170}{subsection.10.1.3}
-\contentsline {subsection}{\numberline {10.1.4}Implementation Details}{189}{subsection.10.1.4}
-\contentsline {section}{\numberline {10.2}Lexicon Formation}{190}{section.10.2}
-\contentsline {subsection}{\numberline {10.2.1}Experimental Setup}{191}{subsection.10.2.1}
-\contentsline {subsection}{\numberline {10.2.2}Results}{192}{subsection.10.2.2}
-\contentsline {subsection}{\numberline {10.2.3}Interaction of Strategies}{201}{subsection.10.2.3}
-\contentsline {subsection}{\numberline {10.2.4}Hybrid Systems}{201}{subsection.10.2.4}
-\contentsline {section}{\numberline {10.3}Summary}{201}{section.10.3}
-\contentsline {chapter}{\numberline {11}Evolution of Spatial Conceptualization Strategies}{207}{chapter.11}
-\contentsline {section}{\numberline {11.1}Alignment for Landmark Strategies}{209}{section.11.1}
-\contentsline {subsection}{\numberline {11.1.1}Experimental Setup and Measures}{211}{subsection.11.1.1}
-\contentsline {subsection}{\numberline {11.1.2}Results}{213}{subsection.11.1.2}
-\contentsline {section}{\numberline {11.2}Alignment for Frame of Reference Strategies}{214}{section.11.2}
-\contentsline {subsection}{\numberline {11.2.1}Experimental Setup}{218}{subsection.11.2.1}
-\contentsline {subsection}{\numberline {11.2.2}Results}{220}{subsection.11.2.2}
-\contentsline {section}{\numberline {11.3}Invention of Conceptualization Strategies}{221}{section.11.3}
-\contentsline {section}{\numberline {11.4}Discussion}{226}{section.11.4}
-\contentsline {chapter}{\numberline {12}Multi-word Lexical Systems for Expressing Landmarks}{231}{chapter.12}
-\contentsline {section}{\numberline {12.1}Invention and Alignment Operators}{232}{section.12.1}
-\contentsline {section}{\numberline {12.2}Experimental Setup and Results}{235}{section.12.2}
-\contentsline {section}{\numberline {12.3}Discussion}{237}{section.12.3}
-\contentsline {chapter}{\numberline {13}Function and Evolution of Locative Spatial Grammar}{241}{chapter.13}
-\contentsline {section}{\numberline {13.1}The Importance of Grammar}{243}{section.13.1}
-\contentsline {subsection}{\numberline {13.1.1}Experimental Results}{247}{subsection.13.1.1}
-\contentsline {subsection}{\numberline {13.1.2}Factors Influencing the Importance of Grammar}{250}{subsection.13.1.2}
-\contentsline {section}{\numberline {13.2}Emergence of Grammatical Markers}{251}{section.13.2}
-\contentsline {subsection}{\numberline {13.2.1}Invention and Alignment Operators}{255}{subsection.13.2.1}
-\contentsline {subsection}{\numberline {13.2.2}Experimental Setup and Results}{256}{subsection.13.2.2}
-\contentsline {section}{\numberline {13.3}Discussion}{256}{section.13.3}
-\contentsline {part}{\numberline {IV}Conclusion}{259}{part.4}
-\contentsline {chapter}{\numberline {14}Conclusion and Future Work}{261}{chapter.14}
-\contentsline {section}{\numberline {14.1}Exaptation}{262}{section.14.1}
-\contentsline {section}{\numberline {14.2}Evolution of Semantic and Syntactic Categories}{263}{section.14.2}
-\contentsline {chapter}{\nonumberline Bibliography}{265}{chapter*.46}
+\contentsline {section}{\numberline {8.3}Categorization and Discrimination}{121}{section.8.3}
+\contentsline {section}{\numberline {8.4}Summary}{133}{section.8.4}
+\contentsline {chapter}{\numberline {9}A Whole Systems Approach to Processing}{135}{chapter.9}
+\contentsline {section}{\numberline {9.1}Integrating IRL and FCG}{135}{section.9.1}
+\contentsline {section}{\numberline {9.2}Handling Semantic Ambiguity}{137}{section.9.2}
+\contentsline {subsection}{\numberline {9.2.1}Syntactic Processing}{139}{subsection.9.2.1}
+\contentsline {subsection}{\numberline {9.2.2}Semantic Processing}{148}{subsection.9.2.2}
+\contentsline {section}{\numberline {9.3}Discussion and Results}{149}{section.9.3}
+\contentsline {part}{\numberline {III}Spatial Language Evolution}{153}{part.3}
+\contentsline {chapter}{\numberline {10}Evolution of Basic Spatial Category Systems}{155}{chapter.10}
+\contentsline {section}{\numberline {10.1}Acquisition of Lexical Systems}{156}{section.10.1}
+\contentsline {subsection}{\numberline {10.1.1}Learning Operators}{156}{subsection.10.1.1}
+\contentsline {subsection}{\numberline {10.1.2}Experimental Setup and Measures}{161}{subsection.10.1.2}
+\contentsline {subsection}{\numberline {10.1.3}Results}{165}{subsection.10.1.3}
+\contentsline {subsection}{\numberline {10.1.4}Implementation Details}{182}{subsection.10.1.4}
+\contentsline {section}{\numberline {10.2}Lexicon Formation}{183}{section.10.2}
+\contentsline {subsection}{\numberline {10.2.1}Experimental Setup}{185}{subsection.10.2.1}
+\contentsline {subsection}{\numberline {10.2.2}Results}{186}{subsection.10.2.2}
+\contentsline {subsection}{\numberline {10.2.3}Interaction of Strategies}{193}{subsection.10.2.3}
+\contentsline {subsection}{\numberline {10.2.4}Hybrid Systems}{193}{subsection.10.2.4}
+\contentsline {section}{\numberline {10.3}Summary}{197}{section.10.3}
+\contentsline {chapter}{\numberline {11}Evolution of Spatial Conceptualization Strategies}{199}{chapter.11}
+\contentsline {section}{\numberline {11.1}Alignment for Landmark Strategies}{201}{section.11.1}
+\contentsline {subsection}{\numberline {11.1.1}Experimental Setup and Measures}{203}{subsection.11.1.1}
+\contentsline {subsection}{\numberline {11.1.2}Results}{205}{subsection.11.1.2}
+\contentsline {section}{\numberline {11.2}Alignment for Frame of Reference Strategies}{206}{section.11.2}
+\contentsline {subsection}{\numberline {11.2.1}Experimental Setup}{210}{subsection.11.2.1}
+\contentsline {subsection}{\numberline {11.2.2}Results}{212}{subsection.11.2.2}
+\contentsline {section}{\numberline {11.3}Invention of Conceptualization Strategies}{213}{section.11.3}
+\contentsline {section}{\numberline {11.4}Discussion}{219}{section.11.4}
+\contentsline {chapter}{\numberline {12}Multi-word Lexical Systems for Expressing Landmarks}{223}{chapter.12}
+\contentsline {section}{\numberline {12.1}Invention and Alignment Operators}{224}{section.12.1}
+\contentsline {section}{\numberline {12.2}Experimental Setup and Results}{227}{section.12.2}
+\contentsline {section}{\numberline {12.3}Discussion}{229}{section.12.3}
+\contentsline {chapter}{\numberline {13}Function and Evolution of Locative Spatial Grammar}{231}{chapter.13}
+\contentsline {section}{\numberline {13.1}The Importance of Grammar}{233}{section.13.1}
+\contentsline {subsection}{\numberline {13.1.1}Experimental Results}{235}{subsection.13.1.1}
+\contentsline {subsection}{\numberline {13.1.2}Factors Influencing the Importance of Grammar}{239}{subsection.13.1.2}
+\contentsline {section}{\numberline {13.2}Emergence of Grammatical Markers}{240}{section.13.2}
+\contentsline {subsection}{\numberline {13.2.1}Invention and Alignment Operators}{244}{subsection.13.2.1}
+\contentsline {subsection}{\numberline {13.2.2}Experimental Setup and Results}{245}{subsection.13.2.2}
+\contentsline {section}{\numberline {13.3}Discussion}{245}{section.13.3}
+\contentsline {part}{\numberline {IV}Conclusion}{249}{part.4}
+\contentsline {chapter}{\numberline {14}Conclusion and Future Work}{251}{chapter.14}
+\contentsline {section}{\numberline {14.1}Exaptation}{252}{section.14.1}
+\contentsline {section}{\numberline {14.2}Evolution of Semantic and Syntactic Categories}{253}{section.14.2}
+\contentsline {chapter}{\nonumberline Bibliography}{255}{chapter*.46}

@@ -1,15 +1,12 @@
- \documentclass[ number=5
-                ,series=cmle,
-                ,isbn=978-3-944675-46-6,
-                ,url=http://langsci-press.org/ %catalog/book/14,
+ \documentclass[
 	        ,output=long    % long|short|inprep              
 	        %,blackandwhite
 	        %,smallfont
-	        %,draftmode  
-		  ]{langsci}
-	
-%new	  
-\usepackage{lsp-gb4e} 
+	        ,draftmode 
+%	        ,draft 
+		  ]{LSP/langsci}
+
+%\usepackage{LSP/lsp-styles/lsp-gb4e} 
 \usepackage{localmetadata}
 \usepackage{localpackages}
 \usepackage{localhyphenation}
@@ -23,13 +20,13 @@
 
 \color{black}
 
-% turn of those nasty overfull and underfull hboxes
-\hbadness=10000
-\hfuzz=50pt
+%% turn of those nasty overfull and underfull hboxes
+%\hbadness=10000
+%\hfuzz=50pt
 
 % ####################################################################
 
-\include{System/environments}
+\include{system/environments}
 %\include{System/commands}
 %\include{System/preamble}
 
