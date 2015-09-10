@@ -4,3 +4,40 @@
 \newcommand{\PREP}{\textsc{prep}}
 \newcommand{\GEN}{\textsc{gen}}
 \newcommand{\DAT}{\textsc{dat}}
+
+% MISCELLANEOUS USEFUL EXPOSITORY MACROS ==========================
+
+%%%%%% ================== FCG-specific conventions =============%%%%%%%
+
+\newcommand\fcode[1]{\texttt{#1}}
+\newcommand\fcxn[1]{\textsc{#1}}
+\newcommand\fterm[1]{\textsc{#1}}
+\newcommand\fcg{{\sc fcg }}
+\newcommand\FCG{{\sc fcg }}
+\DefineVerbatimEnvironment{ftemplate}{Verbatim}{commandchars=\\\{\},frame=single,fontsize=\small,codes={\catcode`\$=3},samepage=true}
+
+
+%%%%%% =========================================================%%%%%%%
+
+
+
+% Linguistic 
+\newcommand{\lex}[1]{{\itshape #1}}             % in-text lexical item
+\newcommand{\unlicensed}{*\,}      
+\newcommand{\infelicitous}{\#\,}
+\newcommand{\questionable}{?\,}
+\newcommand{\bad}{\mbox{*}}                % linguistically unacceptable
+
+% Typographical conventions (redefine per document as desired)
+\newcommand{\newterm}[1]{\textbf{#1}}           % term introduction
+\newcommand{\term}[1]{\textit{#1}}              % term introduction (alternate)
+\newcommand{\oterm}[1]{\textit{#1}}             % other's terms / old terms
+\newcommand{\impt}[1]{\mbox{\textbf{#1}}}       % for extra emphasis
+\newcommand{\defn}[1]{\mbox{\textsc{#1}}}       % (formal) definition of term
+
+% Simple bold heading for paragraph headings (no line skip following)
+% (usually several in a row; no list indentation)
+\newcommand{\enumhead}[1]{\textbf{#1}}         
+\newcommand{\enum}[1]{\medskip \noindent \enumhead{#1}}  
+\newcommand{\phead}[1]{\enum{#1}}
+
