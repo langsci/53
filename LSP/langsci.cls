@@ -226,6 +226,7 @@
 \ifxetex\else\ClassError{LSP/langsci}{Please use XeLaTeX!}{}\fi
 	
 \usepackage{amssymb} % has to be loaded before other stuff
+\usepackage{amsmath} % has to be loaded before mathspec
 % \usepackage{dtklogos}\newcommand{\xelatex}{\XeLaTeX\xspace}	% the XeLaTeX symbol	
 \usepackage{metalogo}\newcommand{\xelatex}{\XeLaTeX\xspace}	
 \usepackage{fontspec}
@@ -240,18 +241,19 @@
 	BoldItalicFont = Arimo-BoldItalic_B.ttf 		
 	]{Arimo_B.ttf}
 		
-\setmonofont[
-	Ligatures={TeX},Scale=MatchLowercase,Path=\fontpath,
-	BoldFont = FreeMonoBold_B.otf ,
-	SlantedFont = FreeMonoOblique_B.otf ,				
-	BoldSlantedFont = FreeMonoBoldOblique_B.otf 		
-	]{FreeMono_B.otf}
 % \setmonofont[
 % 	Ligatures={TeX},Scale=MatchLowercase,Path=\fontpath,
-% 	BoldFont = DejaVuSansMono-Bold.ttf ,
-% 	SlantedFont = DejaVuSansMono-Oblique.ttf ,				
-% 	BoldSlantedFont = DejaVuSansMono-BoldOblique.ttf 		
-% 	]{DejaVuSansMono.ttf}
+% 	BoldFont = FreeMonoBold_B.otf ,
+% 	SlantedFont = FreeMonoOblique_B.otf ,				
+% 	BoldSlantedFont = FreeMonoBoldOblique_B.otf 		
+% 	]{FreeMono_B.otf}
+
+\setmonofont[
+ 	Ligatures={TeX},Scale=MatchLowercase,Path=\fontpath,
+ 	BoldFont = DejaVuSansMono-Bold.ttf ,
+ 	SlantedFont = DejaVuSansMono-Oblique.ttf ,				
+ 	BoldSlantedFont = DejaVuSansMono-BoldOblique.ttf 		
+ 	]{DejaVuSansMono.ttf}
 
 
 

@@ -4,7 +4,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Grounded Spatial Language Games}
+\chapter{Grounded spatial language games}
 \label{s:spatial-language-games}
 \index{spatial language game}
 \begin{figure}
@@ -21,7 +21,7 @@ as well as the robots.}
 \label{f:scene}
 \end{figure}
 
-Language does not occur in a vacuum. Spoken language occurs in physical,
+\noindent Language does not occur in a vacuum. Spoken language occurs in physical,
 situated interactions when two interlocutors meet with specific
 communicative intentions. This chapter explains the basic social interactions 
 at the center of the approach to language. Physical robots meet in communicative
@@ -30,14 +30,14 @@ Taking such a radical approach to the study of language is grounded in a number 
 social and perceptual mechanisms. Here I look at the prerequisites for 
 the computational models discussed later in this book.
 
-Figure \ref{f:scene} shows such an encounter of
+\figref{f:scene} shows such an encounter of
 two humanoid robots in which one of the robots, the speaker, has the goal
 of drawing the attention of the hearer to some object in the environment using language.
-Such interactions are called \emph{language game} \citep{steels2001language}\index{Steels, L.}.
+Such interactions are called \textsc{language games} \citep{steels2001language}\index{Steels, L.}.
 Language games are routinized interactions between two members of 
 a population. The game combines a particular script for the interaction, the linguistic
 information transfer and extra-linguistic feedback about the success of the interaction.
-Here is an example of a language game called the \emph{spatial language game}.
+Here is an example of a language game called the \textsc{spatial language game}:
 
 
 \begin{enumerate}
@@ -62,7 +62,7 @@ points to the topic he wanted to draw the attention to.
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=0.9\columnwidth]{figs/semiotic-cycle}
+\includegraphics[width=0.8\textwidth]{figs/semiotic-cycle}
 \caption[Semiotic cycle]{\index{semiotic cycle}The semiotic cycle is a model of situated communicative interactions between 
 two interacting agents.}
 \end{center}
@@ -73,7 +73,7 @@ To study language in a real world  setting requires to fully spell out
 all components involved in the interaction.
 Besides social mechanisms agents need operational systems for perceiving
 the world, as well as the construction and interpretation of utterances. 
-Figure \ref{f:semiotic-cycle} shows a schematic view of the systems
+\figref{f:semiotic-cycle} shows a schematic view of the systems
 involved in production and parsing, conceptualization and interpretation. 
 Both agents independently process sensorimotor data stemming from
 the onboard cameras and proprioceptive sensors in order to construct 
@@ -86,9 +86,9 @@ The hearer parses the utterance to determine its meaning and
 interprets it with respect to his current model of the world in order 
 to infer the speaker's communicative goal and, for instance, 
 perform a desired action. The system used for conceptualization
-and interpretation are explained in detail in Chaper \ref{s:irl}.
+and interpretation are explained in detail in \chapref{s:irl}.
 The system for producing and parsing utterances is treated in
-Chapter \ref{s:fcg}. 
+\chapref{s:fcg}. 
 The following sections focus on the necessary prerequisites for 
 language production, parsing and evolution in terms of social mechanisms and 
 perceptual processing.
@@ -97,8 +97,8 @@ perceptual processing.
 \label{s:perception}
 The environment that robots interact in is equipped with four kinds of objects
 that were carefully chosen to pick out special features relevant for spatial language:
-\emph{blocks}, \emph{boxes}, \emph{wall markers} and the \emph{robots} themselves 
-(see Figure \ref{f:scene}). 
+blocks, boxes, wall markers and the robots themselves 
+(see \figref{f:scene}). 
 \begin{description}
 \item[Blocks] Are the colored brick like objects. They are typically of the same color.
 Agents perceive these objects as having a certain distance from their 
@@ -108,7 +108,7 @@ particular markers on their sides. These markers are perceived by the sensorimot
 systems as distinct sides of the object. The perceptual systems
 perceive them as having a particular distance and orientation with
 respect to the robot's coordinate system. 
-\item[Wall markers] Figure \ref{f:scene} shows that the same markers
+\item[Wall markers] \figref{f:scene} shows that the same markers
 used for the carton boxes can also occur on the wall.
 Cardboard boxes introduce a geocentric orientation on the scene.
 \item[Robots] Robots also establish the position of the interlocutor in
@@ -116,22 +116,20 @@ each interaction. Every robot tracks the position and orientation of the
 other robot in his environment.
 \end{description}
 
-
 Before a language game starts the robots perceive their
 environment. The robots are endowed with perceptual systems 
 for recognizing and tracking the objects in their environment.
-These systems continuously build up \emph{world models} of the environment
+These systems continuously build up \textsc{world models} of the environment
 consisting of sets of objects. The objects are characterized by continuous
 real-valued features such as color, position and orientation but also
 width, height and length. The perceptual system also provides a basic
 grouping of objects into classes such as robots, blocks and boxes and wall markers. 
-The following is the world model built by the agent to the left in Figure
-\ref{f:scene}. It includes the other robot ({\footnotesize\texttt{robot-2}}), the
+The following is the world model built by the agent to the left in \figref{f:scene}. It includes the other robot ({\footnotesize\texttt{robot-2}}), the
 landmark ({\footnotesize\texttt{box-1}}) and the colored blocks ({\footnotesize\texttt{obj-265}},
-{\footnotesize\texttt{obj-266}} and {\footnotesize\texttt{obj-268}}):
-\label{world-model-example}
-\begin{footnotesize}
-\begin{verbatim}
+{\footnotesize\texttt{obj-266}} and {\footnotesize\texttt{obj-268}}):\label{world-model-example}
+
+% \begin{footnotesize}
+\begin{lstlisting}
 ((robot-1 :type robot :x 0.0 :y 0.0 :orientation 0.5)
  (robot-2 :type robot :x 1461.65 :y -351.24 :orientation 0.9)
  (box-1 :type box :x 513.0 :y 891.67 :orientation 0.36 
@@ -143,9 +141,8 @@ landmark ({\footnotesize\texttt{box-1}}) and the colored blocks ({\footnotesize\
  (obj-266 :x 285.0 :y 549.02 :z 0.0 ...)
  (obj-268 ...)
  (box-wall :orientation 0.36))
-\end{verbatim}
-\end{footnotesize}
-
+\end{lstlisting}
+% \end{footnotesize}
 
 Each robot constructs perceptual representations of the objects in its
 immediate surroundings from the raw sensations streaming from the
@@ -153,15 +150,15 @@ robot's sensor. Each type of object in the environment is tracked
 by a dedicated perceptual system. In general, processing of 
 the different object classes is  a three step process.
 First, low-level vision routines process raw camera
-images to yield basic \emph{percepts} -- these are connected regions that
+images to yield basic \textsc{percepts}~-- these are connected regions that
 differ from the background of the environment or are related to 
 the patterns distributed on the boxes and wall markers.
 Second, these regions are tracked in subsequent
 camera images. In order to do so, the vision system needs to establish a
-correspondence between an internal \emph{model} and the image
+correspondence between an internal \textsc{model} and the image
 regions that refer to the same physical object, a process known in
-robotics as \emph{anchoring} \citep{coradeschi2003anchoring}\index{Saffiotti, A.}\index{Coradeschi, S.}. 
-I use state estimation techniques from robotics, e.g. \emph{Kalman Filters} 
+robotics as \textsc{anchoring} \citep{coradeschi2003anchoring}\index{Saffiotti, A.}\index{Coradeschi, S.}. 
+I use state estimation techniques from robotics, e.g. Kalman ilters 
 \citep{kalman1960linear}\index{Kalman, R. E.}, 
 for maintaining such persistent models. Third, the vision system 
 fuses information from the proprioceptive sensors of the robot
@@ -179,7 +176,7 @@ perceptual systems.
 The experiments reported on in later sections require that agents play many
 language games. In order to speed up the process of a game and in order to
 do repeatable, manipulatable experiments, data from spatial scenes\index{spatial scenes}  such as the one 
-in Figure \ref{f:scene} are recorded and stored. The output of the perception
+in \figref{f:scene} are recorded and stored. The output of the perception
 system of more than 800 spatial scenes with different spatial configurations 
 has been collected and can be accessed by artificial software agents without 
 the agents required to run on physical robots.
@@ -187,18 +184,18 @@ A spatial language game can be enacted on such stored scenes as if robots
 were perceiving the scene at the very moment they are playing a particular 
 language game.
 
-Figure \ref{f:spatial-scenes-1} shows different spatial scenes. Each spatial scene 
+\figref{f:spatial-scenes-1} shows different spatial scenes. Each spatial scene 
 consists of a world model for each of the two robots recorded from the position of 
 each robot. Scenes are grouped into data sets with similar characteristics
 with respect to perspective on the scene, the number of objects and
 the availability of boxes and wall markers. For instance, in some data sets the perspective of interlocutors is similar (see Figure \ref{f:spatial-scenes-1} for 
 examples from one data set), i.e., robots
 are looking at the scene from the same position and there are few objects.
-Figure \ref{f:spatial-scenes-2} shows examples from different data sets.
+\figref{f:spatial-scenes-2} shows examples from different data sets.
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=0.8\columnwidth]{figs/spatial-scenes-overview-1}
+\includegraphics[width=.8\textwidth]{figs/spatial-scenes-overview-1}
 \end{center}
 \caption[Example world models]{Example world models from a spatial data
 set called \emph{space-game-2}. Left the world model of 
@@ -214,7 +211,7 @@ position of the objects change in every scene.}
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=0.8\columnwidth]{figs/spatial-scenes-overview-2}
+\includegraphics[width=.8\textwidth]{figs/spatial-scenes-overview-2}
 \end{center}
 \caption[Example scenes]{Example scenes from different 
 spatial data sets. Each row shows 
@@ -228,23 +225,23 @@ many objects is shown (\emph{space-game-18}).}
 \label{f:spatial-scenes-2}
 \end{figure}
 
-\section{Social Mechanisms}
+\section{Social mechanisms}
 \label{s:social-mechanisms}\index{social mechanisms}
 Language games require a number of social mechanisms to be in place. Joint attention, 
-turn-taking behavior, pointing and other non-linguistic feedback these are mechanisms 
+turn-taking behavior, pointing and other non-linguistic feedback are mechanisms 
 at the heart of the social interaction. Crucial social mechanisms required for these interaction 
 are  considered prerequisites for studying the evolution of language. They constitute the 
-background against which communication and evolution of communication takes place.
+background against which communication and evolution of communication take place.
 
 % joint attention
-Joint attentional scenes \citep{tomasello1995joint}\index{Tomasello, M.} in which interlocutors 
+In joint attentional scenes \citep{tomasello1995joint}\index{Tomasello, M.}, interlocutors 
 are jointly attending to some object for some reasonable amount of time.
-Establishing joint attention means in robotic experiments that two robots 
+Establishing joint attention in robotic experiments means that two robots 
 taking part in a language game must (1) share a physical environment, 
 (2) attend to a set of objects in their surrounding, (3) track whether the 
 respective other robot is able to attend to the same set of objects and 
 (4) be able to manipulate attention by pointing to distal objects and perceiving
-these pointing gestures  Joint attention is monitored by an external computer 
+these pointing gestures.  Joint attention is monitored by an external computer 
 program, that has access to the world models of both interacting robots.  This system
 initiates the interaction between two agents as soon as both agents
 observe the same set of objects.  Spatial scenes are manipulated 
@@ -256,7 +253,7 @@ to the same set of objects.
 % turn taking
 Social interactions have to be structured, so that agents can interpret the 
 signals they exchange. For instance, if the hearer points before
-he has received the utterance the speaker will have a hard time 
+he has received the utterance, the speaker will have a hard time 
 understanding the gesture. However, if the hearer points after
 receiving the utterance, the speaker can assume that this is the response
 to his speech act. Language games are coordinated by behavioral scripts. 
@@ -294,10 +291,7 @@ disagreement in communication by exchanging signals whose
 meaning is shared. Moreover, linguistic utterances are directly passed between
 interlocutors.
 
-
-
 %
 %\bibliographystyle{diss}
 %\bibliography{papers,space}
 %\end{document}
-

@@ -1,9 +1,12 @@
-%add all your local new commands to this file
+% %add all your local new commands to this file
 
 \newcommand{\NOM}{\textsc{nom}}
 \newcommand{\PREP}{\textsc{prep}}
 \newcommand{\GEN}{\textsc{gen}}
 \newcommand{\DAT}{\textsc{dat}}
+
+\renewcommand{\sectref}[1]{Section~\ref{#1}}
+
 
 % MISCELLANEOUS USEFUL EXPOSITORY MACROS ==========================
 
@@ -41,3 +44,5 @@
 \newcommand{\enum}[1]{\medskip \noindent \enumhead{#1}}  
 \newcommand{\phead}[1]{\enum{#1}}
 
+% Patching of deprecated latex commands
+% \let\tt\ttfamily % math mode?!

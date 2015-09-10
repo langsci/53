@@ -1,6 +1,18 @@
 % add all extra packages you need to load to this file 
 \usepackage{graphicx}
 \usepackage{tabularx}
-\usepackage{amsmath} 
+% \usepackage{amsmath} % is loaded in langsci.cls
 \usepackage{multicol}
+\usepackage{./LSP/lsp-styles/lsp-gb4e} % Why was this not loaded automatically?
+\usepackage{./LSP/lsp-styles/lsp-makros}
+\usepackage{./LSP/lsp-styles/lsp-cgloss}
 \usepackage{todonotes}
+\usepackage{alltt}
+\usepackage{fancyvrb}
+\fvset{fontsize=\footnotesize}
+
+
+% LISP code markup
+\usepackage{listings}
+\lstloadlanguages{Lisp}
+\lstset{language=Lisp,basicstyle=\footnotesize\ttfamily}

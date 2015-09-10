@@ -2,15 +2,14 @@
 %% \renewcommand{\includegraphics}[1][1]{} 
 %\begin{document}
 
-
-\chapter{Embodied Cognitive Semantics with IRL}
+\chapter{Embodied cognitive semantics with IRL}
 \label{s:irl}
 Artificial agents trying to achieve communicative goals in situated interactions
 in the real-world need powerful computational systems for conceptualizing 
 their environment. In order to provide 
 embodied artificial systems with rich semantics reminiscent of human 
 language complexity, agents need mechanisms for both conceptualizing complex 
-compositional semantic structure\index{semantic structure}, but, also for 
+compositional semantic structure\index{semantic structure}, but also for 
 actively reconstructing semantic 
 structure in interpretation of ambiguous utterances.
 Furthermore, the system must be open-ended and 
@@ -18,17 +17,17 @@ allow agents to adjust their semantic inventories in order to reach their goals.
 This chapter presents the computational system called
 Incremental Recruitment Language (IRL)\index{Incremental Recruitment Language} 
 that allows agents to represent and process complex conceptualizations\index{conceptualization}
-of spatial scenes. The work presented here bases itself on substantial previous work. 
+of spatial scenes. The work presented here is based on substantial previous work. 
 Key ideas of the IRL system have been laid out by \cite{steels2000emergence}\index{Steels, L.}, 
-with progress reported in \cite{steels2005planning}\index{Steels, L.}\index{Bleys, J.}, \cite{vandenbroeck2008irl}\index{Van den Broeck, W.}, and
-recently in \cite{spranger2010irl,spranger2012irl}\index{Loetzsch, M.}\index{Pauw, S.}\index{Spranger, M.}.
+with progress reported by \cite{steels2005planning}\index{Steels, L.}\index{Bleys, J.}, \cite{vandenbroeck2008irl}\index{Van den Broeck, W.}, and
+recently by \cite{spranger2010irl,spranger2012irl}\index{Loetzsch, M.}\index{Pauw, S.}\index{Spranger, M.}.
 
-\section{Procedural Semantics}
+\section{Procedural semantics}
 \label{s:grounded-procedural-semantics}
 \begin{figure}
 \center
-\includegraphics[width=1\columnwidth]{figs/the-red-block-network}
-\caption{Semantic structure underlying the utterance ``der rote Block'' (the red block).}
+\includegraphics[width=.8\textwidth]{figs/the-red-block-network}
+\caption{Semantic structure underlying the utterance \textit{der rote Block} (`the red block').}
 \label{f:the-red-block-network}
 \end{figure}
 
@@ -41,15 +40,15 @@ i.e. a set of operations that allow the hearer to, for example, discriminate
 an object in the environment or perform an action. Thus we model semantics, 
 i.e. what it is a speaker wants the hearer to execute, as a 
 program linking operations and data.  Let us start with an example. 
-Suppose a speaker utters the phrase ``der rote Block'' (the red block) with the intention 
+Suppose a speaker utters the phrase \textit{der rote Block} (`the red block') with the intention 
 of making the hearer point to an object. In this case, the phrase 
 encodes a program, i.e., set of operations, that are supposed to lead 
 the hearer to identify the object in question. Presumably
-the hearer of this utterance has to first filter the context for blocks, 
+the hearer of this utterance has to filter the context for blocks first, 
 followed by the application of the color category
 red, in order to arrive at the set of red blocks, which is used to 
 compute the topic consisting of a single entity. A possible program, 
-also called \emph{IRL-network}\index{IRL-network|see{semantic structure}}, is shown in Figure \ref{f:the-red-block-network}.
+also called \textsc{irl-network}\index{IRL-network|see{semantic structure}}, is shown in \figref{f:the-red-block-network}.
 This network explicitly represents the chain of the four operations {\footnotesize\tt get-context},
 {\footnotesize\tt apply-class}, {\footnotesize\tt apply-color} and {\footnotesize\tt apply-selector}
 by linking their arguments through variables 
@@ -57,18 +56,18 @@ by linking their arguments through variables
 includes the color category {\footnotesize\tt red}, 
 the object class {\footnotesize\tt block} and the selector 
 {\footnotesize\tt unique} which are introduced via so called 
-\emph{bind statements}, as in 
+\textsc{bind statements}, as in 
 {\footnotesize\tt (bind color-category ?color red)}. We collectively
-refer to concepts, categories etc. as \emph{semantic entities}\index{semantic entity}.
+refer to concepts, categories etc. as \textsc{semantic entities}\index{semantic entity}.
 
 IRL-networks consist of two types of nodes 
 \begin{description}
-\item[Cognitive operations,] also called \emph{semantic operations},\index{cognitive operation}
+\item[Cognitive operations,] also called \textsc{semantic operations},\index{cognitive operation}
 are the algorithms used in conceptualization. They encode a particular cognitive 
 function such as categorization using a color category,
 applying a selector or applying an object class and many more as will be shown
-see later in this book for the domain of space. Cognitive operations 
-are identified by their name, e.g. {\footnotesize\tt apply-color} and
+later in this book for the domain of space. Cognitive operations 
+are identified by their name, e.g. {\footnotesize\tt apply-color}, and
 they have a set of arguments which can be linked to other operations
 or semantic entities via variables (starting with {\footnotesize\tt ?}).
 \item[Semantic entites] is the general term for referring to prototypes,
@@ -87,28 +86,28 @@ is a prototype represented using values for different color channels.
 
 \begin{figure}
 \center
-\includegraphics[width=1\columnwidth]{figs/evaluation-tree}
+\includegraphics[width=\textwidth]{figs/evaluation-tree}
 \caption[Evaluation of an IRL-network]{Progressive evaluation 
-of the network in Figure \ref{f:the-red-block-network}
-on the context shown in Figure \ref{f:scene}.
+of the network in \figref{f:the-red-block-network}
+on the context shown in \figref{f:scene}.
 From left to right, each node represents a step in the evaluation process. From top to bottom, the evaluated operation, the node status, and the current list of bindings of each node are shown. A consistent solution with bindings for all variables is found in the last node, and the value 
-{\footnotesize\tt obj-252} is indeed a unique red block (compare \ref{f:scene}).}
+{\footnotesize\tt obj-252} is indeed a unique red block (compare \figref{f:scene}).}
 \label{f:evaluation-tree}
 \end{figure}
 
 \section{Evaluation}\index{cognitive operation!evaluation}
-A program such as the one in Figure \ref{f:the-red-block-network} is \emph{evaluated}, 
+A program such as the one in \figref{f:the-red-block-network} is \emph{evaluated}
 by a speaker to test the semantic structure with respect to the 
 particular communicative goal, or by a hearer in order to interpret an utterance.
 Evaluation is a process which cycles over the network and progressively computes values
-for variables, a process called \emph{binding}.
-When the network in Figure \ref{f:the-red-block-network}
+for variables, a process called \textsc{binding}.
+When the network in \figref{f:the-red-block-network}
 is evaluated the following happens. First {\footnotesize\tt get-context} gets the current 
 world model from the perceptual processes that are monitoring the 
 environment for events and objects and binds it to the variable 
 {\footnotesize\tt ?ctx-2}. This is followed by the evaluation of the {\footnotesize\tt apply-class}
-operation which computes a similarity score for how similar every object
-in the context is with respect to the object class {\footnotesize\tt block}. 
+operation which computes a similarity score for every object
+in the context with respect to the object class {\footnotesize\tt block}. 
 This yields the set of objects from the context with each object 
 scored using the computed similarity. The set is bound to the variable {\footnotesize\tt ?set-12}. 
 Because this variable is linked to the operation {\footnotesize\tt apply-color}, 
@@ -121,31 +120,31 @@ This yields a new set of objects with multiplied similarity scores.
 The set is bound to the variable {\footnotesize\tt ?set-31}. Lastly, {\footnotesize\tt apply-selector} 
 checks the objects in {\footnotesize\tt ?set-31}, finds the object with 
 the highest similarity score and binds it to the variable {\footnotesize\tt ?topic}
-which is the referent\footnote{Note that the word ``object'' here refers 
+which is the referent\footnote{Note that the word \textit{object} here refers 
 to an agent's private representation of 
 things he has perceived in the world and only 
 indirectly refers to the physical object which is the referent.
-} of the phrase ``der rote Block'' (the red block).
-Figure \ref{f:evaluation-tree} gives an idea how variables get progressively 
+} of the phrase \textit{der rote Block} (`the red block').
+\figref{f:evaluation-tree} gives an idea how variables get progressively 
 bound when the IRL-network is evaluated.
 
 This is only one example how such a network can be evaluated. 
-As has been argued in \cite{steels2000emergence}\index{Steels, L.},
+As \cite{steels2000emergence}\index{Steels, L.} has argued,
 language requires that semantic structure does not encode control flow, but rather 
 data flows in all directions and is computed wherever possible.
 For this, operations need to be able to function in different directions with
-varying input-output parameters
-For instance, the operation {\footnotesize\tt apply-class} which has three arguments, 
+varying input-output parameters.
+For instance, the operation {\footnotesize\tt apply-class}, which has three arguments, 
 applies a class such as {\footnotesize\tt block} to an input set, when the 
-class is explicitly represented in the network. But, in case
+class is explicitly represented in the network. But in case
 this class is not introduced via a bind statement in the network, the operation
-can also provide this information effectively turning this argument
-into an output argument. This \emph{multidirectionality}\index{cognitive operation!multidirectionality} of operations 
+can also provide this information, effectively turning this argument
+into an output argument. This \textsc{multidirectionality}\index{cognitive operation!multidirectionality} of operations 
 proves important for dealing with missing items, for instance due to partial parsing 
 of an utterance, but it is also needed when constructing semantic structure.
 
 
-\section{Conceptualization and Interpretation}\index{conceptualization}\index{interpretation}
+\section{Conceptualization and interpretation}\index{conceptualization}\index{interpretation}
 \begin{figure}
 \center
 \includegraphics[width=1.0\columnwidth]{figs/composition}
@@ -159,18 +158,18 @@ lead to solutions (green nodes).}
 \end{figure}
 
 There are two scenarios in which agents autonomously compose semantic
-structure like the one just described (Figure \ref{f:the-red-block-network}). 
+structure like the one just described in \figref{f:the-red-block-network}. 
 First, speakers have a particular communicative goal and need to construct 
-semantic structure, for instance, for singling out the particular topic the 
-speaker wants to draw attention to.
-This process is called \emph{conceptualization}. In the second scenario, 
+semantic structure, for instance, for singling out the particular topic they
+want to draw attention to.
+This process is called \textsc{conceptualization}. In the second scenario, 
 hearers use information parsed from the observed utterance and their 
 knowledge about the current context of the interaction to 
 actively reconstruct meanings from the potentially partial 
 structures parsed by the language system. We call this process 
-\emph{interpretation}. Both cases are equally important and
+\textsc{interpretation}. Both cases are equally important and
 they both conceive the process of building semantic structure as a heuristically
-guided search process that explores the space of possible IRL-networks 
+guided search process, that explores the space of possible IRL-networks 
 driven by the agent's particular communicative goal and the information
 available to him.
 
@@ -183,10 +182,10 @@ blocks, in particular, cognitive operations packaged into chunks
 into more and more complex semantic structures. 
 Each assembled structure is immediately tested by evaluating it which assesses
 its compatibility with the current communicative goal and the perceived context.
-Figure \ref{f:the-red-block-search-tree} shows an example of such a search process 
-that has produced the program in Figure \ref{f:the-red-block-network} for discriminating 
-the red block in Figure \ref{f:scene}. 
-The search process for `good' semantic structure is guided by 
+\figref{f:the-red-block-search-tree} shows an example of such a search process 
+that has produced the program in \figref{f:the-red-block-network} for discriminating 
+the red block in \figref{f:scene}. 
+The search process for ``good'' semantic structure is guided by 
 many different heuristics, one being that the structure can be expressed using the
 language system available to an agent. Others are more focused on the particular
 character of the communicative goal. If the goal is to discriminate an object 
@@ -205,7 +204,7 @@ the parsed utterance. The search process is constrained by the partial
 meaning parsed from the utterance and
 the kinds of semantic structures that are appropriate in the current context.
 The same scoring mechanisms
-as for conceptualization ensures that only structure that is 
+as for conceptualization ensures that only a structure that is 
 discriminating for a particular object (implicitly assuming that the 
 speaker constructs structure based on these principles) will be considered 
 and the best of all possible results is chosen as the interpretation of an utterance. 
@@ -219,10 +218,10 @@ tool that highly structures human language in order to manage not only
 the search space of possible syntactic structure \citep{steels2006dampen}\index{Steels, L.}\index{Wellens, P.} but
 perhaps more importantly the vast space of possible conceptual
 structures. Parts of meaning that are covered by a particular
-part of language can be stored as a \emph{chunk} and 
+part of language can be stored as a chunk and 
 then used as an basic atomic unit in composition.
 Ready-made semantic structure dramatically reduces the search space. If a structure like
-the final structure in Figure \ref{f:the-red-block-network} is
+the final structure in \figref{f:the-red-block-network} is
 constructed from scratch using simple operations, the search tree
 would have a search depth of three (essentially one step in depth per
 operation). However, every time an operation is added to a program, it
@@ -243,22 +242,20 @@ respect to the communicative goals, e.g. discriminative power
 of a strategy, but also with respect to communicative success. 
 Strategies for conceptualizing reality are tightly linked to 
 language. For instance, one can image that the
-chunk in Figure \ref{f:the-red-block-chunk} which 
-is extracted from the network in Figure \ref{f:the-red-block-network}
+chunk in \figref{f:the-red-block-chunk} which 
+is extracted from the network in \figref{f:the-red-block-network}
 could be the semantics expressed by a determined adjective
-noun phrase construction. One important claim is that the structure in language, 
-in particular in grammar is tightly connected to the conceptualization
-of reality underlying every utterance. So the fact that in English
-noun phrases have determiners or, for instance, that in Russian all
-verbs are marked for aspects suggests that these languages 
+noun phrase construction. One important claim is that the structure in language --
+in particular in grammar -- is tightly connected to the conceptualization
+of reality underlying every utterance. So the exemplary facts that in English,
+noun phrases have determiners, or that in Russian, all
+verbs are marked for aspects, suggests that these languages 
 require speakers to conceptualize reality in a certain way and
 mark these conceptualizations in language. 
 
-
-
 \begin{figure}
 \center
-\includegraphics[width=1.0\columnwidth]{figs/det-color-adj-np-chunk}
+\includegraphics[width=.8\textwidth]{figs/det-color-adj-np-chunk}
 \caption[Color-adjective noun phrase chunk]{Chunk representing the 
 meaning of a determined color-adjective noun phrase. Chunks consist 
 of an IRL-network, plus additional information used for processing: 
@@ -267,7 +264,7 @@ a target variable and open variables. These variables are typed
 and they are used in conceptualization and interpretation for combining chunks
 to larger structures. The target variable of a chunk can be linked to the open
 variable of another chunk. Which selector is used, 
-which object class and which color category are is mostly
+which object class and which color category are, is mostly
 determined by evaluating the network which yields bindings for
 the variables. Since the corresponding variables are open variables
 the information can also be provided by other chunks or in interpretation
@@ -303,7 +300,7 @@ and how agents can invent, adopt and shape their inventory
 of color categories based on the environment they are
 facing. These insights into adaptive categories,
 but also names and individuals can be incorporated into
-IRL which provides mechanisms for the creation and
+IRL, which provides mechanisms for the creation and
 adaptation of categories in semantic structure.
 
 
@@ -324,14 +321,14 @@ chunks and categories.
 
 
 The oldest and in some sense most similar system 
-to what I have presented here is Winograd's SHRDLU 
-\citep{haddock1989computational,winograd1971procedures}\index{Haddock, N. J.}\index{Winograd, T.}, However, SHRDLU misses the key aspects of grounding, active interpretation and conceptualization 
-as a search process. Other work such as \cite{bailey1997modeling}\index{Bailey, D.}\index{Narayanan, S.}\index{Feldman, J.}
+to what I have presented here is Winograd's \textsc{shrdlu} 
+\citep{haddock1989computational,winograd1971procedures}\index{Haddock, N. J.}\index{Winograd, T.}, However, \textsc{shrdlu} misses the key aspects of grounding, active interpretation and conceptualization 
+as a search process. Other work such as those by \cite{bailey1997modeling}\index{Bailey, D.}\index{Narayanan, S.}\index{Feldman, J.}
 and \cite{siskind2001grounding}\index{Siskind, J. M.} 
 focus mostly on lexical meaning. Some approaches
 have taken more general approaches e.g. to event structure \citep{narayanan1999moving}\index{Narayanan, S.} 
 but stay mostly tied with that particular domain. One of the few approaches talking about 
-objects and events in the same framework is \cite{roy2005semiotic}\index{Roy, D.}, which is comparable 
+objects and events in the same framework is \citegen{roy2005semiotic}\index{Roy, D.}, which is comparable 
 to ours, but so far has been a theoretical proposal only.
 
 
