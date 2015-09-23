@@ -228,8 +228,8 @@
 \usepackage{amssymb} % has to be loaded before other stuff
 \usepackage{amsmath} % has to be loaded before mathspec
 % \usepackage{dtklogos}\newcommand{\xelatex}{\XeLaTeX\xspace}	% the XeLaTeX symbol	
+\usepackage{mathspec}
 \usepackage{metalogo}\newcommand{\xelatex}{\XeLaTeX\xspace}	
-\usepackage{fontspec}
 \newcommand{\fontpath}{./LSP/lsp-fonts/}
 
 \setsansfont[
@@ -257,7 +257,7 @@
 
 
 
-\setmainfont[
+\setallmainfonts(Digits,Latin,Greek)[
 	Ligatures={TeX,Common},
 	Path=\fontpath,
 	PunctuationSpace=0,							

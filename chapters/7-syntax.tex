@@ -3,7 +3,7 @@
 %\begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Syntactic Processing}
+\chapter{Syntactic processing}
 \label{s:german-locative-phrases-syntax}
 The syntax of German locative phrases mirrors the complexity of 
 spatial semantics. The main task of syntactic processing is to 
@@ -36,12 +36,12 @@ in FCG can be applied to organize efficient processing while
 allowing grammar designers to build extendable and concise grammars.
 
 This chapter starts by presenting the general ideas behind the design of 
-the grammar (Section \ref{s:syntactic-processing-overview}) and
+the grammar (\sectref{s:syntactic-processing-overview}) and
 identifying core issues that have to be resolved in order to arrive at an
 operational system. The remaining Sections \ref{s:lexical-functional}
 to \ref{s:handling-case} show how to deal with these issues.
 
-\section{Overview of Syntactic Processing}
+\section{Overview of syntactic processing}
 \label{s:syntactic-processing-overview}
 One of the main problems of syntactic processing in a system that
 is integrated with procedural semantics such as IRL is the problem
@@ -73,8 +73,8 @@ of the semantic entity in production. In parsing these units gather information
 required for the semantic interpretation of a semantic entity in the 
 surrounding semantic structure. Lexical constructions introduce abstractions
 into the transient structure\index{transient structure} that allow to go from concrete semantic entities
-to the class they are in. For instance, ``links'' (left) is a lateral spatial 
-category such as ``rechts'' (right). Both behave similar in semantics 
+to the class they are in. For instance, \textit{links} (`left') is a lateral spatial 
+category such as \textit{rechts} (`right'). Both behave similar in semantics 
 as well as in syntax. Lexical units introduce such type information
 to allow hierarchy in processing to take advantage of this information.
 \item[Functional Constructions] This class of constructions is related to
@@ -103,7 +103,7 @@ relations between constituents.
 exclusively with morphology. They are responsible for determining and 
 processing word forms, i.e. the string, for expressing lexical items. In German
 the concrete form of a lexical item is often determined by the larger
-syntactic structure. For instance, a spatial adjective such as ``links'' (left) in
+syntactic structure. For instance, a spatial adjective such as \textit{links} (`left') in
 a determined adjective noun phrase has to agree with the gender and the number
 of the noun and with the case of the determined noun phrase. This requires 
 that in production the form of a lexical item is determined when this information
@@ -118,9 +118,9 @@ discussed in detail in Section \ref{s:semantic-ambiguity}.
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=1.0\columnwidth]{figs/cxn-application}
+\includegraphics[width=.8\textwidth]{figs/cxn-application}
 \end{center}
-\caption[Construction application]{
+\caption[Construction application]{%
 Construction application in the German spatial language 
 grammar discussed in this chapter. In parsing,
 morphological constructions apply first followed by lexical and 
@@ -160,7 +160,7 @@ The chapter concludes by discussing how to deal with the German
 case system (Section \ref{s:handling-case}).
 
 
-\section{Lexical Classes -- Lexical and Functional Constructions}
+\section{Lexical classes -- lexical and functional constructions}
 \label{s:lexical-functional}
 In German the same spatial relation can be expressed using different lexical classes
 (adjective, adverb or preposition). The following shows 
@@ -168,27 +168,27 @@ an example of the spatial relation {\footnotesize\tt front} expressed
 as adjective (Example \ref{e:der-vordere-block-2}), adverb (Example \ref{e:der-block-vorne-2}), 
 and prepositions (Example \ref{e:der-block-vor-der-kiste-2}) which
 are repeated here for convenience from Chapter \ref{s:german-spatial-language-introduction}.
-\begin{example}
+\ea
 \label{e:der-vordere-block-2}
-\gll der vordere Block 
-the.NOM front.ADJ.NOM block.NOM 
-\glt `The front block',
-\glend
-\end{example}
-\begin{example}
+\gll der vordere Block\\
+the.{\NOM} front.{\ADJ}.{\NOM} block.{\NOM}\\
+\glt `The front block'\\
+
+\z
+\ea
 \label{e:der-block-vorne-2}
-\gll der Block vorne 
-the block.NOM in the front.ADV 
-\glt `The front block' 
-\glend
-\end{example}
-\begin{example}
+\gll der Block vorne\\
+the block.{\NOM} in the front.{\ADV} \\
+\glt `The front block'\\
+
+\z
+\ea
 \label{e:der-block-vor-der-kiste-2}
-\gll der Block vor der Kiste 
-the.NOM block.NOM front.PREP the.DAT box.DAT 
-\glt `The block in front of the box'.
-\glend
-\end{example}
+\gll der Block vor der Kiste \\
+the.{\NOM} block.{\NOM} front.{\PREP} the.{\DAT} box.{\DAT} \\
+\glt `The block in front of the box'\\
+
+\z
 
 Lexical classes are an example of a many-to-many mappings. 
 Every German spatial relation discussed in this book
@@ -197,14 +197,14 @@ Vice versa, every lexical class has a number of relations that
 are part of it. For instance, the spatial relations {\footnotesize\tt front}, {\footnotesize\tt back}, 
 {\footnotesize\tt left}, can all be expressed as adverb. 
 However, not all spatial relations can
-be expressed as adverbs. The proximal relations ``nah'' (near) and ``fern'' 
-do not occur in adverbial form\footnote{Linguistic analysis is made 
+be expressed as adverbs. The proximal relations \textit{nah} (`near') and \textit{fern} 
+do not occur in adverbial form.\footnote{Linguistic analysis is made 
 difficult by diverging vocabulary in linguistics and different usages of 
 the same term by different schools. I use the term adverb here for spatial relations
-such as ``vorne'' (front) that can be followed by prepositional phrases and
+such as \textit{vorne} (`front') that can be followed by prepositional phrases and
 used as postmodifiers on determined noun phrases e.g. 
-``der Block vorne in der Kiste'' (in the front area of the box).}.
-Table \ref{t:lexical-class-word-forms} gives an overview of lexical
+\textit{der Block vorne in der Kiste} (`in the front area of the box').}
+\tabref{t:lexical-class-word-forms} gives an overview of lexical
 classes and associated forms. The table shows that different
 groups of spatial relations partake in different lexical classes. 
 For instance, all spatial relations except for proximal relations 
@@ -281,9 +281,9 @@ The fact that Examples \ref{e:der-vordere-block-2},
 refer to the same projective category {\footnotesize\tt front} is expressed 
 by the lexical construction for the spatial relation {\footnotesize\tt front}.
 The construction maps the reference to the spatial relation onto 
-the word stem ``vor''. The following template shows the lexical 
+the word stem \textit{vor}. The following template shows the lexical 
 construction for the category {\footnotesize\tt front}:
-\begin{example}
+\ea
 \label{e:def-lex-front}
 \begin{footnotesize}
 \begin{Verbatim}[commandchars=\\\{\}]
@@ -294,7 +294,7 @@ construction for the category {\footnotesize\tt front}:
   :stem "vor"))
 \end{Verbatim}
 \end{footnotesize}
-\end{example}
+\z
 Lexical constructions capture the similarity of different syntactic and
 semantic usage scenarios of the same category. They encode
 that no matter how the lexical item is used in the larger
@@ -311,7 +311,7 @@ to be able to build grammatical structure out of functional units.
 Below are the skeletons for the functional constructions of spatial 
 adjective, frontal adverbs and frontal prepositions:
 
-\begin{example}
+\ea
 \label{e:def-fun-spatial-adjective}
 \begin{footnotesize}
 \begin{Verbatim}[commandchars=\\\{\}]
@@ -323,9 +323,9 @@ adjective, frontal adverbs and frontal prepositions:
  :syn-function (adjectival))
 \end{Verbatim}
 \end{footnotesize}
-\end{example}
+\z
 
-\begin{example}
+\ea
 \label{e:def-fun-frontal-adverb}
 \begin{footnotesize}
 \begin{Verbatim}[commandchars=\\\{\}]
@@ -341,9 +341,9 @@ adjective, frontal adverbs and frontal prepositions:
   :syn-class (adverb)))
 \end{Verbatim}
 \end{footnotesize}
-\end{example}
+\z
 
-\begin{example}
+\ea
 \label{e:def-fun-frontal-preposition}
 \begin{footnotesize}
 \begin{Verbatim}[commandchars=\\\{\}]
@@ -357,7 +357,7 @@ adjective, frontal adverbs and frontal prepositions:
   :syn-class (angular-preposition)))
 \end{Verbatim}
 \end{footnotesize}
-\end{example}
+\z
 
 These constructions introduce constructional meaning, e.g. 
 {\footnotesize\tt construct-region-frontal} together with semantic 
@@ -408,15 +408,13 @@ the constructions introduce.}
 \end{footnotesize}
 \end{sidewaystable}
 
-
-
 \begin{figure}
 \includegraphics[width=\columnwidth]{figs/lexicals-type-potentials-cats}
 \caption{Subset of the mapping of lexical items to functional constructions.}
 \label{f:lexicals-type-potentials-cats}
 \end{figure}
 
-\paragraph*{Encoding type and lexical class potentials}
+\subsection{Encoding type and lexical class potentials}
 In order to solve the many-to-many mapping problem,
 lexical and functional constructions are 
 extended using the \emph{actual-potential}\index{design pattern!actual-potential} design pattern 
@@ -458,12 +456,12 @@ Figure \ref{f:lexicals-lex-cat-potentials-cats}  for {\footnotesize\tt lex-cat} 
 \label{f:lexicals-lex-cat-potentials-cats}
 \end{figure}
 
-\paragraph*{Technical realization}
+\subsection{Technical realization}
 The actual-potential\index{design pattern!actual-potential} design pattern is easily implemented
 using a dedicated template for extending lexical constructions.
 Example \ref{e:def-lex-front}, for instance, is supplemented by the following two 
 templates which introduce potentials on the semantic and syntactic side.
-\begin{example}
+\ea
 \label{e:def-lex-front-potentials}
 \begin{footnotesize}
 \begin{Verbatim}[commandchars=\\\{\},fontsize=\footnotesize]
@@ -475,11 +473,11 @@ templates which introduce potentials on the semantic and syntactic side.
  (spatial-adjective frontal-adverb frontal-preposition))
 \end{Verbatim}
 \end{footnotesize}
-\end{example}
+\z
 These two templates specify the {\footnotesize\tt type} and 
 {\footnotesize\tt lex-cat} potentials and directly translate into 
 attributes in the {\footnotesize\tt front} lexical construction:
-\begin{example}
+\ea
 \label{e:def-lex-front-cxn}
 \begin{footnotesize}
 \begin{Verbatim}[]
@@ -512,7 +510,7 @@ attributes in the {\footnotesize\tt front} lexical construction:
 ...)
 \end{Verbatim}
 \end{footnotesize}
-\end{example}
+\z
 Importantly, the template {\footnotesize\tt def-add-potential} 
 not only adds the {\footnotesize\tt potential} attribute but also an 
 attribute called {\footnotesize\tt actual}. This attribute, as we will
@@ -527,7 +525,7 @@ allows functional constructions to choose
 the potential in which they are interested and to constrain
 their own application. This process can be seen in an extended 
 version of the functional spatial adjective construction:
-\begin{example}
+\ea
 \label{e:def-fun-spatial-adjective-potentials}
 \begin{footnotesize}
 \begin{Verbatim}[commandchars=\\\{\}]
@@ -539,7 +537,7 @@ version of the functional spatial adjective construction:
  lex-cat spatial-adjective)
 \end{Verbatim}
 \end{footnotesize}
-\end{example}
+\z
 These templates express that, in order for the spatial adjective 
 construction to apply, certain potentials need to be present in the 
 transient structure\index{transient structure}. More precisely, the {\footnotesize\tt type} potential 
@@ -549,7 +547,7 @@ transient structure\index{transient structure}. More precisely, the {\footnotesi
 The template for spatial adjectives translates into the following 
 feature structure (for illustrative purposes, only the semantic 
 side is shown here):
-\begin{example}
+\ea
 \label{e:def-fun-spatial-adjective-potentials}
 \begin{footnotesize}
 \begin{Verbatim}[commandchars=\\\{\}]
@@ -565,7 +563,7 @@ side is shown here):
 ...)
 \end{Verbatim}
 \end{footnotesize}
-\end{example}
+\z
 This construction can only apply if the {\footnotesize\tt type} potential 
 of the lexical constituent in the transient structure imperatively includes 
 {\footnotesize\tt angular-spatial-category}. Additionally,
@@ -597,7 +595,7 @@ apply in the first place (see Figure \ref{f:production-vordere})
 \caption[Interaction of lexical and functional constructions -- syntax]{
 Interaction of lexical constructions with 
 functional constructions in production of
-``vordere'' (front).
+\textit{vordere} (`front').
 The arrow signifies the order of application. 
 Left, the {\footnotesize\tt vordere} unit on the semantic side of the 
 processed transient structure is shown. 
@@ -618,9 +616,6 @@ for {\footnotesize\tt type} and {\footnotesize\tt spatial-adjective} for {\footn
 \label{f:production-vordere}
 \end{figure}
 
-
-
-
 \begin{figure}
 \begin{center}
 \includegraphics[width=1.0\columnwidth]{figs/parsing-vordere}
@@ -628,7 +623,7 @@ for {\footnotesize\tt type} and {\footnotesize\tt spatial-adjective} for {\footn
 \caption[Interaction of lexical constructions
 with functional constructions -- semantics]{
 Interaction of lexical constructions 
-with functional constructions in parsing ``vordere'' (front). 
+with functional constructions in parsing \textit{vordere} (`front'). 
 Lexical constructions apply before functional constructions.
 The {\footnotesize\tt vordere} unit on the semantic side of the 
 processed transient structure\index{transient structure} is shown on the left.
@@ -656,12 +651,12 @@ the lexical class of a word is decided by morphological
 constructions. The morphological constructions apply first when 
 parsing an utterance and they provide a value for the
 {\footnotesize\tt actual} attribute. For instance, when observing the form 
-``vorne'', the morphological construction responsible for the
-string ``vorne'' triggers and adds the information to the transient 
+\textit{vorne}, the morphological construction responsible for the
+string \textit{vorne} triggers and adds the information to the transient 
 structure, namely that an adverb was observed in parsing (see 
-Figure \ref{f:parsing-vordere} for a schematic overview).
+\figref{f:parsing-vordere} for a schematic overview).
 
-\paragraph*{Discussion}
+\subsection{Discussion}
 Handling the many-to-many mapping problem in lexical class choice
 in principle also has other solutions. In particular, one could
 rely on the search process of FCG in order to branch into all possible
@@ -682,8 +677,8 @@ with much fewer constructions (less than 20 lexical and functional constructions
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Landmarks and Complements -- 
-Adverbial and Prepositional Constructions}
+\section{Landmarks and complements -- 
+adverbial and prepositional constructions}
 \label{s:landmarks+complements}
 Chapter \ref{s:german-spatial-language-introduction} contains a number of 
 examples of landmark and perspective marking in German spatial 
@@ -760,7 +755,7 @@ This means, that the {\footnotesize\tt angular-pp-phrase} construction,
 can unify with this specific argument, which is  for this purpose. 
 Let us look at the template to understand the linking
 
-\begin{example}
+\ea
 \begin{footnotesize}
 \begin{verbatim}
 (def-phrasal-cxn angular-pp-phrase
@@ -778,7 +773,7 @@ Let us look at the template to understand the linking
 \end{verbatim}
 \end{footnotesize}
 \label{e:angular-pp-phrase}
-\end{example}
+\z
 Linking is achieved by explicitly unifying the corresponding 
 {\footnotesize\tt args} in the structure, using the variable
 {\footnotesize\tt ?landmark}. The variable occurs both in the {\footnotesize\tt ?ref} 
@@ -791,13 +786,13 @@ For adverbs the linking with landmark works similar to prepositions.
 However, there are important differences in syntax between prepositions
 and adverbs. Let us consider the example of lateral adverbs.
 Lateral adverbs can be extended by landmarks, but the has to 
-be marked using a ``von'' prepositional phrase. 
+be marked using a \textit{von} prepositional phrase. 
 The construction handling the landmark augmentation of lateral adverbs 
-is shown below. In addition to linking, this construction introduces, 
-the preposition ``von''. 
+is shown below. In addition to linking, this construction introduces
+the preposition \textit{von}. 
 
 
-\begin{example}
+\ea
 \begin{footnotesize}
 \begin{verbatim}
 (def-phrasal-cxn lateral-adverb-landmark-marked
@@ -818,7 +813,7 @@ the preposition ``von''.
 \end{verbatim}
 \end{footnotesize}
 \label{e:lateral-adverb-landmark-marked}
-\end{example}
+\z
 
 
 These two constructions show how to solve parts of the  
@@ -834,9 +829,7 @@ the {\footnotesize\tt angular-preposition} potential, but also they
 cannot be extended using the lateral 
 landmark marking scheme, since they are not of class 
 {\footnotesize\tt lateral-region}. Other constructions deal with 
-``in'' prepositional phrases and frontal adverbs.
-
-
+\textit{in} prepositional phrases and frontal adverbs.
 
 \begin{table}
 \begin{centering}
@@ -865,7 +858,7 @@ constituent \emph{c2}, i.e. \emph{c1} has to be exactly before \emph{c2}.}
 \end{centering}
 \end{table}
 
-\section{Linking Everything Together -- High-level Phrasal Constructions}
+\section{Linking everything together -- high-level phrasal constructions}
 \label{s:phrasal}
 The previous section looked at prepositional and adverbial constructions. 
 But, there is more. Particularly, there are important constructions, which only care 
@@ -903,34 +896,28 @@ can be extended by determiners through application of the {\footnotesize\tt dete
 provides for all examples, where nouns, or adjective modified nouns are determined
 using an article.
 \begin{table}
-\begin{centering}
-\begin{small}
-\begin{tabular}{| p{1.75cm} || p{1.55cm} || p{1.4cm}  || p{1.3cm} | p{1.6cm} || p{1.8cm} |}
-\hline
-cxn &  c1 sem-fn & c2 sem-fn & sem-fns & operation  & examples 
-\\ \hline\hline
-
+\begin{tabularx}{\textwidth}{XXXXXX}
+\lsptoprule
+cxn &  c1 sem-fn & c2 sem-fn & sem-fns & operation  & examples\\
+\midrule
 adjectival--nominal--phrase  &modifier &identifier &identifier & &[linke] [block] 
-\\ \hline  
+\\ \midrule
 determiner--nominal--phrase  &determiner & identifier & reference & & [der] [block] 
-\\ \hline
+\\ \midrule
 preposition--referring-expression--phrase &relation &reference & modifier &  & [an] [der kiste] 
-\\ \hline  
+\\ \midrule 
 referring-expression-adverbial-phrase  & reference & modifier & reference & 
 apply-region-filter & [der block] [links], [der block] [vor/an...] 
-\\ \hline  
-possessive  &reference & reference & ref & possessive
+\\ \midrule 
+possessive  & reference & reference & ref & possessive
 & [die linke Seite] [der Kiste] 
-\\ \hline  
-\end{tabular}
-
+\\\lspbottomrule
+\end{tabularx}
 \caption[Mapping of semantic functions]{Mapping of semantic functions of phrasal constructions. For every construction the semantic function 
 potential that needs to be present for the two constituents \emph{c1} and \emph{c2} is shown, as well as the 
 new semantic function potential provided (\emph{sem-fns}). Some of the constructions add additional meaning
 with more complicated argument linking properties. All others however link the {\footnotesize\tt ref} argument of constituent two (\emph{c2}) to the {\footnotesize\tt source} argument of constituent one (\emph{c1}).}
 \label{t:phrasal-sem}
-\end{small}
-\end{centering}
 \end{table}
 
 This explains how adjectival noun phrases can be build, 
@@ -938,9 +925,9 @@ but how do adverbial complement phrases discussed in the
 previous section get linked to referring expressions? 
 This is solved by the {\footnotesize\tt referring-expression-adverbial-phrase}, 
 which links constituents with semantic/syntactic function 
-{\footnotesize\tt reference/referring-expression} (example ``der block'' or ``der gr\"une Block'' 
-and {\footnotesize\tt modifier/adverbial} (example ``links'', ``links von der Kiste'', 
-``vor der Kiste'' \ldots) into a unit that not only syntactically introduces 
+{\footnotesize\tt reference/referring-expression} (example \textit{der block} or \textit{der gr\"une Block}
+and {\footnotesize\tt modifier/adverbial} (example \textit{links}, \textit{links von der Kiste}, 
+\textit{vor der Kiste} \ldots) into a unit that not only syntactically introduces 
 the word order, that the adverbial is behind the referring expression, 
 but also links the meaning and adds the operation {\footnotesize\tt apply-region-filter}. 
 This construction besides linking the meaning of constituents, additionally, 
@@ -962,7 +949,7 @@ construction would also need to specialize on the semantic type of the constitue
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Handling Case}
+\section{Handling case}
 \label{s:handling-case}
 Case and gender agreement in German is an example of a 
 highly distributed information
@@ -971,19 +958,18 @@ are contributed by many different constructions
 and thus have to be incrementally integrated in order
 to produce grammatical utterances in German. For instance, the
 grammatical gender of a prepositional determined adjective noun phrase
-is determined by the noun, as shown in the following example (``Block'', masculine).
-\begin{example}
+is determined by the noun, as shown in the following example (\textit{Block}, masculine).
+\ea % -> \ea
 \label{e:hinter-dem-linken-block}
-\gll hinter dem linken Block 
-behind.PREP the.DAT left.DAT block.DAT 
-\glt `behind the left block'
-\glend
-\end{example}
-Alternatively, the case is governed by the preposition (``hinter'', requires dative). The determiner (``der'') and the
-adjective (``link'') have to be case and gender marked according to
+\gll hinter dem linken Block\\
+behind.{\PREP} the.{\DAT} left.{\DAT} block.{\DAT}\\
+\glt `behind the left block'\\
+\z 
+Alternatively, the case is governed by the preposition (\textit{hinter}, requires dative). The determiner (\textit{der}) and the
+adjective (\textit{link}) have to be case and gender marked according to
 the information provided from these different sources,
 namely, both the determiner and adjective are used in
-their masculine dative forms (``dem'' and ``linken''). In other words,
+their masculine dative forms (\textit{dem} and \textit{linken}). In other words,
 the concrete form of a projective adjective can only be fixed after
 the complete syntactic structure is processed. Along the way, 
 information coming from the preposition about which
@@ -1001,7 +987,7 @@ variables embedded in feature matrices\index{design pattern!feature matrix} are 
 uncertainty, percolation for moving information around and
 constructions of a particular type in order to postpone decisions.
 
-\subsection*{Representing the State of Information}
+\subsection{Representing the state of information}
 Distinctive feature matrices (see \citealp{vantrijp2011matrices}\index{van Trijp, R.}) are a means to
 represent the current, possibly indecisive state of information in
 processing.  They allow different constructions to independently
@@ -1039,8 +1025,8 @@ variables i.e. marked with a `?').
   \centerline{\includegraphics[scale=0.61]{figs/hinter-dem-linken-block-1}}
   \caption[Transient structure after the application of lexical and
     functional constructions]{Transient structure after the application of lexical and
-    functional constructions for production of ``hinter dem linken
-    Block'' (``behind the left block''). For simplification, each unit
+    functional constructions for production of \textit{hinter dem linken
+    Block} (`behind the left block'). For simplification, each unit
     is only shown with its distinctive feature matrix\index{design pattern!feature matrix} for case/gender
     agreement, if present. Furthermore, the feature matrices of the
     lexical units are identical to those of their parent units and are
@@ -1048,7 +1034,7 @@ variables i.e. marked with a `?').
   \label{f:hinter-dem-linken-block-1}
 \end{figure}
 
-Figure \ref{f:hinter-dem-linken-block-1} shows the state of the
+\figref{f:hinter-dem-linken-block-1} shows the state of the
 transient structure\index{transient structure} after the application of lexical and functional
 constructions. It can be seen how the different states of information
 for articles, adjectives, prepositions and nouns are technically
@@ -1062,7 +1048,7 @@ requires. On the other hand, the noun ({\footnotesize\texttt{noun-unit-334}}) is
 categorized based on its gender, and the feature matrix\index{design pattern!feature matrix} consequently
 has variables in the row for masculine and excludes all other fields.
 
-\subsection*{Percolation and Agreement -- Moving Information Around and Unification}
+\subsection{Percolation and agreement -- moving information around and unification}
 Given the setup of initial information by lexical and functional
 constructions, all subsequently applied constructions have to be able
 to move information around and to further constrain the
@@ -1140,8 +1126,8 @@ ultimately decided.
 For some phrases case is not established by prepositions but
 rather by the general grammatical structure. A prime example is when 
 the utterance itself only consists of a noun phrase, which then needs to be marked by 
-the nominative case. For example when meanings for utterances such as ``der
-linke Block'' (``the block to the left'') are expressed, then there
+the nominative case. For example when meanings for utterances such as \textit{der
+linke Block} (`the block to the left') are expressed, then there
 is no preposition that determines the case of the whole
 phrase by agreement. Rather, the {\footnotesize\texttt{referring-expression}}
 construction (see Figure \ref{f:referring-expression-fvm})
@@ -1150,7 +1136,7 @@ determined-noun-phrase unit with a matrix constraining the case to
 nominative.
 
 
-\subsection*{Postponing decisions}
+\subsection{Postponing decisions}
 After the application of the {\footnotesize\tt angular-pp-phrase}
 construction, all necessary information has been accumulated. Case and
 gender are decided, and, hence, all syntactic features for the
@@ -1162,13 +1148,14 @@ are six different articles in German that unevenly cover the 12
 possible case-gender combinations, as shown in the chart below:
 
 \begin{center}
-  \begin{tabular}{ c || c | c | c }
-    & m & f & n \\ \hline\hline
-    nom  & \emph{der} & \emph{die} & \emph{das} \\ \hline
-    gen  & \emph{des} & \emph{der} & \emph{des} \\ \hline
-    dat & \bf{\emph{dem}} & \emph{der} & \bf{\emph{dem}} \\ \hline
+  \begin{tabular}{cccc}
+  	\lsptoprule
+    & m & f & n \\ \midrule
+    nom  & \emph{der} & \emph{die} & \emph{das} \\
+    gen  & \emph{des} & \emph{der} & \emph{des} \\
+    dat & \bf{\emph{dem}} & \emph{der} & \bf{\emph{dem}} \\
     acc & \emph{den} & \emph{die} & \emph{das} \\ 
-  
+	\lspbottomrule
   \end{tabular}
 \end{center}
 ~\\
@@ -1177,7 +1164,7 @@ possible case-gender combinations, as shown in the chart below:
   \centerline{\includegraphics[scale=0.65]{figs/dem-morph-fvm}}
   \caption[Distinctive feature matrix\index{design pattern!feature matrix} of a morphological construction]{
   Distinctive feature matrix of the morphological construction
-    that maps the string ``dem'' to masculine or neuter and dative
+    that maps the string \textit{dem} to masculine or neuter and dative
     articles. Note that since this is a morphological construction, both
     poles of the construction apply to the syntactic pole of a transient
     structure.}
@@ -1191,8 +1178,8 @@ morphological construction is shown in Figure \ref{f:dem-morph}. Since
 this construction has a variable in the dative masculine field, it
 matches with unit {\footnotesize\texttt{unique-unit-99}} in Figure
 \ref{f:hinter-dem-linken-block-3}. Similarly, other morphological
-entries add the strings ``linken'' to the {\footnotesize\texttt{block-unit-47}},
-``Block'' to the {\footnotesize\texttt{block-unit-47}} and ``hinter'' to
+entries add the strings \textit{linken} to the {\footnotesize\texttt{block-unit-47}},
+\textit{Block} to the {\footnotesize\texttt{block-unit-47}} and \textit{hinter} to
 {\footnotesize\texttt{back-unit-11}}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1223,12 +1210,8 @@ leading to concise grammars, while facilitating efficient processing.
 The grammar is powerful enough to deal with German locative
 phrases that include spatial relations, landmarks and even perspective.
 Figure \ref{f:parse-result-transient} shows the final transient structure when an agent
-parses the phrase ``der Block links von der Kiste von dir aus'' (the Block
-to the left of the box from your perspective).
-
-
-
-
+parses the phrase \textit{der Block links von der Kiste von dir aus} (`the block
+to the left of the box from your perspective').
 
 %\bibliographystyle{diss}
 %\bibliography{papers,space} 
