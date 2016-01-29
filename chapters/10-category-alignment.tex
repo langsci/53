@@ -3,29 +3,29 @@
 %\begin{document}
 
 
-\chapter{Evolution of Basic Spatial Category Systems}
+\chapter{Evolution of basic spatial category systems}
 \label{s:lexical-systems}
 The first question that one can ask when approaching the general question for
 how spatial language evolved is how the basic building blocks of
-spatial language, in particular, concepts and spatial relationships arise
+spatial language, in particular concepts and spatial relationships, arise
 and can become shared in populations of agents. This question is chiefly
 about the operators that organize the emergence and self-organization\index{self-organization} of 
 spatial language systems. In a functional approach to language the semantic distinctions, 
 i.e. the category system, as well as the syntactic distinctions, i.e. words 
 and the syntactic structure, arise because
 they serve a particular function and contribute to fulfilling the communicative intentions
-of agents. The function of spatial language, without doubt, is to denote the spatial position of 
+of agents. Without doubt, the function of spatial language is to denote the spatial position of 
 objects in spatial contexts. In order for agents to be able to reach their
 communicative goals they must be equipped with a set of learning operators and
 mechanisms that allow them to gradually become more and more successful in
 reaching their goals. 
 
 The learning mechanisms, their parameters and underlying categorization 
-and conceptualization strategies are grouped into \emph{language strategies} 
+and conceptualization strategies are grouped into \textsc{language strategies} 
 each of which is responsible for building a particular kind of language system. 
 For instance, one can distinguish between the projective and proximal category 
 system which each denote a specific set of words that have particular functions 
-in syntax, e.g., in the grammatical structure of sentences. 
+in syntax, e.g. in the grammatical structure of sentences. 
 For instance, proximal relations are not expressed as adjectives, 
 whereas projective relations can be expressed as adjectives. 
 But in many ways their semantics also differ. While projective relations 
@@ -33,7 +33,7 @@ are denoting the position of objects using angles to some reference
 object (projective) and therefore are for instance relying on the frame of 
 reference used, proximal relations denote the position of objects using distances. Language strategies are the operators
 that form language systems and I will explore in this section specific operators for building
-proximal, projective and absolute systems. But, there are also language strategies 
+proximal, projective and absolute systems. But there are also language strategies 
 which allow agents to build hybrid systems, and I will explore one strategy 
 which forms projective and proximal systems at the same time. Lastly I consider
 mechanisms that allow different language strategies to co-exist.
@@ -45,29 +45,29 @@ focus on words and category distinctions as a prerequisite
 for studying grammatical development. I propose concrete 
 learning mechanisms and their integration into the
 routine processing of spatial utterances. This chapter splits into 
-two parts. First, I look at the necessary mechanisms that allow 
+two sections. In \sectref{s:category-acquisition}, I look at the necessary mechanisms that allow 
 learners to pick up an existing language system from tutors that 
 are operating a full language system. The insights presented in 
-that part are a necessary precursor to the subsequent part 
-describing the  formation of a language system. 
+that section are a necessary precursor to \sectref{s:category-formation},
+describing the formation of a language system. 
 
 Ideas and results presented in this chapter have been 
 published in \citep{spranger2012basic,spranger2013acquisition}\index{Spranger, M.}.
 
-\section{Acquisition of Lexical Systems}
+\section{Acquisition of lexical systems}
 \label{s:category-acquisition}\index{lexicon!acquisition}
 Before turning to the invention and formation of a language system, I require
 insights into the cognitive learning mechanisms agents without knowledge 
 of a particular language system need in order to acquire a fully developed lexical language
-system from other agents. I call the agents that initially have no spatial categories
-and no linguistic knowledge of the language \emph{students}. Agents
-equipped with different parts of the German locative system are called \emph{tutors}.
+system from other agents.\todo{???} I call the agents that initially have no spatial categories
+and no linguistic knowledge of the language \textsc{students}. Agents
+equipped with different parts of the German locative system are called \textsc{tutors}.
 In this section, I will give a concrete answer to this 
-problem and show through experiments that given the right interaction setting,
-the right environment and the right cognitive machinery students are able to learn 
+problem and show through experiments that -- given the right interaction setting,
+the right environment and the right cognitive machinery students -- are able to learn 
 a complex communication system from tutors.
 
-\subsection{Learning Operators}
+\subsection{Learning operators}
 The most important ingredient in the acquisition of a language system are
 the cognitive operations that allow agents to learn an established language
 from their peers. Besides the general capacity for parsing and production 
@@ -84,17 +84,17 @@ conveyed by them.
 So how does learning take place? Learning is deeply integrated into the cognitive architecture 
 of agents. The activation of a particular learning operation depends on the state of the interaction, 
 for instance, whether the interaction was successful, whether the speaker has already pointed to the topic,
-but, also, on the particular state in linguistic processing as the learning operators draw on as 
+or on the particular state in linguistic processing as the learning operators draw on as 
 much information as possible in order to constrain the learning situation. 
 Agents constantly monitor the routine linguistic processing in production and interpretation 
-and try to solve problems by applying \emph{adoption operators} that invent a new category or adopt 
-an unparsed string.  But this is not enough, so-called \emph{alignment operators} are 
+and try to solve problems by applying adoption operators that invent a new category or adopt 
+an unparsed string.  But this is not enough. So-called alignment operators are 
 updating the linguistic knowledge of an agent continuously after every interaction
 in order to gradually approximate the target system.
 
 % concrete learning operators (projective as example)
-Agents trying to acquire an existing language system, and for now 
-let us suppose learners are acquiring the German projective category system, 
+For now let us suppose learners are acquiring the German projective category system. 
+Agents trying to acquire an existing language system 
 foremost operate adoption mechanisms both on the 
 semantic and syntactic level of processing. Upon encountering an unknown 
 string in parsing, the learner detects a problem. For lexical category systems
@@ -207,7 +207,9 @@ the representation. For projective categories, samples are used to
 re-estimate the prototypical direction by computing the mean direction vector of 
 the samples using the following formula for averaging the angles of the samples $S$.
 \begin{equation}
-a_c = \operatorname{atan2}\left(\frac{1}{|S|}\sum_{s\in S}\sin a_s,\frac{1}{|S|}\sum_{s\in S}\cos a_s\right)
+a_c = 
+%\operatorname{atan2}
+\left(\frac{1}{|S|}\sum_{s\in S}\sin a_s,\frac{1}{|S|}\sum_{s\in S}\cos a_s\right)
 \label{e:update-a}
 \end{equation} 
 On top of that, the new $\sigma$ value $\sigma'$ 
@@ -249,7 +251,7 @@ its direction approaches the direction of the target category {\footnotesize\tt 
 \label{f:category-acquisition-projective-development-over-time}
 \end{figure}
 
-\subsection{Experimental Setup and Measures}
+\subsection{Experimental setup and measures}
 One can test the performance of the learning operators discussed above and their 
 sufficiency for acquiring a language system by applying them in populations
 of two agents. One of the agents, the tutor agent, is equipped with a fully 
@@ -282,10 +284,10 @@ $a_\mathnormal{tut}$ and the similarity of the category $C(a_{tut},w)$ the tutor
 associates with each word $w$ to the category the learner $a_{learn}$
 associates with that word $C(a_{learn},w)$
 \begin{equation*}
-\operatorname{I}(a_{tut},a_{learn}) 
+\operatorname{I} (a_{tut},a_{learn}) 
 = 
 \frac{1}{|W(a_{tut})|}\sum_{w \in W(a_\mathnormal{tut})} 
-\operatorname{s}(C(a_{learn},w),C(a_{tut},w))
+\operatorname{s} (C(a_{learn},w),C(a_{tut},w))
 \end{equation*}
 If the learner has no category associated with a particular word $w$, i.e., when $C(a_{tut},w)$ 
 does not find a category, the similarity is $0$. If, however, the learner has some projective category
@@ -779,7 +781,7 @@ the problem of learning the absolute system at the same time as the projective s
 was left unexamined. In fact, the reasons for why this is even a problem apply 
 just as drastically as they did before. Better answers will be given later sections.
 
-\subsection{Implementation Details}
+\subsection{Implementation details}
 In the above description I have glossed over some of the technical details. 
 Specifically I have not explained how precisely the different conceptualization 
 strategies are implemented. This section presents a simplified approach to spatial
@@ -817,7 +819,7 @@ object with the highest discrimination score.
 \vspace{0.3cm}
 \end{explanation}
 
-\section{Lexicon Formation}
+\section{Lexicon formation}
 \label{s:category-formation}\index{lexicon!formation}
 % from acquisition to formation
 % speakers solve communicative problems through invention and adoption
@@ -887,7 +889,7 @@ The shape of categories used in production and interpretation is updated by
 adding another sample and re-estimating the particular distance or angle
 of the category (same as described in Section \ref{s:category-acquisition}).
 
-\subsection{Experimental Setup}
+\subsection{Experimental setup}
 I test the validity of this approach to formation by running experiments 
 in which typically 10 agents start without any categories and constructions 
 and gradually have to solve their communicative problems by invention and
@@ -1123,7 +1125,7 @@ to choose between the two strategies.}
 \label{f:category-formation-proximal+projective-results}
 \end{figure}
 
-\subsection{Interaction of Strategies}
+\subsection{Interaction of strategies}
 The influence of environmental conditions on the unfolding language system 
 can be studied separately with respect to each categorization strategy be
 it absolute, projective or proximal, but it can also be examined with respect
@@ -1162,7 +1164,7 @@ language system consisting of proximal and projective categories is developed.}
 \label{f:compare-projective+proximal}
 \end{figure}
 
-\subsection{Hybrid Systems}
+\subsection{Hybrid systems}
 Lastly, one can consider a system were agents do not have different strategies 
 focussing on a particular sensory channel, but where they have one strategy 
 which allows them to develop the channel focus autonomously. 

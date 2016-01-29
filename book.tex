@@ -1,16 +1,16 @@
- \documentclass[
-	        ,output=long    % long|short|inprep              
+ \documentclass[output=short    % long|short|inprep              
 	        %,blackandwhite
 	        %,smallfont
-	        ,draftmode 
+	        ,draftmode
+	        ,biblatex
 %	        ,draft 
-		  ]{LSP/langsci}
+		  ]{langsci/langscibook}
 
-%\usepackage{LSP/lsp-styles/lsp-gb4e} 
 \usepackage{localmetadata}
 \usepackage{localpackages}
 \usepackage{localhyphenation}
 \usepackage{localcommands}
+\bibliography{space} % References file
 
 % \RecustomVerbatimEnvironment{verbatim}{Verbatim}{}
 % \usepackage{covington}
@@ -41,7 +41,7 @@
 
 \include{chapters/1-introduction}
 
-%%% 2. Background
+% 2. Background
 \part{Spatial language games and technical background}
 \label{p:embodied-language-games}
 \include{chapters/2-background}
@@ -56,18 +56,18 @@
  \include{chapters/7-syntax}
  \include{chapters/8-semantic-processing}
  \include{chapters/9-syntax-semantic-interaction}
-% 
-% %%% 10 evolution
-% \part{Spatial language evolution}
-% \label{p:spatial-language-evolution}
-% \include{chapters/10-category-alignment}
-% \include{chapters/11-reference-systems}
-% \include{chapters/12-lexical-marking}
-% \include{chapters/13-grammar}	
+ 
+ % 10 evolution
+ \part{Spatial language evolution}
+ \label{p:spatial-language-evolution}
+ \include{chapters/10-category-alignment}
+ \include{chapters/11-reference-systems}
+ \include{chapters/12-lexical-marking}
+ \include{chapters/13-grammar}	
 
 %% conclusions
  \part{Conclusion}
-% \include{chapters/14-discussion-and-conclusion}
+ \include{chapters/14-discussion-and-conclusion}
 
 %#############################################################
 \backmatter
@@ -93,6 +93,6 @@
 
 %\renewcommand{\bibname}{References} % changes default name Bibliography to References
 \ohead{Bibliography}
-\bibliography{papers,space} % References file
+\printbibliography[heading=references] 
 
 \end{document}

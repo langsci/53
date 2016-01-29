@@ -185,13 +185,13 @@ conceptualization strategy at the same time.
 The alignment\index{alignment} of conceptualization strategies is measured using the
 \emph{conceptualization strategy similarity}\index{measures!conceptualization strategy similarity} which is computed for a population of agents 
 by averaging the \emph{agent conceptualization strategy similarity} of every agent to every other
-agent. The agent conceptualization strategy similarity $\operatorname{acss}$ is computed by comparing
+agent. The agent conceptualization strategy similarity {\footnotesize\tt acss} is computed by comparing
 the score of each strategy. Since strategies are never removed but merely reduced
 to a score of $0.0$, one can compute a distance of scores between the chunks in each agent
 and envelope the result using an exponential decay function which results in the following formula.
-\begin{equation*}
-\operatorname{acss}(a_1,a_2,S):=  \exp \left( -1 \cdot \sum_{s \in S} |\operatorname{score}(s,a_1) - \operatorname{score}(s,a_2)| \right) 
-\end{equation*}
+\begin{equation}
+%\operatorname{acss}(a_1,a_2,S):= \exp \left( -1 \cdot \sum_{s \in S} \left|\operatorname{score}(s,a_1) - \operatorname{score}(s,a_2)\right| \right) 
+\end{equation}
 In this formula $a_1,a_2$ are the agents whose similarity score is computed, $S$ is the set 
 of strategies given
 to agents and $\operatorname{score}(s,a_1)$ is the score agent $a_1$ gives to strategy $s$.
