@@ -1027,10 +1027,11 @@ al desirabilite de un nov lingua franca: On refusa continuar payar custosi tradu
 	\node [font=\fontsize{25pt}{10mm}\selectfont, right, below right = 16.5mm and 7.5mm of lspcls_bg2.north west, text width=11.5cm] (lspcls_backtitle) {\color{\lsCoverFontColour}\lsBackTitleFont{\lsBackTitle\par}};
 	\node [below = 10mm of lspcls_backtitle, text width=11.5cm, align=justify] {\color{\lsCoverFontColour}\lsBackBodyFont{\parindent=15pt\lsBackBody}};
 	%\node [below right = 192.5mm and 97.5mm of lspcls_bg2.north west] {\color{\lsCoverFontColour}ISBN \lsBackBodyFont{\lsISBN}};
-	\node [below right = 192.5mm and 97.5mm of lspcls_bg2.north west, text width=4cm] {%
-		\colorbox{white}{%
+	\node [below right = 192.5mm and 97.5mm of lspcls_bg2.north west, text width=4cm] {
+		\colorbox{white}{
 			\begin{pspicture}(0,0)(4.1,1in)
-			\psbarcode[transx=.4,transy=.3]{\lsISBNhardcover}{includetext height=.7}{isbn}\end{pspicture}}};
+			\psbarcode[transx=.4,transy=.3]{\lsISBNhardcover}{includetext height=.7}{isbn}
+			\end{pspicture}}};
 	
 	%% Guiding Lines
 	%\draw [red, thick, dashed] (lspcls_covertitle.west) -- (lspcls_seriesinfo.west);
@@ -1042,7 +1043,6 @@ al desirabilite de un nov lingua franca: On refusa continuar payar custosi tradu
 	
 	\end{tikzpicture} 
 	\end{titlepage}
-%	} %% end maketitle
 	\end{document}     % the cover and nothing else.
 \fi	
 	
@@ -1094,10 +1094,9 @@ al desirabilite de un nov lingua franca: On refusa continuar payar custosi tradu
 			\begin{pspicture}(0,0)(4.1,1in)
 			\psbarcode[transx=.4,transy=.3]{%
 				\iflsUscover\lsISBNsoftcoverus\else\lsISBNsoftcover\fi%
-				}{isbn}\end{pspicture}}};
+				}{includetext height=.7}{isbn}\end{pspicture}}};
 	\end{tikzpicture} 
 	\end{titlepage}
-%	} %% end maketitle
 	\end{document}     % the cover and nothing else.
 	\fi		
 \end{titlepage}
