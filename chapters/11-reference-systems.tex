@@ -2,7 +2,7 @@
 %% \renewcommand{\includegraphics}[1][1]{}
 %\begin{document}
 
-\chapter{Evolution of Spatial Conceptualization Strategies}\index{alignment}
+\chapter{Evolution of spatial conceptualization strategies}\index{alignment}
 \label{s:strategies}
 In this section I research the question how conceptualization strategies
 can form autonomously and align in a population of agents. The previous
@@ -105,7 +105,7 @@ turns to invention of strategies.
 The results presented in this chapter have been published in 
 \cite{spranger2011recruitment,spranger2013evolving}.\index{Spranger, M.}
 
-\section{Alignment for Landmark Strategies}\index{alignment}
+\section{Alignment for landmark strategies}\index{alignment}
 % reference is unavoidable
 Landmarks are an integral part of spatial language
 because every spatial relation is implicitly or explicitly related to a reference object.
@@ -139,8 +139,7 @@ which drives the alignment\index{alignment} to find a single strategy most compr
 works in many contexts. This, in essence, implements frequency based dynamics in which structure
 that is used successfully survives and structure that is never used or always used unsuccessfully
 is removed. Strictly speaking, however, structure is never removed, it just gets a score of zero
-which eliminates it from routine processing but leaves it available for recruitment\index{recruitment} should
-it become necessary.
+which eliminates it from routine processing but leaves it available for recruitment\index{recruitment} should it become necessary.
 
 The scoring of semantic structure has important consequences. First, the score of a chunk impacts
 the choices agents make in production and interpretation. The discrimination score of a chunk, i.e. its discriminatory power given the current context, is multiplied by its score. Consequently,
@@ -164,7 +163,7 @@ and bottom: egocentric hearer.}
 \label{f:chunk-alignment-chunks}
 \end{figure}
 
-\subsection{Experimental Setup and Measures}
+\subsection{Experimental setup and measures}
 I claim that chunk alignment\index{alignment} is an effective mechanism that allows agents to
 conventionalize the choice for particular conceptualization strategy alongside 
 forming a category system. The claim is tested by running experiments in which agents 
@@ -190,8 +189,8 @@ the score of each strategy. Since strategies are never removed but merely reduce
 to a score of $0.0$, one can compute a distance of scores between the chunks in each agent
 and envelope the result using an exponential decay function which results in the following formula.
 \begin{equation}
-%\operatorname{acss}(a_1,a_2,S):= \exp \left( -1 \cdot \sum_{s \in S} \left|\operatorname{score}(s,a_1) - \operatorname{score}(s,a_2)\right| \right) 
-\end{equation}
+\operatorname{acss}(a_1,a_2,S):= \operatorname{exp} \left( -1 \cdot \sum_{s \in S} \left|\operatorname{score}(s,a_1) - \operatorname{score}(s,a_2)\right|\right) 
+\end{equation}\todo[inline]{I replaced \textbackslash exp with \textbackslash operatorname\{exp\} here}
 In this formula $a_1,a_2$ are the agents whose similarity score is computed, $S$ is the set 
 of strategies given
 to agents and $\operatorname{score}(s,a_1)$ is the score agent $a_1$ gives to strategy $s$.
@@ -225,7 +224,7 @@ spread in the population.
 \begin{figure}
 \begin{centering}
 \includegraphics[width=0.9\columnwidth]{figs/chunk-alignment-chunks-acquisition}
-\caption[Results strategy acquisition experiments]{
+\caption[Results strategy acquisition experiments]{%
 Acquisition experiment in which agents not only learn the 
 category system from a tutor (projective in this case), but also 
 the underlying conceptualization strategy of the tutor (allocentric).}
@@ -258,7 +257,7 @@ the conceptualization strategies agents are using.
 %\includegraphics[width=0.65\columnwidth]{figs/chunk-alignment-formation-projective-space-game-4-run-2}
 %\includegraphics[width=0.65\columnwidth]{figs/chunk-alignment-formation-projective-space-game-4-run-3}
 \includegraphics[width=0.95\columnwidth]{figs/chunk-alignment-formation-projective-space-game-4-together}
-\caption[Different outcomes of chunk alignment experiments]{
+\caption[Different outcomes of chunk alignment experiments]{%
 Different outcomes of the chunk alignment\index{alignment} experiments on 
 different data sets. All three graphs show the average score of the three different 
 strategies over the first 1000 interactions of one particular experimental run. 
@@ -283,10 +282,10 @@ strong preference for the allocentric strategy with the speaker, he will adopt t
 part of a hearer strategy. Even though the category is essentially unaligned
 because different agents see it as part of different strategies, it might still be quite successful, 
 particularly in context where there are few objects. 
-If success of the category is above $50\%$, it is very hard for the alignment\index{alignment} mechanisms 
+If success of the category is above $50\si{\percent}$, it is very hard for the alignment\index{alignment} mechanisms 
 to remove it, since success is rewarded much more than failure is punished to allow 
 the system to get off the ground. In such cases, misalignment can appear while retaining
-success rates of above $50\%$ in communication. In other words, agents might get stuck in 
+success rates of above $50\si{\percent}$ in communication. In other words, agents might get stuck in 
 local optima and without additional mechanisms might be unable to get out of such
 conditions.
 
@@ -306,7 +305,7 @@ conditions.
 %on the same cognitive operations.
 
 
-\section{Alignment for Frame of Reference Strategies}\index{alignment}
+\section{Alignment for frame of reference strategies}\index{alignment}
 The same mechanisms explaining alignment of reference object conceptualization strategies 
 can be used to explain the alignment of
 other components of spatial language such as frames of reference, e.g. intrinsic and absolute
@@ -379,12 +378,12 @@ another strategy would be more discriminating or equally discriminating.
 \includegraphics[width=0.9\columnwidth]{figs/chunk-alignment-frames-absolute-vs-intrinsic}
 \includegraphics[width=0.9\columnwidth]{figs/chunk-alignment-frames-absolute-vs-intrinsic-alignment}
 \end{center}
-\caption[Results category formation and frame of reference alignment\index{alignment}]{
+\caption[Results category formation and frame of reference alignment\index{alignment}]{%
 Dynamics of a category formation experiment in which 10 agents align the frame of reference
 used in conceptualization. The environment has a clear preference for the absolute frame of reference
 in that it is the only frame of reference available in certain context. 
-In $50\%$ of the contexts both intrinsic and absolute
-frame of reference are available, in the remaining $50\%$ of the contexts only an absolute frame
+In $50\si{\percent}$ of the contexts both intrinsic and absolute
+frame of reference are available, in the remaining $50\si{\percent}$ of the contexts only an absolute frame
 of reference is available. The strong preference of the environment drives agents to develop 
 an absolute system which dominates across 25 runs of the same experiment. The graph shows 
 that together with the category system agents align their conceptualization strategy.}
@@ -393,13 +392,13 @@ that together with the category system agents align their conceptualization stra
 
 
 
-\subsection{Experimental Setup}
+\subsection{Experimental setup}
 I test the power of chunk alignment\index{alignment} using contexts which can be manipulated to feature 
 absolute and intrinsic properties. More specifically, I manipulate the distribution of intrinsic and 
 absolute properties in the environment. Figure \ref{f:chunk-alignment-frames-absolute-vs-intrinsic} 
 shows the dynamics of an experiment where agents start equipped with two strategies: an absolute
-and an intrinsic one. The environment is such that it favors absolute systems. In $50\%$ of the 
-scenes both intrinsic and absolute features are present. In the remaining $50\%$ of the contexts
+and an intrinsic one. The environment is such that it favors absolute systems. In $50\si{\percent}$ of the 
+scenes both intrinsic and absolute features are present. In the remaining $50\si{\percent}$ of the contexts
 only absolute features are present and no intrinsic ones. The environmental
 conditions have a strong effect on the development of the system in that all 25 populations
 agree on using an absolute strategy. What is important is that the contexts where
@@ -417,30 +416,31 @@ on the developing system are shown in Figures
 \ref{f:chunk-alignment-frames-absolute-vs-intrinsic-bar-plot} 
 and \ref{f:chunk-alignment-frames-absolute-vs-intrinsic-detail}. 
 Both figures show results for different experimental conditions. In all conditions
-$50\%$ of the scenes feature both intrinsic and absolute properties. The conditions
-differ only in how the remaining $50\%$ of  scenes are divided. The following table
+$50\si{\percent}$ of the scenes feature both intrinsic and absolute properties. The conditions
+differ only in how the remaining $50\si{\percent}$ of  scenes are divided. The following table
 overviews the conditions.
 \begin{center}
-    \begin{tabular}{ | l | p{1.5cm} | p{1.5cm} | p{1.5cm} |}
-    \hline
-    condition & both & intrinsic only & absolute only \\ \hline\hline
-    0.0 & 50\% & 0\% & 50\%\\ \hline
-    0.25 & 50\% & 12.5\% & 37.5\% \\ \hline
-    0.50 & 50\% & 25\% & 25\% \\ \hline
-    0.75 & 50\% & 37.5\% & 12.5\% \\ \hline
-    1.0 & 50\% & 50\% & 0\%\\ \hline
+    \begin{tabular}{SSSS}
+    \lsptoprule
+    {condition} & {both (\si{\percent})} & {intrinsic only (\si{\percent})} & {absolute only (\si{\percent})} \\ \midrule%\hline\hline
+    0.0 & 50 & 0 & 50\\ %\hline
+    0.25 & 50 & 12.5 & 37.5 \\ % \hline
+    0.50 & 50 & 25 & 25 \\ %\hline
+    0.75 & 50 & 37.5 & 12.5 \\ %\hline
+    1.0 & 50 & 50 & 0\\ % \hline
+    \lspbottomrule
     \end{tabular}
     \label{t:conditions}
 \end{center}
-Conditions are named after the percentage of intrinsic only scenes in the $50\%$ of scenes that
+Conditions are named after the percentage of intrinsic only scenes in the $50\si{\percent}$ of scenes that
 feature either only intrinsic or only absolute properties. 
 Figure \ref{f:chunk-alignment-frames-absolute-vs-intrinsic-detail} shows the average 
 score of the absolute and intrinsic strategies (projective).  
-In all three cases, $50\%$ of the scenes feature both intrinsic and absolute properties. 
-On the top results are shown for an environment that in the remaining $50\%$ has only 
+In all three cases, $50\si{\percent}$ of the scenes feature both intrinsic and absolute properties. 
+On the top results are shown for an environment that in the remaining $50\si{\percent}$ has only 
 absolute features. The middle figure shows results where 
-$25\%$ have only absolute features and $25\%$ only intrinsic features. 
-The bottom figure shows results for $50\%$ intrinsic features. Clearly, agents in all 
+$25\si{\percent}$ have only absolute features and $25\si{\percent}$ only intrinsic features. 
+The bottom figure shows results for $50\si{\percent}$ intrinsic features. Clearly, agents in all 
 cases align strategies reflecting environmental conditions. If the environment clearly 
 supports an absolute strategy, the absolute strategy wins. If there are clear advantages 
 for having an intrinsic strategy (bottom), the intrinsic strategy takes over and suppresses 
@@ -449,7 +449,7 @@ the absolute strategy.
 
 Figure \ref{f:chunk-alignment-frames-absolute-vs-intrinsic-bar-plot} compares communicative success
 as well as resulting average scores of each strategy. Interestingly, the middle condition $0.5$ exhibits
-a significant drop in communicative success to around $80\%$. The reason for this can be seen in Figure 
+a significant drop in communicative success to around $80\si{\percent}$. The reason for this can be seen in Figure 
 \ref{f:chunk-alignment-frames-absolute-vs-intrinsic-detail} (middle) which shows the dynamics
 of a single run of such an experiment. In this condition no strategy is particularly favored and to
 be reasonably successful both strategies are necessary. This leads to both strategies having
@@ -466,7 +466,7 @@ communication systems emerge.
 \begin{center}
 \includegraphics[width=1.0\columnwidth]{figs/chunk-alignment-frames-absolute-vs-intrinsic-bar-plot}
 \end{center}
-\caption[Comparison for different distributions of intrinsic and absolute features]{
+\caption[Comparison for different distributions of intrinsic and absolute features]{%
 Results for experiments with different distributions of intrinsic and absolute features. Each condition
 was tested with 25 experiments of populations with 10 agents each. The figure shows the 
 communicative success\index{measures!communicative success} and the scores of the absolute and intrinsic strategy averaged over the
@@ -482,7 +482,7 @@ multiple runs.}
 %\includegraphics[width=0.7\columnwidth]{figs/chunk-alignment-frames-absolute-vs-intrinsic-10.pdf}
 \includegraphics[width=0.8\columnwidth]{figs/chunk-alignment-frames-absolute-vs-intrinsic-together}
 \end{center}
-\caption[Dynamics of alignment\index{alignment} for different environmental conditions]{
+\caption[Dynamics of alignment\index{alignment} for different environmental conditions]{%
 Dynamics of alignment\index{alignment} for different environmental conditions. 
 The graphs show the average score of the absolute and intrinsic strategy 
 unfold over time. The top figure shows condition 0.0 (see Table 
@@ -495,7 +495,7 @@ condition 0.5, and the bottom figure shows condition 1.0.}
 \begin{center}
 \includegraphics[width=1.0\columnwidth]{figs/conceptualization-strategy-invention-1.png}
 \end{center}
-\caption[Search for new conceptualization strategies]{
+\caption[Search for new conceptualization strategies]{%
 When agents are unable to conceptualize, they search for new 
 conceptualization strategies by assembling cognitive operations 
 into new chunks. Every node is a particular
@@ -509,7 +509,7 @@ Other possible strategies did not work on the current context (blue nodes).}
 \begin{center}
 \includegraphics[width=1.0\columnwidth]{figs/conceptualization-strategy-invention-2.png}
 \end{center}
-\caption[Effect of new conceptualization strategies on the search process]{
+\caption[Effect of new conceptualization strategies on the search process]{%
 The new strategies assembled by the agent (Figure \ref{f:strategy-invention-1})
 are immediately stored in new chunks. This has the immediate effect of 
 condensing the search process.
@@ -519,7 +519,7 @@ depends on the context and topic that agents are processing at the moment of inv
 \label{f:strategy-invention-2}
 \end{figure}
 
-\section{Invention of Conceptualization Strategies}
+\section{Invention of conceptualization strategies}
 The question of how conceptualization strategies can align in a population is important.
 However, another important ingredient is, of course, how conceptualization strategies come
 into existence in the first place. Invention is a necessary pre-requisite for the usage of
@@ -557,7 +557,6 @@ power of each of these different possibilities. So, for instance, if an existing
 the probability of inventing a new strategy increases, whereas if the current topic 
 can be sufficiently discriminated using an existing strategy, no invention occurs.
 
-
 Figure \ref{f:strategy-invention-dynamics} shows the process of invention and alignment of 
 conceptualization strategies in a population of agents. In the experiment generating such results agents 
 have a large repository of basic cognitive operations from which they can draw new building blocks 
@@ -578,7 +577,7 @@ to be invented. Nevertheless, agents do come to an agreement. Here, they agree o
 \includegraphics[width=0.9\columnwidth]{figs/chunk-alignment-category-invention-success}
 \includegraphics[width=0.9\columnwidth]{figs/chunk-alignment-category-invention-alignment}
 \end{center}
-\caption[Results for strategy invention, alignment and category development]{
+\caption[Results for strategy invention, alignment and category development]{%
 Results for strategy invention, alignment and category development. A population
 of 10 agents develops both conceptualization strategies as well as lexical systems for 
 spatial strategies corresponding to these strategies.}
@@ -627,7 +626,7 @@ results in which certain spatial scenes have neither intrinsic nor absolute feat
 
 \begin{table}
 \caption[Results absolute, intrinsic and relative 
-strategy competition]{
+strategy competition]{%
 Results for absolute, intrinsic and relative 
 conceptualization strategy competition
 in different environmental conditions. This table shows 
@@ -638,14 +637,15 @@ strategy (all allocentric) after 10000 interactions
 Table \ref{t:experimental-conditions-absolute-vs-intrinsic-vs-relative} explains 
 the different conditions.}
 \begin{center}
-\begin{tabular}{| p{1.5cm} | p{2.5cm} | p{1.5cm} | p{1.5cm}  | p{1.5cm} |}
-\hline
-condition & communicative success & score relative strategy 
-& score intrinsic strategy & score absolute strategy\\ \hline\hline
-0.25 & 100\% & 1.0 & 0.0 &  0.0\\ \hline
-0.50 & 100\% & 1.0 & 0.0 &  0.0\\ \hline
-0.75 & 100\% & 1.0 & 0.0 &  0.0\\ \hline
-1.0 & 100\% & 1.0 & 0.0 &  0.0\\ \hline
+\begin{tabular}{SSSSS}
+\lsptoprule
+{condition} & \multicolumn{1}{p{.2\textwidth}}{communicative success (\si{\percent})} & \multicolumn{1}{p{.2\textwidth}}{score relative\newline strategy}
+& \multicolumn{1}{p{.2\textwidth}}{score intrinsic\newline strategy} &  \multicolumn{1}{p{.2\textwidth}}{score absolute\newline strategy}\\ \midrule
+0.25 & 100 & 1.0 & 0.0 &  0.0\\ %\hline
+0.50 & 100 & 1.0 & 0.0 &  0.0\\ %\hline
+0.75 & 100 & 1.0 & 0.0 &  0.0\\ %\hline
+1.0 & 100 & 1.0 & 0.0 &  0.0\\ %\hline
+\lspbottomrule
 \end{tabular}
 \end{center}
 \label{t:absolute-vs-intrinsic-vs-relative}
@@ -683,13 +683,14 @@ in the best case, however, it leads to more robust alignment.
 Statistical distribution of features in the environment for
 the different experimental conditions compared in Table \ref{t:absolute-vs-intrinsic-vs-relative}.}
 \begin{center}
-\begin{tabular}{ | l | p{1.5cm} | p{1.5cm} | p{1.5cm} | p{1.5cm} |}
-\hline
-condition & relative only & intrinsic + relative & absolute + relative & absolute + intrinsic + relative \\ \hline\hline
-0.25 & 25\% & 30\% & 7.5\% & 37.5\%\\ \hline
-0.50 & 50\% & 20\% & 5\% & 25\% \\ \hline
-0.75 & 75\% & 10\% & 2.5\% & 12.5\% \\ \hline
-1.0 & 100\% & 0\% & 0\% & 0\%\\ \hline
+\begin{tabular}{SSSSS}
+\lsptoprule
+{condition} & {relative} & {intrinsic +} & {absolute +} & {absolute + intrinsic +} \\
+ & {only (\si{\percent})} & {relative (\si{\percent})} & {relative (\si{\percent})} & {relative (\si{\percent})} \\ \midrule
+0.25 & 25 & 30 & 7.5 & 37.5\\ %\hline
+0.50 & 50 & 20 & 5 & 25 \\ %\hline
+0.75 & 75 & 10 & 2.5 & 12.5 \\ %\hline
+1.0 & 100 & 0 & 0 & 0\\ \lspbottomrule
 \end{tabular}
 \end{center}
 \label{t:experimental-conditions-absolute-vs-intrinsic-vs-relative}
