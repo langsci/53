@@ -74,7 +74,7 @@ communicate precise semantic distinctions that he wants to convey.
 The key item for analysis is the function of items 
 both in syntax and semantics. 
 These dependencies between syntax and semantics can be easily
-operationalized using FCG\index{Fluid Construction Grammar}
+operationalized using FCG\is{Fluid Construction Grammar}
 \citep{beule2005hierarchy,steels2005linking}\index{De Beule, J.}\index{Steels, L.}\index{Neubauer, N.}. 
 
 Throughout this book language processing is implemented
@@ -94,7 +94,7 @@ the semantic structure conceptualized by IRL into syntactic structure,
 i.e. words and grammatical relations using constructions in the linguistic inventory. 
 In parsing this process is reversed and the construction inventory is used
 to recover as much semantic structure from an utterance as possible.
-Processing is organized around the \textsc{transient structure}\index{transient structure}
+Processing is organized around the \textsc{transient structure}\is{transient structure}
 which acts as a blackboard representing the current state of processing.
 Constructions work like rules -- if a construction is applicable,
 i.e. if conditions for its application are met, the construction
@@ -107,7 +107,7 @@ no construction can apply anymore.
 \begin{center}
 \includegraphics[width=.8\textwidth]{figs/simple-grammar-initial}
 \end{center}
-\caption[Initial transient structure]{\index{transient structure!initial}Initial transient structure which 
+\caption[Initial transient structure]{\is{transient structure!initial}Initial transient structure which 
 contains only the meaning 
 to be expressed in the top-unit of the semantic pole (left).
 There is no hierarchy yet and the syntactic pole (right) is empty.}
@@ -118,7 +118,7 @@ There is no hierarchy yet and the syntactic pole (right) is empty.}
 \begin{center}
 \includegraphics[width=\textwidth]{figs/simple-grammar-final}
 \end{center}
-\caption[Final transient structure]{\index{transient structure!final}Final transient structure after 
+\caption[Final transient structure]{\is{transient structure!final}Final transient structure after 
 many constructions of a simplified German grammar have been applied.
 The structure consists of units which are hierarchically organized starting
 from the top-unit. The meaning to be expressed is distributed over various 
@@ -132,8 +132,8 @@ word order.}
 \label{f:final-structure}
 \end{sidewaysfigure}
 
-\subsection{Transient structure}\index{transient structure}
-The transient structure\index{transient structure} has two poles: a semantic and a syntactic pole.
+\subsection{Transient structure}\is{transient structure}
+The transient structure\is{transient structure} has two poles: a semantic and a syntactic pole.
 Information regarding meaning is accumulated on the semantic
 side, information about words and grammatical relations are
 gathered on the syntactic side. Information is organized into 
@@ -141,13 +141,13 @@ units identified by a {\footnotesize\tt unit-name}. Units consist of {\footnotes
 In order to represent constituent structure, units can form hierarchies 
 in which some units are hierarchically linked to other units effectively 
 building tree like structures.
-In the beginning of processing the transient structure\index{transient structure} is filled with 
+In the beginning of processing the transient structure\is{transient structure} is filled with 
 information either from the conceptualization 
 processes, e.g. in production, or from the utterance observed, e.g.
 in parsing. Subsequently, constructions change the transient structure by adding new
 units, introducing hierarchy, changing the value of attributes or by introducing 
 new attributes. Figures \ref{f:initial-structure} and \ref{f:final-structure} show the transition from 
-an initial transient structure\index{transient structure} which only contains a single unit, called ``top-unit'' 
+an initial transient structure\is{transient structure} which only contains a single unit, called ``top-unit'' 
 on each side to a final transient structure with hierarchical organization of units 
 and many more features. The initial structure only contains a 
 meaning on the semantic side. The final structure contains,
@@ -155,7 +155,7 @@ among other things, strings and syntactic word order constraints
 which can be used to build an utterance, a process called \textsc{rendering}.
 Figures~\ref{f:initial-structure} and \ref{f:final-structure} show graphical representations
 of the list representation (s-expression) used in processing. The
-following restates the initial transient structure\index{transient structure} as s-expression.
+following restates the initial transient structure\is{transient structure} as s-expression.
 % \begin{footnotesize}
 \begin{lstlisting}
 ((top
@@ -219,28 +219,28 @@ structure. For example {\footnotesize\tt red-unit-40} is a subunit of
 \end{center}
 \caption[Construction application]{This figure shows a schematic view on 
 construction application (Figure adapted from \citealp{steels2011design}\index{Steels, L.}).
-Starting from the initial transient structure\index{transient structure} (left)
+Starting from the initial transient structure\is{transient structure} (left)
 all constructions in the set of constructions are tested whether they 
 match with the structure. Two constructions match with the
 initial transient structure. If a construction matches it 
 can merge new information. Construction 72 adds 
 unit C. After the structure has been changed, the process continues
 and all constructions are checked whether they merge with
-the transient structure\index{transient structure} modified by construction 72.
+the transient structure\is{transient structure} modified by construction 72.
 Because construction 72 has applied, the transient
 structure is in a state such that construction 2 can now apply. 
 This was previously not the case. Construction 2 is depending on
 information provided by construction 72. Subsequently, construction 2 
 further changes the transient structure and so on and so forth.
 Often multiple constructions from the set of constructions can apply.
-For example, construction 3 could also change the initial transient structure\index{transient structure}.
+For example, construction 3 could also change the initial transient structure\is{transient structure}.
 This poses a general problem in processing which is solved
 by using a search algorithm described later in this section.}
 \label{f:cxn-application}
 \end{figure}
 
-\subsection{Constructions}\index{construction}
-Constructions are organized in the same way as transient structures\index{transient structure}.
+\subsection{Constructions}\is{construction}
+Constructions are organized in the same way as transient structures\is{transient structure}.
 They consist of two poles and the data in each pole are organized in terms of units, 
 attributes and values. FCG supports bi-directional constructions which means
 that the same construction is used in production and parsing. 
@@ -248,12 +248,12 @@ The difference between production and parsing is how the syntactic and semantic
 pole of a construction is used in each case. 
 In production the semantic pole is used to check the applicability
 of the construction. In parsing the syntactic pole is used. Applicability
-of a construction is checked using a mechanism called \textsc{matching}.\index{matching}
-Matching is based on the well studied concept of \textsc{unification} which \index{unification}
+of a construction is checked using a mechanism called \textsc{matching}.\is{matching}
+Matching is based on the well studied concept of \textsc{unification} which \is{unification}
 is a computational process for equating two terms in this 
 case the semantic or syntactic pole of the construction with the corresponding 
 pole of the transient structure. If matching succeeds, the construction can
-change both poles of the transient structure\index{transient structure}, a process called \textsc{merge},
+change both poles of the transient structure\is{transient structure}, a process called \textsc{merge},
 because it fuses information.
 The precise inner workings of these two fundamental operations 
 are described in \citet{steels2006fcg}\index{Steels, L.}\index{De Beule, J.}.
@@ -277,7 +277,7 @@ bottom shows the hierarchy building part of the construction.}
 \figref{f:lex-rot-cxn} shows an example of a lexical construction that maps 
 the color category {\footnotesize\tt red} onto the string \textit{rote} (`red')
 (\figref{f:after-red-cxn} shows what happens
-when this construction is applied to the initial transient structure\index{transient structure!initial}). 
+when this construction is applied to the initial transient structure\is{transient structure!initial}). 
 The following shows the low-level list representation of the construction
 schematically depicted in \figref{f:lex-rot-cxn}
 % \begin{example}
@@ -302,19 +302,19 @@ schematically depicted in \figref{f:lex-rot-cxn}
 % \end{footnotesize}
 % \end{example}
 The top displays the semantic pole followed by the syntactic pole after the 
-{\footnotesize\tt <-->}. In production the construction requires\index{production}
+{\footnotesize\tt <-->}. In production the construction requires\is{production}
 the meaning {\footnotesize\tt (bind color-category ?red red)} to be present.
 If this is the case, the construction merges the information 
-on the syntactic side, in particular the stem, into the transient structure\index{transient structure}.
+on the syntactic side, in particular the stem, into the transient structure\is{transient structure}.
 Additionally, this construction builds hierarchy. It introduces a new unit
 which is a subunit of the top-unit and which is used to collect
 information for this particular lexical item. Already this simple 
 construction uses the four basic ways in which constructions
-interact with the transient structure\index{transient structure}:
+interact with the transient structure\is{transient structure}:
 
 \begin{description}
 \item[Variables and matching] Constructions inevitably contain
-many variables. Already the unit names in the transient structure\index{transient structure}
+many variables. Already the unit names in the transient structure\is{transient structure}
 are changing every time a new utterance is parsed or a new meaning
 is produced. But also, just to give another example, variables in the meaning 
 linking cognitive operations are different every time IRL conceptualizes. 
@@ -395,7 +395,7 @@ can typically apply to the transient structure and the question is how to organi
 the process if there are multiple constructions that want to change
 the transient structure. In the absence of a~priori rules to 
 prefer one construction over another, each construction that can 
-apply to the transient structure\index{transient structure}, is tried in a different branch of a 
+apply to the transient structure\is{transient structure}, is tried in a different branch of a 
 heuristically guided search process. In other words, instead
 of having competing constructions change the same transient
 structure, the structure is copied and each potentially
@@ -408,7 +408,7 @@ node contains a transient structure. The initial node
 contains the initial transient structure. Leaf nodes contain final structures.
 The search process itself can be manipulated. 
 For instance, it is possible to remove and refrain from processing 
-duplicate nodes which contain the same transient structure\index{transient structure}
+duplicate nodes which contain the same transient structure\is{transient structure}
 and the order of following a particular branch can be 
 influenced by how successful one predicts the branch to be.
 \figref{f:fcg-search} shows an example search tree for 
@@ -433,7 +433,7 @@ The idea is to allow re-occurring problems in grammar design
 to be solved using \textsc{templates} -- without having
 to resort and copy the code needed for describing a construction
 in the basic list notation. Templates 
-are a general mechanism for expressing \textsc{design patterns}\index{design pattern},
+are a general mechanism for expressing \textsc{design patterns}\is{design pattern},
 i.e. solutions that can be re-used to deal with the
 same problem occurring in different situations. For instance,
 all grammars implement phrasal constructions. One 
@@ -527,7 +527,7 @@ of interest for the study of the influence of the grammaticalization
 processes on language evolution \citep{traugott1991grammaticalization}\index{Heine, B.}\index{Traugott, E. C.}.
 
 Another important argument for the use of FCG is its robust
-behavior in parsing and production. The search process\index{parsing}
+behavior in parsing and production. The search process\is{parsing}
 for construction application and the bi-directional 
 nature of constructions allow agents to produce
 as much of the meaning as they can when they

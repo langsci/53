@@ -9,7 +9,7 @@ integration of these two systems in a unified architecture.
 Consequently this chapter is technical in nature. It starts out by giving
 an overview of how processing is integrated (Section \ref{s:irl-fcg-integration}).
 Section \ref{s:semantic-ambiguity} discusses the phenomenon of 
-semantic ambiguity\index{semantic ambiguity} which requires a deep level of integration.
+semantic ambiguity\is{semantic ambiguity} which requires a deep level of integration.
 The chapter concludes with results on the performance of the 
 complete system (Section \ref{s:syntax+semantics-integration}).
 
@@ -24,7 +24,7 @@ The task engine bundles the processing done by an agent and allows to track
 different hypotheses. For instance, in production a speaker might conceptualize
 different semantic structures and only later decide which of those he wants
 to use based on how well it can be verbalized. For this IRL and FCG 
-is packaged into processes.\index{task processor}
+is packaged into processes.\is{task processor}
 
 \begin{figure}
 \includegraphics[width=0.5\textwidth]{figs/production}
@@ -33,7 +33,7 @@ Processes running when a speaker produces an utterance. Ellipsis represent
 data structures, squashed rectangles represent processes.}
 \label{f:production}
 \end{figure}
-
+\textsl{}
 Figures~\ref{f:production} and~\ref{f:interpretation} show the typical processing 
 for the speaker and the hearer.
 Each of them runs different processes which bundle FCG 
@@ -61,7 +61,7 @@ combining the discrimination score of the meaning and confidence of construction
 application. Moreover, as we can see in \figref{f:production}, speakers also run processes vital 
 for the hearer. Before passing an utterance to the hearer, the speaker parses and
 interprets the phrase he is about to use. The mechanism is called 
-\textsc{re-entrance}\index{re-entrance} \citep{steels03reentrance}\index{Steels, L.}. Applied to this process model,
+\textsc{re-entrance}\is{re-entrance} \citep{steels03reentrance}\index{Steels, L.}. Applied to this process model,
 this means that agents can choose the best result based on the 
 prediction how that phrase might be interpreted by the hearer.
 
@@ -75,7 +75,7 @@ data structures, squashed rectangles represent processes.}
 \end{center}
 \end{figure}
 
-\section{Handling semantic ambiguity}\index{semantic ambiguity}
+\section{Handling semantic ambiguity}\is{semantic ambiguity}
 \label{s:semantic-ambiguity}
 An example where the integration of the systems for syntactic processing
 and conceptualization can play out its power is semantic ambiguity.
@@ -128,7 +128,7 @@ interact (Section \ref{s:semantic-ambiguity-semantic}).
 
 \subsection{Syntactic processing}
 \label{s:semantic-ambiguity-syntactic}
-The main task of FCG in cases of semantic ambiguity\index{semantic ambiguity} is to correctly 
+The main task of FCG in cases of semantic ambiguity\is{semantic ambiguity} is to correctly 
 retrieve the possible interpretations of a phrase. For instance, if there
 is a relative and an intrinsic reading of a phrase then those two 
 readings should be recovered in parsing -- not more, but also not less.
@@ -139,7 +139,7 @@ using a combination of these techniques:
 \begin{enumerate}
 \item {logic variables}, for representing uncertainty
 \item {percolation}, for distributing information
-\item {the actual-potential design pattern}\index{design pattern!actual-potential}, for constraining the 
+\item {the actual-potential design pattern}\is{design pattern!actual-potential}, for constraining the 
 application of constructions
 \item {sem-sem constructions}, which are particular constructions 
 that only apply on the semantic side of 
@@ -150,7 +150,7 @@ the inherent ambiguity in certain German locative phrases in a
 concise way, while allowing constructions to collectively resolve the ambiguity 
 where possible, or to otherwise interpret the phrase in all possible ways.
 
-The semantic ambiguity\index{semantic ambiguity} discussed in this chapter 
+The semantic ambiguity\is{semantic ambiguity} discussed in this chapter 
 focuses entirely on how a particular landmark is conceptualized.
 Consequently, such kind of ambiguity only surfaces in phrases involving 
 overtly or covertly expressed landmarks. Examples
@@ -255,8 +255,8 @@ to the frame of reference used in computation.}
 \end{center}
 \end{figure}
 
-\subsubsection{Representing ambiguity in the transient structure}\index{transient structure}
-The next question is how the semantic ambiguity\index{semantic ambiguity} and, in particular, the
+\subsubsection{Representing ambiguity in the transient structure}\is{transient structure}
+The next question is how the semantic ambiguity\is{semantic ambiguity} and, in particular, the
 uncertainty about which interpretation is possible, can be represented 
 in syntactic processing. For this, uncertainty has to be represented in the 
 transient structure. Uncertainty is represented using a variable. 
@@ -304,7 +304,7 @@ To summarize, the use of the same variable allows for the representation
 of the uncertainty in a unified way in the semantic structure 
 as well as in the construction and, consequently, in the transient structure.
 
-\subsubsection{Constructions for processing semantic ambiguity}\index{semantic ambiguity}
+\subsubsection{Constructions for processing semantic ambiguity}\is{semantic ambiguity}
 With the knowledge of how to represent semantic structure as well as the 
 ambiguity in the semantic interpretation, 
 I can now turn to the processing of potentially ambiguous utterances.
@@ -408,7 +408,7 @@ The construction in \figref{f:setting-f-o-r-before} and \REF{e:def-phrasal-relat
 \begin{center}
 \includegraphics[width=0.8\columnwidth]{figs/perspective-marking-parsing-vorn-von-dir-aus-before} 
 \caption[Transient structure before application]{%
-Transient structure\index{transient structure} before the application of 
+Transient structure\is{transient structure} before the application of 
 the {\footnotesize\tt relative-region--perspective-marked} construction
 (when parsing \textit{der Block vorne von dir aus}). The {\footnotesize\tt f-o-r} 
 (frame of reference) {\footnotesize\tt sem-cat} attribute of the 
@@ -510,7 +510,7 @@ effects on semantic ambiguity pervasive in German locative phrases.
 
 \subsection{Semantic processing}
 \label{s:semantic-ambiguity-semantic}
-The second part of handling semantic ambiguity\index{semantic ambiguity} is in interpretation. 
+The second part of handling semantic ambiguity\is{semantic ambiguity} is in interpretation. 
 Let us consider the following phrase.
 \ea
 \label{e:der-block-vor-der-kiste-repeated}
@@ -542,7 +542,7 @@ In this particular configuration all three interpretations lead
 to different results. This is not always the case. There are three 
 ways of dealing with semantic ambiguity.
 \begin{itemize}
-\item The speaker detects that the phrase would be ambiguous in re-entrance\index{re-entrance} and 
+\item The speaker detects that the phrase would be ambiguous in re-entrance\is{re-entrance} and 
 chooses to avoid the problem by expressing himself differently.
 \item  In some scenes even though a phrase might be highly ambiguous with 
 many different interpretations, all of these interpretations refer to the same object.
@@ -555,7 +555,7 @@ the case study discussed in this section. For this particular scene the interact
 a success and the hearer correctly identified the topic.
 \end{itemize}
 Importantly, in all three cases agents rely on the power of IRL and FCG 
-to deal with semantic ambiguity\index{semantic ambiguity}.
+to deal with semantic ambiguity\is{semantic ambiguity}.
 
 
 \begin{figure}[p]

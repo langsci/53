@@ -192,7 +192,7 @@ of the agent. For discrimination tasks, for example, the score of a particular
 semantic structure is mainly determined by how 
 big the overall similarity of the target object is in contrast to 
 the score of all other objects in the context. 
-The \textsc{discrimination score} \index{discrimination score}
+The \textsc{discrimination score} \is{discrimination score}
 $\operatorname{disc}$ for the object $o$ with respect to other
 objects $O$ is computed by subtracting the maximum
 of all scores of the objects $o'$ in $O$ from the score $s_o$ of $o$.
@@ -286,7 +286,7 @@ in a way that highlights a particular aspect of that event, e.g. the beginning o
 that it repeats, etc. The syntactic need to express
 these distinctions points to conceptualization strategies that are required to
 build correct Russian sentences. Such strategies can easily be expressed with chunks
-and their preference by scoring them accordingly \citep{gerasymova2010acquisition}\index{Gerasymova, K.}\index{Spranger, M.}.\index{measures!conceptualization strategy similarity}
+and their preference by scoring them accordingly \citep{gerasymova2010acquisition}\index{Gerasymova, K.}\index{Spranger, M.}.\is{measures!conceptualization strategy similarity}
 \item[Perspective Choice]
 In many situations speakers seem to prefer to conceptualize
 reality from the perspective of the hearer. Social status and
@@ -390,7 +390,7 @@ An important part of the complete machinery for discriminating an object
 in the environment is the problem of how spatial categories and relations
 themselves are applied. In computational modeling, discrimination is often conflated with categorization,
 or to be more precise, with a certain approach to categorization which can 
-be called \textsc{strict category membership}\index{categorization!strict} (see \citealp{belpaeme2007language}\index{Bleys, J.}\index{Belpaeme, T.} 
+be called \textsc{strict category membership}\is{categorization!strict} (see \citealp{belpaeme2007language}\index{Bleys, J.}\index{Belpaeme, T.} 
 for an application of this approach to color). Categorization is understood here
 as strict membership in which a point in the sensorimotor 
 space is categorized as belonging
@@ -429,13 +429,13 @@ to $c$. So other objects in $O$ can be strict members of $c$ as long as they
 are not closer to $c$ than $o$. In fact what seems to be driving
 people in their choice of categories in discrimination task seems to be most
 importantly the principle of \textsc{greatest distance} or greatest 
-contrast \index{greatest distance principle}\index{greatest contrast|see{greatest distance principle}} 
+contrast \is{greatest distance principle}\is{greatest contrast|see{greatest distance principle}} 
 which only requires the category to establish sufficient difference
 between the distance of object $o$ and all other objects in the context.
 Such principles have been used generally to explain peoples behavior in 
 object discrimination tasks \citep{hermann1976objektbenennung}\index{Hermann, T.}\index{Grabowski, J.}
 and also have been applied more specifically to spatial language 
-(see the \textsc{shifting contrast principle} \index{shifting contrast principle|see{greatest distance principle}}introduced by 
+(see the \textsc{shifting contrast principle} \is{shifting contrast principle|see{greatest distance principle}}introduced by 
 \citealp{herskovits1986language}\index{Herskovits, A.} and similar ideas in \citealp{freksa1999links}\index{Freksa, C.}).
 These insights primarily relate to criterion two. But one can also use them 
 to attack the strict membership criterion. If humans really
@@ -513,7 +513,7 @@ by many scholars to the semantic analysis of spatial language (see
 one is tempted to take such an approach to modeling the semantics
 of spatial language. However, there are some considerable problems
 associated with the category membership approach particularly when 
-facing the problem of \textsc{perceptual deviation}.\index{perceptual deviation}
+facing the problem of \textsc{perceptual deviation}.\is{perceptual deviation}
 
 \begin{figure}
 \begin{center}
@@ -533,7 +533,7 @@ only consists of the object {\footnotesize\tt obj-230}.}
 \begin{center}
 \includegraphics[width=.8\columnwidth]{figs/semantic-structure-apply-der-linke-block}
 \end{center}
-\caption[Lenient categorization semantics]{\index{categorization!lenient}%
+\caption[Lenient categorization semantics]{\is{categorization!lenient}%
 On the left side, the semantic structure of the phrase
 \textit{der linke Block} (`the left block') with {\footnotesize\tt apply} operations is shown. The images to
 the right show the application of semantic operations which leads to the
@@ -614,8 +614,8 @@ approach fails as its membership constraint cannot be met.
 \includegraphics[width=0.6\columnwidth]{figs/lenient-vs-strict-interpretation}\\
 \includegraphics[width=0.6\columnwidth]{figs/lenient-vs-strict-interpretation-strict}\\
 \includegraphics[width=0.6\columnwidth]{figs/lenient-vs-strict-interpretation-lenient}
-\caption[Lenient vs strict categorization]{\index{categorization!strict}%
-Lenient versus strict categorization\index{categorization!strict}.
+\caption[Lenient vs strict categorization]{\is{categorization!strict}%
+Lenient versus strict categorization\is{categorization!strict}.
 The first figure shows 
 the similarity functions for {\footnotesize\tt left} and {\footnotesize\tt right} 
 categories over the angle. The second figure shows the decomposition
@@ -705,7 +705,7 @@ their respective success and failure on different sets of spatial scenes.
 \includegraphics[width=.8\columnwidth]{figs/apply-filter-comparison-scenes}
 \end{center}
 \caption[Spatial scenes used to compare lenient vs. strict categorization]
-{\index{categorization!strict}\index{categorization!lenient}%
+{\is{categorization!strict}\is{categorization!lenient}%
 This figure exemplarily shows spatial scenes used for comparing lenient and strict
 categorization implementations. The left image shows an example scene from the data 
 set labeled {\footnotesize\tt space-game-10} which consists of scenes with one landmark and two robots 
@@ -721,7 +721,7 @@ The results in \figref{f:apply-filter-comparison} show
 a clear advantage for the lenient approach proposed in this 
 book. The success in interaction for this approach to 
 spatial categorization is consistently above 85\% across various 
-spatial scenes, whereas the success of strict categorization\index{categorization!strict} drops to 22\%
+spatial scenes, whereas the success of strict categorization\is{categorization!strict} drops to 22\%
 in the worst case ({\footnotesize\tt space-game-18}) but consistently performs below 60\%
 success showing the power of the lenient approach to deal even with 
 very complex spatial scenes (see \figref{f:lenient-vs-strict-scenes} for
@@ -739,7 +739,7 @@ as can be seen takes the major blame for failure.
 \includegraphics[width=.8\columnwidth]{figs/apply-filter-comparison}
 \end{center}
 \caption[Comparison of filter type semantics and apply semantics]
-{Results of comparing strict versus lenient categorization\index{categorization!lenient}
+{Results of comparing strict versus lenient categorization\is{categorization!lenient}
 on different sets of spatial scenes}
 \label{f:apply-filter-comparison}
 \end{figure}
@@ -752,7 +752,7 @@ on different sets of spatial scenes}
 \end{center}
 \caption[Effect of additional categories on strict categorization]
 {Results of comparing different sets of spatial categories and their 
-effect on the strict categorization\index{categorization!strict} approach}
+effect on the strict categorization\is{categorization!strict} approach}
 \label{f:filter-increased-categories}
 \end{figure}
 
@@ -766,7 +766,7 @@ approach the problem could be eased. For instance one could increase
 the number of possible decompositions of the sensorimotor space
 by adding more categories which allows the speaker to more easily conceptualize.
 \figref{f:filter-increased-categories} shows the effect of 
-adding more categories to the inventory of strict categorization\index{categorization!strict} agents.
+adding more categories to the inventory of strict categorization\is{categorization!strict} agents.
 It compares four conditions (over the different spatial scenes):
 ``german'', ``double'', ``triple'' and ``quadruple''.
 ``German'' refers to the set of categories introduced earlier, e.g. front, back, left, 
@@ -783,7 +783,7 @@ german condition.
 \end{center}
 \caption[Effect of additional categories on lenient categorization]
 {Results of comparing different sets of spatial categories and their 
-effect on the lenient categorization approach.\index{categorization!lenient}}
+effect on the lenient categorization approach.\is{categorization!lenient}}
 \label{f:apply-increased-categories}
 \end{figure}
 
@@ -793,7 +793,7 @@ surprising in the sense that there was a lot of room for improvement in the
 first place. For the other two sets of scenes success in interaction stays 
 pretty much the same. And it seems that also for {\footnotesize\tt space-game-18} a certain
 limit of improvement is reached, as success actually drops again for quadrupled
-number of categories\index{measures!number of categories}. The most interesting point is, however, that overall 
+number of categories\is{measures!number of categories}. The most interesting point is, however, that overall 
 success in interaction stays roughly the same for most spatial scenes 
 and failures of the speaker to conceptualize
 are replaced by the inability of hearers to interpret. This is most strikingly the case
@@ -806,7 +806,7 @@ area of applicability of categories
 becomes, and consequently the more likely it becomes that an object that is
 categorized as belonging to a certain category by the speaker will be 
 categorized differently by the hearer. One might
-wonder what the effect of more categories is on the lenient categorization\index{categorization!lenient}
+wonder what the effect of more categories is on the lenient categorization\is{categorization!lenient}
 approach. \figref{f:apply-increased-categories} shows that while there
 is some impact of more categories in the difficult scenes of data set
 {\footnotesize\tt space-game-18}, overall there is no significant increase in success in

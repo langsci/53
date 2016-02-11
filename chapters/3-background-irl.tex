@@ -9,14 +9,14 @@ in the real-world need powerful computational systems for conceptualizing
 their environment. In order to provide 
 embodied artificial systems with rich semantics reminiscent of human 
 language complexity, agents need mechanisms for both conceptualizing complex 
-compositional semantic structure\index{semantic structure}, but also for 
+compositional semantic structure\is{semantic structure}, but also for 
 actively reconstructing semantic 
 structure in interpretation of ambiguous utterances.
 Furthermore, the system must be open-ended and 
 allow agents to adjust their semantic inventories in order to reach their goals. 
 This chapter presents the computational system called
-Incremental Recruitment Language (IRL)\index{Incremental Recruitment Language} 
-that allows agents to represent and process complex conceptualizations\index{conceptualization}
+Incremental Recruitment Language (IRL)\is{Incremental Recruitment Language} 
+that allows agents to represent and process complex conceptualizations\is{conceptualization}
 of spatial scenes. The work presented here is based on substantial previous work. 
 Key ideas of the IRL system have been laid out by \cite{steels2000emergence}\index{Steels, L.}, 
 with progress reported by \cite{steels2005planning}\index{Steels, L.}\index{Bleys, J.}, \cite{vandenbroeck2008irl}\index{Van den Broeck, W.}, and
@@ -48,7 +48,7 @@ the hearer of this utterance has to filter the context for blocks first,
 followed by the application of the color category
 red, in order to arrive at the set of red blocks, which is used to 
 compute the topic consisting of a single entity. A possible program, 
-also called \textsc{irl-network}\index{IRL-network|see{semantic structure}}, is shown in \figref{f:the-red-block-network}.
+also called \textsc{irl-network}\is{IRL-network|see{semantic structure}}, is shown in \figref{f:the-red-block-network}.
 This network explicitly represents the chain of the four operations {\footnotesize\tt get-context},
 {\footnotesize\tt apply-class}, {\footnotesize\tt apply-color} and {\footnotesize\tt apply-selector}
 by linking their arguments through variables 
@@ -58,11 +58,11 @@ the object class {\footnotesize\tt block} and the selector
 {\footnotesize\tt unique} which are introduced via so called 
 \textsc{bind statements}, as in 
 {\footnotesize\tt (bind color-category ?color red)}. We collectively
-refer to concepts, categories etc. as \textsc{semantic entities}\index{semantic entity}.
+refer to concepts, categories etc. as \textsc{semantic entities}\is{semantic entity}.
 
 IRL-networks consist of two types of nodes 
 \begin{description}
-\item[Cognitive operations,] also called \textsc{semantic operations},\index{cognitive operation}
+\item[Cognitive operations,] also called \textsc{semantic operations},\is{cognitive operation}
 are the algorithms used in conceptualization. They encode a particular cognitive 
 function such as categorization using a color category,
 applying a selector or applying an object class and many more as will be shown
@@ -95,7 +95,7 @@ From left to right, each node represents a step in the evaluation process. From 
 \label{f:evaluation-tree}
 \end{figure}
 
-\section{Evaluation}\index{cognitive operation!evaluation}
+\section{Evaluation}\is{cognitive operation!evaluation}
 A program such as the one in \figref{f:the-red-block-network} is \emph{evaluated}
 by a speaker to test the semantic structure with respect to the 
 particular communicative goal, or by a hearer in order to interpret an utterance.
@@ -139,12 +139,12 @@ applies a class such as {\footnotesize\tt block} to an input set, when the
 class is explicitly represented in the network. But in case
 this class is not introduced via a bind statement in the network, the operation
 can also provide this information, effectively turning this argument
-into an output argument. This \textsc{multidirectionality}\index{cognitive operation!multidirectionality} of operations 
+into an output argument. This \textsc{multidirectionality}\is{cognitive operation!multidirectionality} of operations 
 proves important for dealing with missing items, for instance due to partial parsing 
 of an utterance, but it is also needed when constructing semantic structure.
 
 
-\section{Conceptualization and interpretation}\index{conceptualization}\index{interpretation}
+\section{Conceptualization and interpretation}\is{conceptualization}\is{interpretation}
 \begin{figure}
 \center
 \includegraphics[width=1.0\columnwidth]{figs/composition}
@@ -209,7 +209,7 @@ discriminating for a particular object (implicitly assuming that the
 speaker constructs structure based on these principles) will be considered 
 and the best of all possible results is chosen as the interpretation of an utterance. 
 
-\section{Chunking}\index{chunking}
+\section{Chunking}\is{chunking}
 Search spaces quickly become intractable because the number of 
 possibilities for composing semantic structures increases exponentially 
 with the number of cognitive operations. A look at language
@@ -275,7 +275,7 @@ ways of conceptualizing reality.}
 \end{figure}
 
 
-\section{Grounding}\index{grounding}
+\section{Grounding}\is{grounding}
 Another important issue is grounding. 
 There are now many proposals of how agents can ground lexicons and 
 categorical systems in sensorimotor interaction with the environment 

@@ -55,3 +55,26 @@
 
 % tabularx columns
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+
+%Env
+
+\newenvironment{explanation}[1]
+{\vskip0.08cm\parbox[t]{0.15\textwidth}{\raggedleft #1}
+	\hskip0.03\textwidth\begin{minipage}[t]{0.76\textwidth}}
+	{\end{minipage}\vskip0.05cm}
+\newcommand{\refex}[1]{Example~\ref{ex:#1}}
+\newcommand{\refeq}[1]{(\ref{eq:#1})}
+
+\newcommand{\definition}[2]{
+	\vskip0.3cm
+	\noindent
+	\emph{#1}
+	\hskip0.2cm
+	\textsc{#2}
+	\nopagebreak
+	\vskip0.1cm
+	\hrule
+	\nopagebreak
+	\vskip0.1cm}
+\endinput

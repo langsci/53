@@ -24,10 +24,10 @@ An IRL-network representing the meaning of the phrase
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Representing spatial relations}\index{spatial relation}
+\section{Representing spatial relations}\is{spatial relation}
 The semantics of spatial relations is the subject of ongoing debate. The 
 key question is whether there is something like a 
-\textsc{semantic core}\index{spatial relation!semantic core}  of 
+\textsc{semantic core}\is{spatial relation!semantic core}  of 
 spatial relations, i.e. a core meaning that 
 abstracts from discourse situations as far as possible 
 \citep{tenbrink2007space}\index{Tenbrink, T.}, and what that 
@@ -66,7 +66,7 @@ Consequently, from a computational point of view, there are two
 important category types for representing the geometric properties 
 of the German spatial relations discussed in this book {\footnotesize\tt angular-category}, 
 which represent prototypical angles and {\footnotesize\tt proximal-category}, 
-which represent prototypical distances (see Figure \ref{f:category-hierarchy} for an overview).\index{spatial relation!proximal}
+which represent prototypical distances (see Figure \ref{f:category-hierarchy} for an overview).\is{spatial relation!proximal}
 
 \begin{figure}
 \includegraphics[width=1\columnwidth]{figs/category-hierarchy.pdf}
@@ -81,7 +81,7 @@ using functions that map a particular input location to the applicability degree
 of a particular category. For prototype based spatial categories 
 degree of applicability amounts to similarity in some spatial dimension, 
 e.g. in the angular dimension for angular relations. 
-Projective and absolute relations are\index{spatial relation!projective}\index{spatial relation!absolute}\index{spatial relation!angular}
+Projective and absolute relations are\is{spatial relation!projective}\is{spatial relation!absolute}\is{spatial relation!angular}
 examples of angular categories, with a focal region around the 
 denoted axis. For instance, frontal categories have a high degree of applicability
 along the frontal axis. Whereas lateral categories have a high 
@@ -159,7 +159,7 @@ $\sigma_{\mathtt{\footnotesize near}=700.0}$ and $\sigma_{\mathtt{\footnotesize 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Applying spatial relations}\index{spatial relation!regions}
+\section{Applying spatial relations}\is{spatial relation!regions}
 Prepositionally and adverbially expressed spatial relations denote 
 spatial regions which are always related to some reference object.
 For instance, in the phrase \textit{der block links der Kiste} (`the block to the left
@@ -267,7 +267,7 @@ depicted for the category {\footnotesize\tt near} and the landmark {\footnotesiz
 \label{f:apply-proximal-region}
 \end{figure}
 
-\section{Frames of reference}\index{frames of reference}
+\section{Frames of reference}\is{frames of reference}
 Projective and absolute relations are defined in terms of focal directions.
 Consequently, for these kinds of relations the rotation of the landmark 
 is an important issue determining the precise applicability of 
@@ -287,7 +287,7 @@ In German all three frames of reference are possible.
 
 
 \begin{description}
-\item[Intrinsic frame of reference]\index{frames of reference!intrinsic}
+\item[Intrinsic frame of reference]\is{frames of reference!intrinsic}
 The intrinsic frame of reference is an object centered coordinate 
 system, meaning that projective categories are applied to the 
 reference object based on particular sides of the object, which 
@@ -339,7 +339,7 @@ front, but rather are parallel to the left and right side of the perspective
 {\footnotesize\tt robot-1}.
 The right figure shows an absolute frame of reference applied to the landmark 
 {\footnotesize\tt box-1}. Cardinal directions are aligned based on a geocentric direction
-induced on the scene by a marker.\index{frames of reference!relative}}
+induced on the scene by a marker.\is{frames of reference!relative}}
 \label{f:frames-of-reference}
 \end{figure}
 
@@ -357,7 +357,7 @@ a geocentric marker on the wall. The direction towards this marker
 defines the direction to the north. Figure \ref{f:frames-of-reference} 
 gives an example.
 
-\index{frames of reference!absolute}
+\is{frames of reference!absolute}
 \definition{Semantic operation}{construct-region-absolute}
 \begin{explanation}{description}
 Computes an absolute region based on the landmark
@@ -405,7 +405,7 @@ implemented in the operation {\footnotesize\tt construct-region-vertical}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Internal and external regions}\index{spatial relation!internal}\index{spatial relation!external}
+\section{Internal and external regions}\is{spatial relation!internal}\is{spatial relation!external}
 Another line of processing distinctions can be made between internal 
 and external relations. \textit{North} and \textit{south}, but also prepositional use
 of \textit{front}, e.g. \textit{vor}, are referring to external regions, that is the
@@ -468,7 +468,7 @@ Consequently, object {\footnotesize\tt obj-182} could be described in German as
 \end{centering}
 \end{figure}
 
-\section{Group-based reference}\index{spatial relation!group-based reference}
+\section{Group-based reference}\is{spatial relation!group-based reference}
 The semantics of German spatial adjectives is best understood in terms of 
 group-based reference.\footnote{Recent evidence \citep{moratz2006spatial}\index{Moratz, R.}\index{Tenbrink, T.} 
 points to more variety in interpretation. For the purpose of this book, however,
@@ -507,14 +507,14 @@ objects that constitute a set, namely the set of all block which relates to
 the group that the reference should be based on.
 The implementation of the semantic operation 
 {\footnotesize\tt apply-spatial-category-group-based} relies on a well-known clustering algorithm
-called \emph{k-means}\index{k-means} \citep{lloyd1982least}\index{Lloyd, S.P.} in order to find the group 
+called \emph{k-means}\is{k-means} \citep{lloyd1982least}\index{Lloyd, S.P.} in order to find the group 
 of objects in the input set. The scores of all objects in the input set 
 are used to divide the input set into two groups and all elements 
 in the group with the higher score centroid are used to compute 
 the spatial landmark. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Perspective marking}\index{perspective marking}
+\section{Perspective marking}\is{perspective marking}
 
 \begin{figure}
 \begin{center}
@@ -572,7 +572,7 @@ but also a rotation.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Discussion}
 
-\subsection{Functional constraints}\index{spatial relation!functional constraints}
+\subsection{Functional constraints}\is{spatial relation!functional constraints}
 Purely geometric accounts of spatial semantics have been criticized
 on the basis of psycholinguistic studies that reveal for many spatial relations,
 that additional functional constraints influence their applicability. 
@@ -611,7 +611,7 @@ once a functional model can be established in terms of similarity,
 it can readily be incorporated into the current model by exchanging
 semantic operations.
 
-\subsection{Contextual factors}\index{spatial relation!contextual factors}
+\subsection{Contextual factors}\is{spatial relation!contextual factors}
 Besides functional constraints, contextual factors affect the
 applicability of spatial terms. For instance, for proximal relations: 
 \emph{prototypical size} \citep{gapp1994basic}\index{Gapp, K.}, but also 
@@ -635,7 +635,7 @@ might be more relevant for the task than in object location description tasks.
 Such processes are dealt with in detail in \chapref{s:german-locative-phrases-semantic-processing}.
 
 
-\subsection{Other modeling approaches}\index{spatial relation!spatial ontologies}\index{spatial relation!qualitative spatial reasoning}
+\subsection{Other modeling approaches}\is{spatial relation!spatial ontologies}\is{spatial relation!qualitative spatial reasoning}
 Spatial semantics is an important and vibrant research area. 
 Many different proposals are currently being made. Some suggest 
 the use of formal ontology engineering \citep{bateman2007role,bateman2010situating,bateman2010ontology}\index{Ross, R.}\index{Farrar, S.}\index{Bateman, J. A.}\index{Hois, J.}\index{Tenbrink, T.}

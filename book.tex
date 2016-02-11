@@ -12,18 +12,7 @@
 \usepackage{localcommands}
 \bibliography{localbibliography} % References file
 
-% \RecustomVerbatimEnvironment{verbatim}{Verbatim}{}
-% \usepackage{covington}
-
-%% turn of those nasty overfull and underfull hboxes
-%\hbadness=10000
-%\hfuzz=50pt
-
 % ####################################################################
-
-\include{system/environments}
-%\include{System/commands}
-%\include{System/preamble}
 
 \begin{document}
 
@@ -72,27 +61,26 @@
 %#############################################################
 \backmatter
 
+%\renewcommand{\bibname}{References} % changes default name Bibliography to References
+\ohead{Bibliography}
+\printbibliography[heading=references] 
+
 
 \phantomsection%this allows hyperlink in ToC to work
 \addcontentsline{toc}{chapter}{Indexes} 
-
 \phantomsection%this allows hyperlink in ToC to work
 \addcontentsline{toc}{section}{Name index}
 \ohead{Name index} 
 \printindex
   
-\phantomsection%this allows hyperlink in ToC to work
-\addcontentsline{toc}{section}{Language index}
-\ohead{Language index} 
-\printindex[lan] 
+%\phantomsection%this allows hyperlink in ToC to work
+%\addcontentsline{toc}{section}{Language index}
+%\ohead{Language index} 
+%\printindex[lan] 
   
 \phantomsection%this allows hyperlink in ToC to work
 \addcontentsline{toc}{section}{Subject index}
 \ohead{Subject index} 
 \printindex[sbj]
-
-%\renewcommand{\bibname}{References} % changes default name Bibliography to References
-\ohead{Bibliography}
-\printbibliography[heading=references] 
 
 \end{document}

@@ -66,12 +66,12 @@ organized into certain types of constructions each providing different informati
 \item[Lexical Constructions] These constructions map semantic entities
 to stems and back. Hand in hand with morphological constructions they
 are responsible for the expression of lexical items. Lexical constructions
-introduce lexical units in the transient structure\index{transient structure} that are used to assemble
+introduce lexical units in the transient structure\is{transient structure} that are used to assemble
 information necessary for decisions on the lexical class and the word form 
 of the semantic entity in production. In parsing these units gather information 
 required for the semantic interpretation of a semantic entity in the 
 surrounding semantic structure. Lexical constructions introduce abstractions
-into the transient structure\index{transient structure} that allow to go from concrete semantic entities
+into the transient structure\is{transient structure} that allow to go from concrete semantic entities
 to the class they are in. For instance, \textit{links} (`left') is a lateral spatial 
 category such as \textit{rechts} (`right'). Both behave similar in semantics 
 as well as in syntax. Lexical units introduce such type information
@@ -110,7 +110,7 @@ is available, which requires that constructions such as the determined-noun-phra
 construction have supplied this information. In parsing, morphological constructions
 function as word form recognizers.
 \item[Semantic Constructions] Lastly, there is a special type of constructions 
-which is only used in parsing for handling semantic ambiguity\index{semantic ambiguity}. They are 
+which is only used in parsing for handling semantic ambiguity\is{semantic ambiguity}. They are 
 discussed in detail in \sectref{s:semantic-ambiguity}.
 \end{description}
 
@@ -245,20 +245,20 @@ Relation & \upshape Adjective & \upshape Adverb & \upshape Preposition [\textsc{
 The problem of choosing a lexical class in production and 
 finding the lexical class in interpretation is solved by a careful
 setup of the interaction of functional and lexical constructions.
-I use a particular design pattern called \textsc{actual-potential}.\index{design pattern!actual-potential}%
+I use a particular design pattern called \textsc{actual-potential}.\is{design pattern!actual-potential}%
 \footnote{The pattern is inspired by earlier work on
 argument realization \citep{vantrijp2008phd}\index{van Trijp, R.} which is 
 also a many-to-many mapping problem.}
 The design pattern allows to store possible lexical classes
 in the form of potentials for each lexical item directly in the 
-lexical units of the transient structure\index{transient structure}. Subsequent 
+lexical units of the transient structure\is{transient structure}. Subsequent 
 functional constructions can constrain their application based on the 
 potential of the lexical item, consequently, ruling out 
 non standard usage, e.g., expressing proximal relations as adjectives.
 The same is used on the semantic side, where the semantic
 type hierarchy of the semantic entity is stored as a list of potentials.
 
-The actual-potential\index{design pattern!actual-potential} technique allows to 
+The actual-potential\is{design pattern!actual-potential} technique allows to 
 distribute decision making across lexical and functional constructions 
 by separating the specification of options (potentials)
 from the \emph{actual} decision. Possible choices are
@@ -268,7 +268,7 @@ thereby signaling to subsequent constructions which choices are
 possible which allows subsequent constructions to constrain their 
 application by observing potentials and triggering only when
 the right potentials are present. Before we jump to the 
-application of the actual-potential\index{design pattern!actual-potential} design pattern, we need to 
+application of the actual-potential\is{design pattern!actual-potential} design pattern, we need to 
 consider the lexical and functional constructions that are involved.
 
 The fact that Examples \REF{e:der-vordere-block-2}--\REF{e:der-block-vor-der-kiste-2} 
@@ -443,7 +443,7 @@ the constructions introduce.}
 \subsection{Encoding type and lexical class potentials}
 In order to solve the many-to-many mapping problem,
 lexical and functional constructions are 
-extended using the \emph{actual-potential}\index{design pattern!actual-potential} design pattern 
+extended using the \emph{actual-potential}\is{design pattern!actual-potential} design pattern 
 on the syntactic and semantic pole of constructions.
 Lexical constructions merge semantic and 
 syntactic potentials into lexical units. This 
@@ -483,7 +483,7 @@ for {\footnotesize\tt type}  potentials of projective lexical constructions and
 \end{figure}
 
 \subsection{Technical realization}
-The actual-potential\index{design pattern!actual-potential} design pattern is easily implemented
+The actual-potential\is{design pattern!actual-potential} design pattern is easily implemented
 using a dedicated template for extending lexical constructions.
 Example \REF{e:def-lex-front}, for instance, is supplemented by the following two 
 templates which introduce potentials on the semantic and syntactic side.
@@ -542,7 +542,7 @@ in the lexical construction and is used to store which
 is picked up, for instance by a functional construction, the 
 {\footnotesize\tt actual} attribute is also set.
 
-The information stored by the lexical construction in the transient structure\index{transient structure}
+The information stored by the lexical construction in the transient structure\is{transient structure}
 allows functional constructions to choose 
 the potential in which they are interested and to constrain
 their own application. This process can be seen in an extended 
@@ -560,7 +560,7 @@ version of the functional spatial adjective construction:
 \z
 In order for the spatial adjective 
 construction to apply, these templates express that certain potentials need to be present in the 
-transient structure\index{transient structure}. More precisely, the {\footnotesize\tt type} potential 
+transient structure\is{transient structure}. More precisely, the {\footnotesize\tt type} potential 
 {\footnotesize\tt angular-spatial-category} and the {\footnotesize\tt lex-cat} potential 
 {\footnotesize\tt spatial-adjective} need to be there. 
 
@@ -595,7 +595,7 @@ potential be merged. The specified potential always has to be present,
 in this case on the semantic side, but for the {\footnotesize\tt lex-cat} 
 potentials, the case is vice versa on the 
 syntactic side. Consequently, choosing a potential does not 
-change the potential in the transient structure\index{transient structure}. 
+change the potential in the transient structure\is{transient structure}. 
 The second feature, the {\footnotesize\tt actual} attribute, must be equal 
 to {\footnotesize\tt angular-spatial-category} or a variable in order for the spatial 
 adjective construction to apply. If the attribute
@@ -618,7 +618,7 @@ The arrow signifies the order of application.
 Left, the {\footnotesize\tt vordere} unit on the semantic side of the 
 processed transient structure is shown. 
 Right, the syntactic unit is shown. The 
-transient structure\index{transient structure} actually contains more units, and the units 
+transient structure\is{transient structure} actually contains more units, and the units 
 themselves contain more features, but
 everything has been shortened for illustrative purposes. The 
 top row shows the lexical unit after
@@ -644,7 +644,7 @@ Interaction of lexical constructions
 with functional constructions in parsing \textit{vordere} (`front'). 
 Lexical constructions apply before functional constructions.
 The {\footnotesize\tt vordere} unit on the semantic side of the 
-processed transient structure\index{transient structure} is shown on the left.
+processed transient structure\is{transient structure} is shown on the left.
 The syntactic unit is shown on the right. The transient 
 structure actually contains more units, and the units themselves
 contain more features, but everything has been shortened 
@@ -880,7 +880,7 @@ about the syntactic and semantic functions of their constituents, and hence are
 widely applicable and underlie the ability of the grammar to build and parse 
 complex recursive utterances involving many complemented phrases. Phrasal 
 constructions have two constituents. The unification of constituents is based on 
-the actual-potential\index{design pattern!actual-potential} design pattern. The constructions require their constituents 
+the actual-potential\is{design pattern!actual-potential} design pattern. The constructions require their constituents 
 to provide certain semantic and syntactic function potentials, while providing 
 new potentials for semantic and syntactic functions themselves. 
 All of them also introduce a particular word order and a particular linking 
@@ -999,7 +999,7 @@ around in order to facilitate decisions and spread their effect, and
 (3) ways to postpone decisions until enough information is
 accumulated. The solutions presented for these problems naturally
 mirror the techniques discussed in the previous section. Logic
-variables embedded in feature matrices\index{design pattern!feature matrix} are used to represent
+variables embedded in feature matrices\is{design pattern!feature matrix} are used to represent
 uncertainty, percolation for moving information around and
 constructions of a particular type in order to postpone decisions.
 
@@ -1012,7 +1012,7 @@ features until enough information has been collected. Hence, feature
 matrices function similarly to the logic variable used for
 representing uncertainty in the previous section, as they are a
 technique for accumulating information contributed by different
-constructions. Distinctive feature matrices\index{design pattern!feature matrix} extend the concept of
+constructions. Distinctive feature matrices\is{design pattern!feature matrix} extend the concept of
 logic variables and allow for the representation of dependencies between features
 in processing.
 
@@ -1025,8 +1025,8 @@ specifically with the noun. Consequently, the state of information for
 some word classes is initially constrained. While adjectives and
 articles have no constraints on case and gender, nouns already provide
 information about their gender, and prepositions about the required
-case. Distinctive feature matrices\index{design pattern!feature matrix} allow for the representation of such different
-states of information in the transient structure\index{transient structure} in a unified way by
+case. Distinctive feature matrices\is{design pattern!feature matrix} allow for the representation of such different
+states of information in the transient structure\is{transient structure} in a unified way by
 explicitly representing all combinations of possible feature values
 in a matrix. For our German example, this information is captured in
 a two dimensional matrix, where columns reflect the four German cases,
@@ -1043,7 +1043,7 @@ variables i.e. marked with a `?').
     functional constructions]{Transient structure after the application of lexical and
     functional constructions for production of \textit{hinter dem linken
     Block} (`behind the left block'). For simplification, each unit
-    is only shown with its distinctive feature matrix\index{design pattern!feature matrix} for case/gender
+    is only shown with its distinctive feature matrix\is{design pattern!feature matrix} for case/gender
     agreement, if present. Furthermore, the feature matrices of the
     lexical units are identical to those of their parent units and are
     thus also not shown.}
@@ -1051,17 +1051,17 @@ variables i.e. marked with a `?').
 \end{figure}
 
 \figref{f:hinter-dem-linken-block-1} shows the state of the
-transient structure\index{transient structure} after the application of lexical and functional
+transient structure\is{transient structure} after the application of lexical and functional
 constructions. It can be seen how the different states of information
 for articles, adjectives, prepositions and nouns are technically
-represented. The feature matrices\index{design pattern!feature matrix} for the spatial adjective
+represented. The feature matrices\is{design pattern!feature matrix} for the spatial adjective
 ({\footnotesize\texttt{spatial-adjective-unit-334}}) and for the article
 ({\footnotesize\texttt{article-unit-334}}) are completely filled with variables. On
-the other hand, the feature matrix\index{design pattern!feature matrix} for the frontal preposition
+the other hand, the feature matrix\is{design pattern!feature matrix} for the frontal preposition
 ({\footnotesize\texttt{frontal-preposition-unit-93}}) features a `{\textminus}' everywhere but
 in the column representing the dative case, namely, the case it
 requires. On the other hand, the noun ({\footnotesize\texttt{noun-unit-334}}) is
-categorized based on its gender, and the feature matrix\index{design pattern!feature matrix} consequently
+categorized based on its gender, and the feature matrix\is{design pattern!feature matrix} consequently
 has variables in the row for masculine and excludes all other fields.
 
 \subsection{Percolation and agreement -- moving information around and unification}
@@ -1088,7 +1088,7 @@ the {\footnotesize\tt adjectival-nominal} construction (see Figure
 \ref{f:hinter-dem-linken-block-2}). In our example, this construction
 handles the adjective ({\footnotesize\texttt{spatial-adjective-unit-334}}) and
 the noun ({\footnotesize\texttt{noun-unit-334}}) as constituents. Apart from introducing
-German word order, this construction unifies the feature matrix\index{design pattern!feature matrix} of the
+German word order, this construction unifies the feature matrix\is{design pattern!feature matrix} of the
 adjective and the noun, which automatically constrains the gender
 possibilities for the adjective, in this case to masculine. In fact,
 through unification the two feature matrices are the same after the
@@ -1120,7 +1120,7 @@ is still missing. Case is provided by the angular preposition, and
 agreement between the preposition and the determined-nominal-phrase is
 established by the {\footnotesize\tt angular-pp-phrase} (see \figref{f:hinter-dem-linken-block-3}). The {\footnotesize\tt angular-pp-phrase}
 technically behaves very similarly to the the {\footnotesize\tt determiner-nominal} and the {\footnotesize\tt adjectival-nominal}
-constructions: it unifies the feature matrices\index{design pattern!feature matrix} of its two constituents
+constructions: it unifies the feature matrices\is{design pattern!feature matrix} of its two constituents
 ({\footnotesize\texttt{frontal-preposition-unit-93}} and
 {\footnotesize\texttt{determiner-nominal-phrase-unit-373}}). However, the effect is
 quite different in that now the feature matrix of the article, the
@@ -1144,7 +1144,7 @@ linke Block} (`the block to the left') are expressed, then there
 is no preposition that determines the case of the whole
 phrase by agreement. Rather, the {\footnotesize\texttt{referring-expression}}
 construction (see \figref{f:referring-expression-fvm})
-introduces the nominative case by unifying the feature matrix\index{design pattern!feature matrix} of the
+introduces the nominative case by unifying the feature matrix\is{design pattern!feature matrix} of the
 determined-noun-phrase unit with a matrix constraining the case to
 nominative.
 
@@ -1173,7 +1173,7 @@ possible case-gender combinations, as shown in the chart below:
 
 \begin{figure}[t]
   \centerline{\includegraphics[scale=0.65]{figs/dem-morph-fvm}}
-  \caption[Distinctive feature matrix\index{design pattern!feature matrix} of a morphological construction]{%
+  \caption[Distinctive feature matrix\is{design pattern!feature matrix} of a morphological construction]{%
   Distinctive feature matrix of the morphological construction
     that maps the string \textit{dem} to masculine or neuter and dative
     articles. Note that since this is a morphological construction, both
@@ -1198,7 +1198,7 @@ entries add the strings \textit{linken} to the {\footnotesize\texttt{block-unit-
 \begin{centering}
 \includegraphics[width=\columnwidth]{figs/parse-result-transient-syn}
 \includegraphics[width=\columnwidth]{figs/parse-result-transient-sem}
-\caption[Final transient structure]{Parts of a final transient structure\index{transient structure}. The top shows the syntactic pole. The bottom
+\caption[Final transient structure]{Parts of a final transient structure\is{transient structure}. The top shows the syntactic pole. The bottom
 shows the semantic pole.}
 \end{centering}
 \label{f:parse-result-transient}
@@ -1208,7 +1208,7 @@ Problems of intertwined information processing across multiple constructions
 and across different parts of transient structures often appear when dealing 
 with complex, real world language. This chapter detailed how to tackle such 
 problems using (1) adequate information representation techniques, such 
-as logic variables, feature matrices\index{design pattern!feature matrix} and disjunctive potentials,
+as logic variables, feature matrices\is{design pattern!feature matrix} and disjunctive potentials,
 (2) percolation for distributing information in the transient structure, and 
 (3) special constructions which are needed to help postpone decisions until 
 the state of information is ready. The techniques have proven to be 
