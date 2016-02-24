@@ -48,7 +48,7 @@ Many of these proposals are rooted in a strand of psycholinguistic research that
 prototypes and prototypicality effects \citep{rosch1978principle}\index{Rosch, E.}. 
 Here, prototypes or prototypical points in the sensorimotor
 space are used as representations for spatial categories
-(for a similar approach to color, see \citealp{bleys2010phd}\index{Bleys, J.}). 
+(for a similar approach to color, see \citealt{bleys2010phd}\index{Bleys, J.}). 
 For instance, the projective term \textit{links} (`left') can 
 be interpreted for objects which relate to the reference object
 by an angle of $90^\circ$ (prototypical left angle). The more the angle 
@@ -94,7 +94,7 @@ of angles. In order to get a similarity function $\operatorname{sim}_{a} \in [0,
 the angle distance is wrapped in an exponential decay envelope 
 and weighted by a $\sigma$ which steers the steepness of the 
 exponential decay. High values for $\sigma$ correspond to a slow decay 
-in similarity the bigger the angular distance\todo{I think ``the bigger the angular distance'' should be omitted}, whereas low values for $\sigma$ 
+in similarity the bigger the angular distance, whereas low values for $\sigma$ 
 correspond to a sharper decline in similarity.
 Consequently, the following equations defines the degree of applicability given a
 location $l$ and an angular category $c$, as the angular distance 
@@ -161,12 +161,12 @@ $\sigma_{\mathtt{\footnotesize near}=700.0}$ and $\sigma_{\mathtt{\footnotesize 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Applying spatial relations}\is{spatial relation!regions}
 Prepositionally and adverbially expressed spatial relations denote 
-spatial regions which are always related to some reference object.
+\textsc{spatial regions} which are always related to some reference object.
 For instance, in the phrase \textit{der block links der Kiste} (`the block to the left
 of the box') an object \textit{der Block} (`the block') is related to the landmark 
 \textit{die Kiste} (`the box') via the spatial category \textit{links} (`left'). 
 The information about which category is used and which landmark
-is referred to is packaged in a \emph{spatial region}.
+is referred to is packaged in a spatial region.
 In order to represent the difference between the construction of a region
 as for instance denoted by the prepositional phrase \textit{vor der Kiste}
 (`in front of the box') and the application of that region to filter objects,
@@ -206,12 +206,12 @@ that the landmark is at the center of origin of the coordinate system
 and (2) applying the similarity function defined in Equation 
 \ref{e:proximal-category-similarity}. This operation in many ways
 acts as a classifier such as the semantic operations for {\footnotesize\tt color}
-and {\footnotesize\tt object-class} described in \sectref{s:irl}. 
+and {\footnotesize\tt object-class} described in \chapref{s:irl}. 
 For each object in the source set the similarity of this object to the 
 spatial region is computed, based on the constituents of the region,
 e.g. which category and which landmark was used to define the region.
 This similarity is combined with the other computed similarities for
-the object (see \sectref{s:irl} for description). 
+the object (see \chapref{s:irl} for description). 
 The operation {\footnotesize\tt apply-region-filter} 
 is general enough to be applicable to all regions, including projective and absolute 
 regions whose description is to follow.\footnote{This operation can
@@ -507,7 +507,7 @@ objects that constitute a set, namely the set of all block which relates to
 the group that the reference should be based on.
 The implementation of the semantic operation 
 {\footnotesize\tt apply-spatial-category-group-based} relies on a well-known clustering algorithm
-called \emph{k-means}\is{k-means} \citep{lloyd1982least}\index{Lloyd, S.P.} in order to find the group 
+called $k$-means)\is{k-means@$k$-means} \citep{lloyd1982least}\index{Lloyd, S.P.} in order to find the group 
 of objects in the input set. The scores of all objects in the input set 
 are used to divide the input set into two groups and all elements 
 in the group with the higher score centroid are used to compute 
@@ -539,7 +539,7 @@ perspective'). Only relative interpretations of a spatial phrase can be perspect
 marked. The perspective itself marks the position of the viewpoint, and therefore 
 also the view direction, i.e. rotation. 
 
-Intrinsic frames of reference computationally behave very similar to perspective-marked 
+Intrinsic frames of reference computationally behave very similar to perspec\-tive-marked 
 relative frames. Some argue therefore, that an intrinsic reference system is in essence a 
 conflated relative reference system that coincides with the perspective 
 on the scene \citep{levinson1996language}\index{Levinson, S. C.}. 
@@ -614,13 +614,13 @@ semantic operations.
 \subsection{Contextual factors}\is{spatial relation!contextual factors}
 Besides functional constraints, contextual factors affect the
 applicability of spatial terms. For instance, for proximal relations: 
-\emph{prototypical size} \citep{gapp1994basic}\index{Gapp, K.}, but also 
-\emph{object salience} \citep{regier2001grounding}\index{Regier, T.}\index{Carlson, L. A.}, and \emph{object interference} 
+\textsc{prototypical size} \citep{gapp1994basic}\index{Gapp, K.}, but also 
+\textsc{object salience} \citep{regier2001grounding}\index{Regier, T.}\index{Carlson, L. A.}, and \textsc{object interference} 
 \citep{kelleher2009dialog}\index{Costello, F. J.}\index{Kelleher, J. D.} seem to play a role.
 Just to give an example, the prototypical size factor can explain
 why the proximal region \textit{nahe des Geb\"audes}
 (`near the building') is larger than that of \textit{nahe dem Apfel} (`near the apple') 
-(example adapted from \citealp{gapp1994basic}\index{Gapp, K.}) by the difference in typical 
+(example adapted from \citealt{gapp1994basic}\index{Gapp, K.}) by the difference in typical 
 size of buildings and apples. 
 Constraints such as the prototypical size, as well as the influence of
 object salience, are easily integrated into the model, but just as 

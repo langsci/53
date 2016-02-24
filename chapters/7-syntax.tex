@@ -61,7 +61,7 @@ grammatical markers, word order, morphology, etc.
 German requires fine grained distinctions of constructions
 in order to facilitate and coordinate processing. The grammar is 
 organized into certain types of constructions each providing different information
-(see \citealp{steels2011phrasal}\index{Steels, L.} for the original idea). 
+(see \citealt{steels2011phrasal}\index{Steels, L.} for the original idea). 
 \begin{description}
 \item[Lexical Constructions] These constructions map semantic entities
 to stems and back. Hand in hand with morphological constructions they
@@ -163,8 +163,8 @@ case system (\sectref{s:handling-case}).
 In German the same spatial relation can be expressed using different lexical classes
 (adjective, adverb or preposition). The following shows 
 an example of the spatial relation {\footnotesize\tt front} expressed
-as adjective (Example \ref{e:der-vordere-block-2}), adverb (Example \ref{e:der-block-vorne-2}), 
-and prepositions (Example \ref{e:der-block-vor-der-kiste-2}) which
+as adjective (\REF{e:der-vordere-block-2}), adverb (\REF{e:der-block-vorne-2}), 
+and prepositions (\REF{e:der-block-vor-der-kiste-2}) which
 are repeated here for convenience from \chapref{s:german-spatial-language-introduction}.
 \ea
 \label{e:der-vordere-block-2}
@@ -587,9 +587,9 @@ of the lexical constituent in the transient structure imperatively includes
 {\footnotesize\tt angular-spatial-category}. Additionally,
 it requires the {\footnotesize\tt actual} attribute
 to be {\footnotesize\tt angular-spatial-category} or a variable. There are two
-things to note here: the use of the {\footnotesize\tt ==!} operator for 
+things to note here: the use of the {\footnotesize\verb|==!|} operator for 
 potentials and the handling of the {\footnotesize\tt actual} attribute. 
-The {\footnotesize\tt ==!} operator only unifies and never merges, 
+The {\footnotesize\verb|==!|} operator only unifies and never merges, 
 which means that neither in production nor parsing can a missing 
 potential be merged. The specified potential always has to be present, 
 in this case on the semantic side, but for the {\footnotesize\tt lex-cat} 
@@ -608,7 +608,7 @@ apply in the first place (see \figref{f:production-vordere})
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=1.0\columnwidth]{figs/production-vordere}
+\includegraphics[width=.8\columnwidth]{figs/production-vordere}
 \end{center}
 \caption[Interaction of lexical and functional constructions -- syntax]{%
 Interaction of lexical constructions with 
@@ -636,7 +636,7 @@ for {\footnotesize\tt type} and {\footnotesize\tt spatial-adjective} for {\footn
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=1.0\columnwidth]{figs/parsing-vordere}
+\includegraphics[width=.8\columnwidth]{figs/parsing-vordere}
 \end{center}
 \caption[Interaction of lexical constructions
 with functional constructions -- semantics]{%
@@ -717,7 +717,7 @@ in particular projective adverbs and projective prepositions.
 \begin{footnotesize}
 \begin{tabular}{p{1.6cm}p{1.6cm}p{1.6cm}p{1.6cm}p{1.6cm}p{1.4cm}p{1.4cm}p{3.5cm}}
 \lsptoprule
-cxn &  c1 syn-function & c1 syn-class &  c2 syn-fn & c2 syn-class  & syn-functions & syn-classes & examples \\ \midrule
+cxn &  c1 syn-\newline function & c1 syn-class &  c2 syn-fn & c2 syn-class  & syn-functions & syn-classes & examples \\ \midrule
 angular-pp-phrase & & angular-preposition & referring-expression & & adverbial & &[vor] [der Kiste], [links] [der Kiste]
 \\ \hline  
 lateral-region-landmark-marked  & adverbial &adverb & referring-expression & & adverbial & & [links] [von mir] 
@@ -727,7 +727,7 @@ relative-region-perspective-marked  &adverbial & &referring-expression & & & &
 \\ 
 \hline
 \hline
-cxn name &  c1 sem-function & c1 sem-class &  c2 sem-fn & c2 sem-class  & sem-functions & sem-classes & examples \\ \hline\hline
+cxn name &  c1 sem-\newline function & c1 sem-class &  c2 sem-fn & c2 sem-class  & sem-functions & sem-classes & examples \\ \hline\hline
 angular-pp-phrase & & angular-relationship & reference & & modifier & region, relative-region & [vor][der Kiste], [links][der Kiste]
 \\ \hline
 lateral-region-landmark-marked  & modifier & lateral-region & reference & & modifier & region, relative-region & [links] [von mir] 
@@ -741,8 +741,8 @@ relative-region-perspective-marked  & modifier & relative-region &reference & &m
 \caption[Syntactic and semantic mappings of constructions]{%
 Syntactic and semantic mappings of constructions 
 governing prepositional and complemented adverbials. Syntactic and semantic
-functions and classes for the two constituents (c1 and c2) are shown. To the right
-the newly introduced syntactic and semantic function and classes are shown.\todo[inline]{reverse columns and rows?}}
+functions and classes for the two constituents ($c1$ and $c2$) are shown. To the right
+the newly introduced syntactic and semantic function and classes are shown.}
 \end{sidewaystable}
 
 Let us first consider the extension of projective prepositions 
@@ -806,8 +806,9 @@ the preposition \textit{von}.
 
 
 \ea
-\begin{footnotesize}
-\begin{verbatim}
+\begin{lstlisting}
+%\begin{footnotesize}
+%\begin{verbatim}
 (def-phrasal-cxn lateral-adverb-landmark-marked
  :constituents
  (def-constituent
@@ -823,8 +824,9 @@ the preposition \textit{von}.
   :preposition "von")
  :syn-function adverbial
  :sem-function modifier)
-\end{verbatim}
-\end{footnotesize}
+%\end{verbatim}
+%\end{footnotesize}
+\end{lstlisting}
 \label{e:lateral-adverb-landmark-marked}
 \z
 
@@ -857,7 +859,7 @@ referring-expression-adverbial-phrase  &referring-expression & adverbial & refer
 \\ \hline  
 preposition-referring-expression-phrase  &preposition & referring-expression & adverbial & [an][der kiste] 
 \\ \hline  
-possessive  &referring-expression & referring-expression & referring-expression & [die linke Seite] [der Kiste] 
+possessive  &referring-expression & referring-expression & referring-expression & [die linke Seite]\newline [der Kiste] 
 \\ \lspbottomrule
 \end{tabularx}
 \caption[Mapping of syntactic functions]{Mapping of syntactic functions (phrasal constructions). All phrasal
@@ -890,13 +892,13 @@ Hence, in production these constructions express particular linkings in the sema
 of their functional constituents. 
 
 The simplest example of such a construction is the {\footnotesize\tt adjectival-nominal-phrase}, which allows agents to build large adjective noun phrases 
-(see \citealp{steels2011phrasal}\index{Steels, L.} for the original idea). 
+(see \citealt{steels2011phrasal}\index{Steels, L.} for the original idea). 
 Tables \ref{t:phrasal-syn} 
 and \ref{t:phrasal-sem} detail the semantic and syntactic functions of 
 the constituents of all phrasal constructions, as well as the syntactic 
 and semantic function potentials they introduce. The adjectival 
 nominal construction maps a constituent with syntactic 
-function {\footnotesize\tt adjectival} and semantic function {\footnotesize\tt modifier} and a constituent with syntactic function nominal and semantic function identifier onto a new unit.\todo{???} Hence, it builds hierarchy by introducing a new unit with two subunits -- 
+function {\footnotesize\tt adjectival} and semantic function {\footnotesize\tt modifier} and a constituent with syntactic function nominal and semantic function identifier onto a new unit. Hence, it builds hierarchy by introducing a new unit with two subunits -- 
 namely its two constituents. This new unit has the semantic function potential of identifier and the syntactic function 
 potential nominal. There are a number of functional constructions providing such semantic and syntactic 
 functions. Both color and spatial adjectives provide the semantic function {\footnotesize\tt modifier} and the syntactic
@@ -1004,7 +1006,7 @@ uncertainty, percolation for moving information around and
 constructions of a particular type in order to postpone decisions.
 
 \subsection{Representing the state of information}
-Distinctive feature matrices (see \citealp{vantrijp2011matrices}\index{van Trijp, R.}) are a means to
+Distinctive feature matrices (see \citealt{vantrijp2011matrices}\index{van Trijp, R.}) are a means to
 represent the current, possibly indecisive state of information in
 processing. They allow different constructions to independently
 contribute constraints on values of the syntactic, case and gender
@@ -1033,9 +1035,9 @@ a two dimensional matrix, where columns reflect the four German cases,
 and rows reflect the three grammatical genders. Every field in the
 matrix corresponds to a particular combination of case and gender,
 such as accusative-masculine, and every field can either be explicitly
-excluded (i.e. marked with a `{\textminus}'), selected (i.e.  marked by a `+') or
+excluded (i.e. marked with a ``{\textminus}''), selected (i.e.  marked by a ``+'') or
 in an unknown state of information, which is represented using
-variables i.e. marked with a `?').
+variables i.e. marked with a ``?'').
 
 \begin{figure}[t]
   \centerline{\includegraphics[scale=0.61]{figs/hinter-dem-linken-block-1}}
@@ -1058,7 +1060,7 @@ represented. The feature matrices\is{design pattern!feature matrix} for the spat
 ({\footnotesize\texttt{spatial-adjective-unit-334}}) and for the article
 ({\footnotesize\texttt{article-unit-334}}) are completely filled with variables. On
 the other hand, the feature matrix\is{design pattern!feature matrix} for the frontal preposition
-({\footnotesize\texttt{frontal-preposition-unit-93}}) features a `{\textminus}' everywhere but
+({\footnotesize\texttt{frontal-preposition-unit-93}}) features a ``{\textminus}'' everywhere but
 in the column representing the dative case, namely, the case it
 requires. On the other hand, the noun ({\footnotesize\texttt{noun-unit-334}}) is
 categorized based on its gender, and the feature matrix\is{design pattern!feature matrix} consequently

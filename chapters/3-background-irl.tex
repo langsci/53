@@ -20,17 +20,10 @@ that allows agents to represent and process complex conceptualizations\is{concep
 of spatial scenes. The work presented here is based on substantial previous work. 
 Key ideas of the IRL system have been laid out by \cite{steels2000emergence}\index{Steels, L.}, 
 with progress reported by \cite{steels2005planning}\index{Steels, L.}\index{Bleys, J.}, \cite{vandenbroeck2008irl}\index{Van den Broeck, W.}, and
-recently by \cite{spranger2010irl,spranger2012irl}\index{Loetzsch, M.}\index{Pauw, S.}\index{Spranger, M.}.
+recently by \citet{spranger2010irl} and \citet{spranger2012irl}.
 
 \section{Procedural semantics}
 \label{s:grounded-procedural-semantics}
-\begin{figure}
-\center
-\includegraphics[width=.8\textwidth]{figs/the-red-block-network}
-\caption{Semantic structure underlying the utterance \textit{der rote Block} (`the red block').}
-\label{f:the-red-block-network}
-\end{figure}
-
 In order for a hearer to interpret an utterance, he has to apply the 
 meaning conveyed in the linguistic structure to his perception of 
 the context. Consequently, a speaker who 
@@ -60,9 +53,16 @@ the object class {\footnotesize\tt block} and the selector
 {\footnotesize\tt (bind color-category ?color red)}. We collectively
 refer to concepts, categories etc. as \textsc{semantic entities}\is{semantic entity}.
 
-IRL-networks consist of two types of nodes 
+\begin{figure}
+	\center
+	\includegraphics[width=.8\textwidth]{figs/the-red-block-network}
+	\caption{Semantic structure underlying the utterance \textit{der rote Block} (`the red block').}
+	\label{f:the-red-block-network}
+\end{figure}
+
+\noindent IRL-networks consist of two types of nodes :
 \begin{description}
-\item[Cognitive operations,] also called \textsc{semantic operations},\is{cognitive operation}
+\item[Cognitive operations] also called \textsc{semantic operations},\is{cognitive operation}
 are the algorithms used in conceptualization. They encode a particular cognitive 
 function such as categorization using a color category,
 applying a selector or applying an object class and many more as will be shown
@@ -120,7 +120,7 @@ This yields a new set of objects with multiplied similarity scores.
 The set is bound to the variable {\footnotesize\tt ?set-31}. Lastly, {\footnotesize\tt apply-selector} 
 checks the objects in {\footnotesize\tt ?set-31}, finds the object with 
 the highest similarity score and binds it to the variable {\footnotesize\tt ?topic}
-which is the referent\footnote{Note that the word \textit{object} here refers 
+which is the referent\footnote{Note that the word ``object'' here refers 
 to an agent's private representation of 
 things he has perceived in the world and only 
 indirectly refers to the physical object which is the referent.

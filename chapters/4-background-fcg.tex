@@ -39,15 +39,15 @@ Rot ist eine Farbe\\
 % \item \textit{der rote Block} (`the red block')
 % \item \textit{Rot ist eine Farbe} (`red is a color')
 % \end{enumerate}
-In Example \REF{ex:4:1} \textit{rot} (`red') is used to modify the set of objects
+In \REF{ex:4:1} \textit{rot} (`red') is used to modify the set of objects
 denoted by the word \textit{Block} (`block') whereas in \REF{ex:4:2} the
 statement is about the color itself. We can precisely capture 
 these differences in semantic function using cognitive operations
-and IRL (an structure for Example \REF{ex:4:1} can be found in \sectref{s:irl}). 
+and IRL (an structure for \REF{ex:4:1} can be found in \sectref{s:irl}). 
 The semantic function is coupled to a particular expression
-in syntax. In Example \REF{ex:4:1} the color is expressed
+in syntax. In \REF{ex:4:1} the color is expressed
 as an adjective which signals its use as a modifier.  
-In Example \REF{ex:4:2} the color is expressed as a noun and
+In \REF{ex:4:2} the color is expressed as a noun and
 signals that the subsequent verb phrase is a fact about the color itself. 
 In production, the speaker can therefore choose to express
 the category as an adjective if the category is linked to the corresponding
@@ -55,7 +55,7 @@ cognitive operation (e.g. {\footnotesize\tt apply-color}). In parsing, when
 he observes a color adjective this allows him to infer
 that he is supposed to modify a set of objects using that operation.
 Which set of objects the color adjective modifies is determined
-by the larger syntactic and semantic context. For instance, in Example
+by the larger syntactic and semantic context. For instance, in 
 \REF{ex:4:1} the adjective is part of an adjective noun phrase that 
 indicates which set is modified by the color category namely
 the set of blocks. From the viewpoint of the adjective noun phrase
@@ -169,7 +169,7 @@ following restates the initial transient structure\is{transient structure} as s-
 ((top))
 \end{lstlisting}
 % \end{footnotesize}
-The top shows the semantic pole. The bottom, after the {\footnotesize\tt <-->},
+The top shows the semantic pole. The bottom, after the {\footnotesize\verb|<-->|},
 shows the syntactic pole. Both poles have one unit (the top-unit). 
 On the semantic side the top-unit has one attribute, the meaning attribute
 which has an IRL-network in list form as its value. 
@@ -209,7 +209,7 @@ meaning is distributed across different units.
 Notice that which unit is subunit of another is coded by a special
 attribute called {\footnotesize\tt syn-subunits} on the syntactic pole
 and {\footnotesize\tt sem-subunits} on the semantic pole. Compare
-this with \figref{f:after-red-cxn} which shows the hierarchy in the final 
+this with \figref{f:after-red-cxn} which shows the hierarchy in the final\enlargethispage{1\baselineskip}
 structure. For example {\footnotesize\tt red-unit-40} is a subunit of 
 {\footnotesize\tt color-adjective-unit-44}.
 
@@ -218,7 +218,7 @@ structure. For example {\footnotesize\tt red-unit-40} is a subunit of
 \includegraphics[width=0.75\textwidth]{figs/high-level-cxn-application}
 \end{center}
 \caption[Construction application]{This figure shows a schematic view on 
-construction application (Figure adapted from \citealp{steels2011design}\index{Steels, L.}).
+construction application (Figure adapted from \citealt{steels2011design}\index{Steels, L.}).
 Starting from the initial transient structure\is{transient structure} (left)
 all constructions in the set of constructions are tested whether they 
 match with the structure. Two constructions match with the
@@ -302,7 +302,7 @@ schematically depicted in \figref{f:lex-rot-cxn}
 % \end{footnotesize}
 % \end{example}
 The top displays the semantic pole followed by the syntactic pole after the 
-{\footnotesize\tt <-->}. In production the construction requires\is{production}
+{\footnotesize\verb|<-->|}. In production the construction requires\is{production}
 the meaning {\footnotesize\tt (bind color-category ?red red)} to be present.
 If this is the case, the construction merges the information 
 on the syntactic side, in particular the stem, into the transient structure\is{transient structure}.
@@ -321,7 +321,7 @@ linking cognitive operations are different every time IRL conceptualizes.
 Using a variable in one part of the construction and repeating it in another 
 can lead to changes in the transient structure triggered
 by matching and merging \citep{steels2006fcg}\index{Steels, L.}\index{De Beule, J.}.
-Example \REF{e:red-lex-list}, for instance, uses matching and merging
+\REF{e:red-lex-list}, for instance, uses matching and merging
 by re-using the variable in the meaning {\footnotesize\tt ?red-57}
 in the {\footnotesize\tt args} attribute. Whatever this variable binds
 to in processing the re-occurring variable will make sure
@@ -448,13 +448,13 @@ to the template.
 % \begin{example}
 \ea\label{e:template-syntax}
 % \begin{footnotesize}
-% \begin{Verbatim}[commandchars=\\\{\}]
-\begin{lstlisting}
-(\emph{template-name} \emph{construction-name}
- \emph{:argument-1} \emph{value-1}
- \emph{:argument-2} \emph{value-2}
+% \begin{Verbatim}[commandchars=\\\{\}] % Our Typewriter font has no italics, so no \emph for you :(
+\begin{lstlisting}[columns=fixed]
+(template-name	construction-name
+ :argument-1	value-1
+ :argument-2	value-2
  ...
- \emph{:argument-n} \emph{value-n})
+ :argument-n	value-n)
 \end{lstlisting}\z
 % \end{footnotesize}
 % \end{example}

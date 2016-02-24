@@ -7,21 +7,7 @@
 \chapter{Grounded spatial language games}
 \label{s:spatial-language-games}
 \is{spatial language game}
-\begin{figure}
-\begin{center}
-\includegraphics[width=1.0\columnwidth]{figs/space-scene-2-small}
-\end{center}
-\caption[Example spatial setup]{Example scene. 
-Two robots autonomously perceive and act in an office 
-environment that contains different types of objects. Both 
-robots autonomously create world models reflecting the state 
-of the environment (see bottom left and right schematics), that 
-include objects with spatial and color properties, the carton boxes 
-as well as the robots.}
-\label{f:scene}
-\end{figure}
-
-\noindent Language does not occur in a vacuum. Spoken language occurs in physical,
+Language does not occur in a vacuum. Spoken language occurs in physical,
 situated interactions when two interlocutors meet with specific
 communicative intentions. This chapter explains the basic social interactions 
 at the center of the approach to language. Physical robots meet in communicative
@@ -38,7 +24,6 @@ Language games are routinized interactions between two members of
 a population. The game combines a particular script for the interaction, the linguistic
 information transfer and extra-linguistic feedback about the success of the interaction.
 Here is an example of a language game called the \textsc{spatial language game}:
-
 
 \begin{enumerate}
 \item The language game starts by randomly drawing two agents from the population. 
@@ -61,8 +46,21 @@ points to the topic he wanted to draw the attention to.
 
 
 \begin{figure}
+	\begin{center}
+		\includegraphics[width=1.0\columnwidth]{figs/space-scene-2-small}
+	\end{center}
+	\caption[Example spatial setup]{Example scene. 
+		Two robots autonomously perceive and act in an office 
+		environment that contains different types of objects. Both 
+		robots autonomously create world models reflecting the state 
+		of the environment (see bottom left and right schematics), that 
+		include objects with spatial and color properties, the carton boxes 
+		as well as the robots.}
+	\label{f:scene}
+\end{figure}
+\begin{figure}
 \begin{center}
-\includegraphics[width=0.8\textwidth]{figs/semiotic-cycle}
+\includegraphics[width=0.7\textwidth]{figs/semiotic-cycle}
 \caption[Semiotic cycle]{\is{semiotic cycle}The semiotic cycle is a model of situated communicative interactions between 
 two interacting agents.}
 \end{center}
@@ -158,7 +156,7 @@ camera images. In order to do so, the vision system needs to establish a
 correspondence between an internal \textsc{model} and the image
 regions that refer to the same physical object, a process known in
 robotics as \textsc{anchoring} \citep{coradeschi2003anchoring}\index{Saffiotti, A.}\index{Coradeschi, S.}. 
-I use state estimation techniques from robotics, e.g. Kalman ilters 
+I use state estimation techniques from robotics, e.g. Kalman filters 
 \citep{kalman1960linear}\index{Kalman, R. E.}, 
 for maintaining such persistent models. Third, the vision system 
 fuses information from the proprioceptive sensors of the robot
@@ -198,7 +196,7 @@ are looking at the scene from the same position and there are few objects.
 \includegraphics[width=.8\textwidth]{figs/spatial-scenes-overview-1}
 \end{center}
 \caption[Example world models]{Example world models from a spatial data
-set called \emph{space-game-2}. Left the world model of 
+set called {\tt\footnotesize space-game-2}. Left the world model of 
 robot \emph{a} is shown. To the right the world model of robot 
 \emph{b} is shown. All scenes share similar properties. In 
 this data set robots share a similar perspective on the scene.
@@ -218,10 +216,10 @@ spatial data sets. Each row shows
 scenes from a particular data set (the world model of 
 robot \emph{a} is always shown). 
 The first row shows a data set which features a global landmark 
-(\emph{space-game-9}).
+({\tt\footnotesize space-game-9}).
 The middle row shows scenes of a data set without global landmark and
-without box (\emph{space-game-17}). Lastly, a data set which features 
-many objects is shown (\emph{space-game-18}).}
+without box ({\tt\footnotesize space-game-17}). Lastly, a data set which features 
+many objects is shown ({\tt\footnotesize space-game-18}).}
 \label{f:spatial-scenes-2}
 \end{figure}
 
@@ -274,7 +272,7 @@ agreement in communication.  For demonstration purposes robots are
 equipped with pointing gestures but in the communicative interactions 
 underlying the results presented in this book, robots use a different 
 mechanism in order to avoid further difficulties stemming from uncertainties in pointing (see
-\citealp{steels1998stochasticity}\index{Steels, L.}\index{Kaplan, F.} for a discussion of the impact of
+\citealt{steels1998stochasticity}\index{Steels, L.}\index{Kaplan, F.} for a discussion of the impact of
 such uncertainties on the performance in language games). When a
 robot wants to point to an object in the environment, he directly
 transmits the coordinates of the intended object to the

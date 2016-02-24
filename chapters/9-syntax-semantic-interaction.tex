@@ -155,7 +155,7 @@ focuses entirely on how a particular landmark is conceptualized.
 Consequently, such kind of ambiguity only surfaces in phrases involving 
 overtly or covertly expressed landmarks. Examples
 of such phrases are prepositional and adverbial phrases, such as 
-the following (\REF{e:der-block-vorne} is repeated 
+the following (\REF{e:der-block-vorne} is repeated \todo{undefined reference}
 in \REF{e:der-block-vorne-repeated} 
 for convenience):
 \ea
@@ -197,7 +197,7 @@ such as in \REF{e:der-block-vor-der-kiste-von-dir-aus}.
 the.{\NOM} block.{\NOM} front.{\PREP} the.{\DAT} box.{\DAT} from.{\PREP} your.{\DAT} from.{\PREP}\\
 \glt `The block in front of the box from your perspective'\\
 %\glend
-\z\todo{Please re-consider glossing in this and similar examples}
+\z
 The component \textit{von dir aus} (`from your perspective') is a clear indicator that
 the landmark is construed from a certain perspective. Consequently, this phrase 
 has a relative reading only. After all, interpreting a relative landmark always entails 
@@ -397,7 +397,7 @@ phrase attached to it).
 the.{\NOM} block.{\NOM} front.{\ADV}  from.{\PREP} your.{\DAT} from.{\PREP}\\ 
 \glt `The block in the front of the box from your perspective'\\
 %\glend
-\z\todo{Please re-consider glossing here and in similar Examples}
+\z
 Basically, a construction setting the frame of reference to relative is required.
 The prerequisite for which is that there is a region that has the potential to be
 interpreted as a relative region. Additionally, there needs to be a perspective 
@@ -524,6 +524,20 @@ those two readings and passes them as potential solutions to IRL.
 The task engine splits in search which allows to trace each of the two interpretations
 separately (see \figref{f:processing-interpretations}).
 
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.5\columnwidth]{figs/semantic-ambiguity-interpretation}
+	\end{center}
+	\caption[Interpretation example schematic]{%
+		Interpretation of \REF{e:der-block-vor-der-kiste-repeated}. In parsing,
+		FCG finds two possible interpretations (relative and intrinsic). IRL is then called 
+		on each of these interpretations separately and recovers 
+		two possible conceptualizations for the relative reading. All three
+		possible interpretations and their corresponding topics are scored. 
+		The hearer then decides that {\footnotesize\tt obj-253} is the best interpretation.}
+	\label{f:processing-interpretations}
+\end{figure}
+
 Suppose that a speaker uttered this phrase in the spatial scene 
 shown in \figref{f:scene} (which is repeated here in \figref{f:scene-repeated}) and he wants to refer to object {\footnotesize\tt obj-266} in his context (which
 is {\footnotesize\tt obj-253} in the hearer's context). 
@@ -537,6 +551,14 @@ choose which of the interpretations is the best one (see \figref{f:interpretatio
 depiction of the three possible interpretations and \figref{f:processing-interpretations} for
 an overview of processing). The final decision is based 
 on the discrimination score of the three possible interpretations.
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.8\columnwidth]{figs/space-scene-2-small}
+	\end{center}
+	\caption[Example scene]{Example scene (same as in \figref{f:scene}).}
+	\label{f:scene-repeated}
+\end{figure}
 
 In this particular configuration all three interpretations lead 
 to different results. This is not always the case. There are three 
@@ -557,30 +579,7 @@ a success and the hearer correctly identified the topic.
 Importantly, in all three cases agents rely on the power of IRL and FCG 
 to deal with semantic ambiguity\is{semantic ambiguity}.
 
-
-\begin{figure}[p]
-\begin{center}
-\includegraphics[width=0.8\columnwidth]{figs/space-scene-2-small}
-\end{center}
-\caption[Example scene]{Example scene (same as in \figref{f:scene}).}
-\label{f:scene-repeated}
-\end{figure}
-
-\begin{figure}[p]
-\begin{center}
-\includegraphics[width=0.5\columnwidth]{figs/semantic-ambiguity-interpretation}
-\end{center}
-\caption[Interpretation example schematic]{%
-Interpretation of \REF{e:der-block-vor-der-kiste-repeated}. In parsing,
-FCG finds two possible interpretations (relative and intrinsic). IRL is then called 
-on each of these interpretations separately and recovers 
-two possible conceptualizations for the relative reading. All three
-possible interpretations and their corresponding topics are scored. 
-The hearer then decides that {\footnotesize\tt obj-253} is the best interpretation.}
-\label{f:processing-interpretations}
-\end{figure}
-\clearpage
-\begin{figure}[t]
+\begin{figure}
 \begin{center}
 \includegraphics[width=0.95\columnwidth]{figs/semantic-ambiguity-interpretations.png}
 \end{center}

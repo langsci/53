@@ -88,8 +88,7 @@ In description scenarios the applicability
 of a spatial relation is the important aspect, 
 whereas in discrimination scenarios, the power to contrast the
 target object from the rest of the objects is more important 
-\citep{tenbrink2005identifying}\index{Tenbrink, T.} 
-(see \figref{f:discrimination-vs-description} for an example). 
+(\citealt{tenbrink2005identifying}\index{Tenbrink, T.}, see \figref{f:discrimination-vs-description} for an example). 
 Agents in discrimination scenarios choose spatial relations and
 reference systems based on maximizing the distance to other objects
 \citep{herskovits1986language}\index{Herskovits, A.}.
@@ -115,7 +114,7 @@ space of possible or even desirable conceptualizations.
 
 \begin{figure}
 \begin{centering}
-\includegraphics[width=1\columnwidth]{figs/space-scene-2-small}
+\includegraphics[width=.8\columnwidth]{figs/space-scene-2-small}
 \end{centering}
 \caption[Spatial setup example]
 {Spatial setup}
@@ -180,7 +179,7 @@ Implementing the conceptualization of spatial scenes is based on
 two computational steps. Semantic structure is, first, automatically
 combined and, second, it is ranked based on the particular
 communicative goal. We use a search algorithm 
-(see \sectref{s:irl}) as a means to 
+(see \chapref{s:irl}) as a means to 
 automatically combine simple semantic building blocks 
 into more complex ones. Semantic structure assembled in the search process is 
 immediately tried on the current context, given the specific 
@@ -271,7 +270,7 @@ have been observed to prefer the relative frame of reference
 over the intrinsic one \citep{levinson2003space}\index{Levinson, S. C.},
 and German speaker seem to prefer the intrinsic over the relative frame of reference 
 \citep{ehrich1985linguistik}\index{Ehrich, V.}. Although evidence for these kinds of phenomena
-seems at least contradictory (see \citealp{miller1976language}\index{Johnson-Laird, P. N.}\index{Miller, G. A.} for 
+seems at least contradictory (see \citealt{miller1976language}\index{Johnson-Laird, P. N.}\index{Miller, G. A.} for 
 reverse findings for English speakers) nevertheless the assumption
 that one frame of reference is conventionally selected more often 
 is reasonable and can be incorporated into the 
@@ -390,7 +389,7 @@ An important part of the complete machinery for discriminating an object
 in the environment is the problem of how spatial categories and relations
 themselves are applied. In computational modeling, discrimination is often conflated with categorization,
 or to be more precise, with a certain approach to categorization which can 
-be called \textsc{strict category membership}\is{categorization!strict} (see \citealp{belpaeme2007language}\index{Bleys, J.}\index{Belpaeme, T.} 
+be called \textsc{strict category membership}\is{categorization!strict} (see \citealt{belpaeme2007language}\index{Bleys, J.}\index{Belpaeme, T.} 
 for an application of this approach to color). Categorization is understood here
 as strict membership in which a point in the sensorimotor 
 space is categorized as belonging
@@ -401,8 +400,8 @@ of the red category. Consequently, every point in the sensorimotor space
 belongs to precisely one category of the set of categories and the
 complete sensorimotor space can be decomposed 
 into different sets of objects based on their category membership, 
-a process known as Voronoi tesselation \citep{aurenhammer1991voronoi}\index{Aurenhammer, F.} 
-(see \figref{f:voronoi}). Applying such an approach to discrimination, one needs to additionally 
+a process known as Voronoi tesselation (\citealt{aurenhammer1991voronoi}\index{Aurenhammer, F.}, see \figref{f:voronoi}).
+Applying such an approach to discrimination, one needs to additionally 
 define some criteria as to when a category $c$ can be called discriminating
 object $o$ from the context $O$. The strict category membership approach
 posits two requirements to be met.
@@ -473,7 +472,7 @@ details of the strict category membership approach in the following paragraphs.
 Every point in the plane is categorized based on which
 centroid (black dots) it is closest leading to subsets of
 points where all points are closest to a particular centroid (Figure adapted from 
-\citealp{aurenhammer1991voronoi}\index{Aurenhammer, F.}).}
+\citealt{aurenhammer1991voronoi}\index{Aurenhammer, F.}).}
 \label{f:voronoi}
 \end{figure}
 
@@ -503,13 +502,13 @@ object and if that is the case outputs that object.
 This way of modeling semantic structure bears some similarities with
 logic based approaches to semantics where, for instance, noun phrases denote a 
 property that can be represented as a function from entities to truth 
-values (see for example \citealp{barwise1981generalized}\index{Cooper, R.}\index{Barwise, J.}) -- in other words, where noun phrases denote sets of objects for which
+values (see for example \citealt{barwise1981generalized}\index{Cooper, R.}\index{Barwise, J.}) -- in other words, where noun phrases denote sets of objects for which
 the property holds. For instance the interpretation of \textit{Ball} (`ball') denotes 
 the set of all balls in the context which is the same as filtering the context
 for the set of balls. Such approaches are the dominant way of semantic
 analysis for instance in generative grammar and they are also applied 
 by many scholars to the semantic analysis of spatial language (see 
-\citealp{eschenbach1997axiomatic}\index{Eschenbach, C.}\index{Kulik, L.} for an example). Consequently
+\citealt{eschenbach1997axiomatic}\index{Eschenbach, C.}\index{Kulik, L.} for an example). Consequently
 one is tempted to take such an approach to modeling the semantics
 of spatial language. However, there are some considerable problems
 associated with the category membership approach particularly when 
@@ -745,17 +744,6 @@ on different sets of spatial scenes}
 \end{figure}
 % [todo: add condition names and svg's]
 
-
-\begin{figure}
-\begin{center}
-\includegraphics[width=.8\columnwidth]{figs/filter-more-categories.pdf}
-\end{center}
-\caption[Effect of additional categories on strict categorization]
-{Results of comparing different sets of spatial categories and their 
-effect on the strict categorization\is{categorization!strict} approach}
-\label{f:filter-increased-categories}
-\end{figure}
-
 Failures to conceptualize in the case of strict category membership are caused by 
 insufficient clustering of the input space. The problem is that categories are not
 dense enough to allow the speaker to conceptualize for the particular topic.
@@ -773,19 +761,9 @@ It compares four conditions (over the different spatial scenes):
 right and so forth. ``Double'' refers to a set of categories where the number of 
 categories is doubled. So for instance, instead of two lateral categories left and right 
 there are now four. The same holds for frontal and proximal categories. In the ``triple'' 
-condition agents are equipped with three times as many categories and in the 
+condition agents are equipped with three times as many categories and in the
 ``quadruple'' condition the number of categories is four times compared to the 
 german condition. 
-
-\begin{figure}
-\begin{center}
-\includegraphics[width=.8\columnwidth]{figs/apply-more-categories.pdf}
-\end{center}
-\caption[Effect of additional categories on lenient categorization]
-{Results of comparing different sets of spatial categories and their 
-effect on the lenient categorization approach.\is{categorization!lenient}}
-\label{f:apply-increased-categories}
-\end{figure}
 
 In some cases most notably for data set {\footnotesize\tt space-game-18} 
 more categories indeed helps triple the success in interaction. This is not all that
@@ -811,6 +789,25 @@ approach. \figref{f:apply-increased-categories} shows that while there
 is some impact of more categories in the difficult scenes of data set
 {\footnotesize\tt space-game-18}, overall there is no significant increase in success in
 interaction.
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=.8\columnwidth]{figs/filter-more-categories.pdf}
+	\end{center}
+	\caption[Effect of additional categories on strict categorization]
+	{Results of comparing different sets of spatial categories and their 
+		effect on the strict categorization\is{categorization!strict} approach}
+	\label{f:filter-increased-categories}
+\end{figure}
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=.8\columnwidth]{figs/apply-more-categories.pdf}
+	\end{center}
+	\caption[Effect of additional categories on lenient categorization]
+	{Results of comparing different sets of spatial categories and their 
+		effect on the lenient categorization approach.\is{categorization!lenient}}
+	\label{f:apply-increased-categories}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Summary}
