@@ -182,9 +182,9 @@ conceptualization strategy at the same time.
 
 % extra monitoring
 The alignment\is{alignment} of conceptualization strategies is measured using the
-\emph{conceptualization strategy similarity}\is{measures!conceptualization strategy similarity} which is computed for a population of agents 
-by averaging the \emph{agent conceptualization strategy similarity} of every agent to every other
-agent. The agent conceptualization strategy similarity {\footnotesize\tt acss} is computed by comparing
+\textsc{conceptualization strategy similarity}\is{measures!conceptualization strategy similarity} which is computed for a population of agents 
+by averaging the {agent conceptualization strategy similarity} of every agent to every other
+agent. The agent conceptualization strategy similarity ({\footnotesize\tt acss}) is computed by comparing
 the score of each strategy. Since strategies are never removed but merely reduced
 to a score of $0.0$, one can compute a distance of scores between the chunks in each agent
 and envelope the result using an exponential decay function which results in the following formula.
@@ -194,14 +194,14 @@ and envelope the result using an exponential decay function which results in the
 In this formula $a_1,a_2$ are the agents whose similarity score is computed, $S$ is the set 
 of strategies given
 to agents and $\operatorname{score}(s,a_1)$ is the score agent $a_1$ gives to strategy $s$.
-The conceptualization strategy similarity $\operatorname{css}$ for the population $P$ is defined 
+The conceptualization strategy similarity ({\footnotesize\tt css}) for the population $P$ is defined 
 as the average $\operatorname{acss}$
 for every two agents. Since $\operatorname{acss}$ is symmetric, all combinations of two agents are
 considered. This measure is only one way to understand the dynamics of a particular chunk alignment \is{alignment}
 experiment. Since all agents start out equipped with the same set of strategies this measure is equal to $1.0$
 in the beginning. However, when considered over many interactions, the measure provides important insights 
 into how similar the development is. Particularly, large drops in similarity diagnose significant divergence in strategy use. Most information from $\operatorname{css}$ is drawn by analyzing its dynamics together with a 
-second measure which tracks the \emph{average number of chunks} in the population ignoring chunks with a 
+second measure which tracks the average number of chunks in the population ignoring chunks with a 
 score of $0$. If the average number of chunks in a population of agents drops from 3 to 1 and 
 $\operatorname{css}$ stays
 high, we can conclude that the population has agreed on a single conceptualization strategy (see Figure
@@ -624,6 +624,7 @@ and where all scenes include a box landmark.
 Table \ref{t:absolute-vs-intrinsic-vs-relative} summarizes
 results in which certain spatial scenes have neither intrinsic nor absolute features.
 
+
 \begin{table}
 \caption[Results absolute, intrinsic and relative 
 strategy competition]{%
@@ -637,6 +638,7 @@ strategy (all allocentric) after 10000 interactions
 Table \ref{t:experimental-conditions-absolute-vs-intrinsic-vs-relative} explains 
 the different conditions.}
 \begin{center}
+\resizebox{\textwidth}{!}{%
 \begin{tabular}{SSSSS}
 \lsptoprule
 {condition} & \multicolumn{1}{p{.2\textwidth}}{communicative success (\si{\percent})} & \multicolumn{1}{p{.2\textwidth}}{score relative\newline strategy}
@@ -647,6 +649,7 @@ the different conditions.}
 1.0 & 100 & 1.0 & 0.0 &  0.0\\ %\hline
 \lspbottomrule
 \end{tabular}
+}
 \end{center}
 \label{t:absolute-vs-intrinsic-vs-relative}
 \end{table}
@@ -710,7 +713,7 @@ and lexical systems from scratch. But often times new conceptualization strategi
 existing material including categories as well as lexical and grammatical constructions 
 and extend them to work within the new conceptual space that a strategy spans. This has been attested in 
 spatial language which often is thought to originate in language for body parts (see 
-for example \citealp{maclaury1989zapotec}\index{MacLaury, R. E.}). For the results in this section this means 
+for example \citealt{maclaury1989zapotec}\index{MacLaury, R. E.}). For the results in this section this means 
 that the harsh condition that agents
 start from virtually nothing can be relaxed. 
 Applying this insight to exaptation one can predict that when systems become exapted 
