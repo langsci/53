@@ -1,0 +1,4 @@
+LaTeX Warning: Label `e:def-fun-spatial-adjective-potentials' multiply defined.
+LaTeX Warning: Label `f:space-scene-2' multiply defined.
+LaTeX Warning: Label `e:def-fun-frontal-adverb' multiply defined.
+LaTeX Warning: Label `f:interpretations' multiply defined.
