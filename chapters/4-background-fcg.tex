@@ -5,7 +5,7 @@
 \chapter{Construction Grammar with FCG}
 \label{s:fcg}
 Construction Grammar posits that  linguistic
-knowledge is organized in the form of ``constructions'' \citep{goldberg1995constructions,croft2001radical}\index{Goldberg, A.}\index{Croft, W.}
+knowledge is organized in the form of ``constructions'' \citep{goldberg1995constructions,croft2001radical}\oldindex{Goldberg, A.}\oldindex{Croft, W.}
 which are mappings of semantics and pragmatics to syntax, 
 i.e. words and grammar, but also phonology, prosody or intonation. 
 Typically, Construction grammarians take a functional view on language
@@ -75,7 +75,7 @@ The key item for analysis is the function of items
 both in syntax and semantics. 
 These dependencies between syntax and semantics can be easily
 operationalized using FCG\is{Fluid Construction Grammar}
-\citep{beule2005hierarchy,steels2005linking}\index{De Beule, J.}\index{Steels, L.}\index{Neubauer, N.}. 
+\citep{beule2005hierarchy,steels2005linking}\oldindex{De Beule, J.}\oldindex{Steels, L.}\oldindex{Neubauer, N.}. 
 
 Throughout this book language processing is implemented
 in FCG, a computational implementation of Construction Grammar. FCG is (1) a formalism
@@ -218,7 +218,7 @@ structure. For example {\footnotesize\tt red-unit-40} is a subunit of
 \includegraphics[width=0.75\textwidth]{figs/high-level-cxn-application}
 \end{center}
 \caption[Construction application]{This figure shows a schematic view on 
-construction application (Figure adapted from \citealt{steels2011design}\index{Steels, L.}).
+construction application (Figure adapted from \citealt{steels2011design}\oldindex{Steels, L.}).
 Starting from the initial transient structure\is{transient structure} (left)
 all constructions in the set of constructions are tested whether they 
 match with the structure. Two constructions match with the
@@ -256,7 +256,7 @@ pole of the transient structure. If matching succeeds, the construction can
 change both poles of the transient structure\is{transient structure}, a process called \textsc{merge},
 because it fuses information.
 The precise inner workings of these two fundamental operations 
-are described in \citet{steels2006fcg}\index{Steels, L.}\index{De Beule, J.}.
+are described in \citet{steels2006fcg}\oldindex{Steels, L.}\oldindex{De Beule, J.}.
 The most important fact is that matching in FCG mainly relies on 
 variables, which in FCG (and in IRL) start with {\footnotesize\tt ?}.
 In computational terms constructions specify (1) under which conditions
@@ -320,7 +320,7 @@ is produced. But also, just to give another example, variables in the meaning
 linking cognitive operations are different every time IRL conceptualizes. 
 Using a variable in one part of the construction and repeating it in another 
 can lead to changes in the transient structure triggered
-by matching and merging \citep{steels2006fcg}\index{Steels, L.}\index{De Beule, J.}.
+by matching and merging \citep{steels2006fcg}\oldindex{Steels, L.}\oldindex{De Beule, J.}.
 \REF{e:red-lex-list}, for instance, uses matching and merging
 by re-using the variable in the meaning {\footnotesize\tt ?red-57}
 in the {\footnotesize\tt args} attribute. Whatever this variable binds
@@ -328,7 +328,7 @@ to in processing the re-occurring variable will make sure
 that the data is available in both places.
 \item[Hierarchy] Hierarchy is built using a special
 operator called the ``J-operator'', which changes the
-transient structure to include a new unit \citep{beule2005hierarchy}\index{De Beule, J.}\index{Steels, L.}.
+transient structure to include a new unit \citep{beule2005hierarchy}\oldindex{De Beule, J.}\oldindex{Steels, L.}.
 The new unit can have units that are already present in the 
 transient structure as children. A construction can therefore 
 easily change the hierarchical structure of the complete pole.
@@ -524,7 +524,7 @@ between lexical, functional or phrasal constructions. Hence, FCG
 supports research into how constructions can change 
 from lexical to grammatical constructions, which is 
 of interest for the study of the influence of the grammaticalization 
-processes on language evolution \citep{traugott1991grammaticalization}\index{Heine, B.}\index{Traugott, E. C.}.
+processes on language evolution \citep{traugott1991grammaticalization}\oldindex{Heine, B.}\oldindex{Traugott, E. C.}.
 
 Another important argument for the use of FCG is its robust
 behavior in parsing and production. The search process\is{parsing}
@@ -584,11 +584,11 @@ There is no question that this is a short, in many ways too short,
 introduction to FCG. FCG has been under continuous development
 since 1998 and it has developed into a mature system which allows 
 to research complex language phenomena such as Russian aspect 
-\citep{gerasymova2010acquisition,gerasymova2012temporal}\index{Gerasymova, K.}\index{Spranger, M.}. The complexity of natural 
+\citep{gerasymova2010acquisition,gerasymova2012temporal}\oldindex{Gerasymova, K.}\oldindex{Spranger, M.}. The complexity of natural 
 language has without doubt left its mark on the system and many design 
 choices in the system are not immediately obvious,
 unless one takes the scope of the research program into account.
-Recently several book projects \citep{steels2011design,steels2012computational}\index{Steels, L.}
+Recently several book projects \citep{steels2011design,steels2012computational}\oldindex{Steels, L.}
 attempted to communicate the full scope of FCG research
 performed in the last decade. The interested reader is referred
 to these efforts to get a broader introduction.
